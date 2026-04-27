@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator README Français</title>
+  <style>
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(180deg,#0f172a,#111827); color:#e5e7eb; line-height:1.8; }
+    main { max-width:880px; margin:0 auto; padding:44px 20px; }
+    h1,h2,h3 { color:#f8fafc; line-height:1.35; }
+    h1 { font-size:2.2rem; margin-bottom:.2em; }
+    h2 { margin-top:36px; padding-bottom:6px; border-bottom:1px solid #334155; color:#bfdbfe; }
+    h3 { margin-top:24px; color:#dbeafe; }
+    a { color:#93c5fd; text-decoration:none; font-weight:600; }
+    a:hover { text-decoration:underline; }
+    .hero,.card { background:rgba(17,24,39,.86); border:1px solid #334155; border-radius:18px; padding:22px; margin:20px 0; }
+    .hero { border-radius:24px; box-shadow:0 20px 60px rgba(0,0,0,.25); }
+    .tagline { color:#93c5fd; font-size:1.08rem; margin-top:0; }
+    ul,ol { padding-left:1.35em; }
+    li { margin:.25em 0; }
+    .note { color:#cbd5e1; background:rgba(15,23,42,.8); border-left:4px solid #60a5fa; padding:12px 14px; border-radius:10px; }
+    .warning { background:rgba(127,29,29,.22); border-left:4px solid #f87171; padding:12px 14px; border-radius:10px; }
+    .small { color:#94a3b8; font-size:.95rem; }
+    .buttons a { display:inline-block; margin:8px 8px 8px 0; padding:9px 14px; border:1px solid #60a5fa; border-radius:12px; color:#dbeafe; text-decoration:none; }
+    .buttons a:hover { background:#1e3a8a; }
+  </style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <h1>✨ VRC Misa Translator v1.10.8</h1>
+  <p class="tagline">Outil de traduction en temps réel pour VRChat</p>
+  <p>
+    VRC Misa Translator est une application de bureau qui traduit votre voix ou le texte saisi manuellement,
+    puis l’envoie dans le Chatbox de VRChat.
+  </p>
+  <p>
+    Elle est conçue pour faciliter les conversations avec des utilisateurs du monde entier,
+    l’animation d’événements et la communication multilingue.
+  </p>
+  <div class="buttons">
+    <a href="../">Retour à la page d’accueil</a>
+  </div>
+</section>
+
+<section class="card">
+  <h2>🚀 Fonctionnalités principales</h2>
+
+  <h3>🎤 Traduction vocale</h3>
+  <ul>
+    <li>Reconnaissance vocale en temps réel avec Whisper</li>
+    <li>Prise en charge de 20 langues</li>
+    <li>Modes Google Traduction / traduction ChatGPT</li>
+    <li>Choix entre modèles légers et modèles plus précis</li>
+  </ul>
+
+  <h3>⌨️ Traduction par saisie texte</h3>
+  <ul>
+    <li>Saisie directe dans le champ de texte source</li>
+    <li>Entrée pour traduire et envoyer</li>
+    <li>Maj + Entrée pour insérer un saut de ligne</li>
+    <li>Effacement automatique après l’envoi</li>
+    <li>Icône crayon lors de l’envoi depuis la saisie manuelle</li>
+  </ul>
+
+  <h3>📡 Intégration VRChat</h3>
+  <ul>
+    <li>Envoi vers le VRChat Chatbox via OSC</li>
+    <li>Envoi automatique pris en charge</li>
+    <li>Aide à la communication multilingue</li>
+  </ul>
+
+  <h3>⚙️ Interface et outils pratiques</h3>
+  <ul>
+    <li>Préréglages : standard / rapide / haute qualité</li>
+    <li>Actualisation de la liste des microphones</li>
+    <li>Fonction de liste noire contre les erreurs de reconnaissance</li>
+    <li>Journal et filtres d’affichage</li>
+    <li>Langues d’interface actuellement disponibles : japonais / anglais</li>
+    <li>Bouton README</li>
+    <li>Bouton de page de mise à jour</li>
+    <li>Affichage de la licence</li>
+  </ul>
+
+  <h3>💰 Gestion de l’utilisation de ChatGPT</h3>
+  <ul>
+    <li>Affichage du coût du jour</li>
+    <li>Historique d’utilisation</li>
+    <li>Alertes de limite d’utilisation</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🆕 Nouveautés de la v1.10.8</h2>
+  <ul>
+    <li>Amélioration de la disposition du menu supérieur</li>
+    <li>Placement des boutons README / mise à jour / licence en haut</li>
+    <li>Boutons supérieurs au style lien texte</li>
+    <li>Correction de la taille de la fenêtre d’avertissement des modèles lourds</li>
+    <li>Correction de l’affichage de la fenêtre de mise à jour</li>
+    <li>Amélioration de l’utilisation de la saisie texte</li>
+    <li>Meilleure stabilité du changement de langue de l’interface</li>
+    <li>Correction de divers bugs et amélioration de la stabilité générale</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>▶️ Utilisation de base</h2>
+
+  <h3>Traduction vocale</h3>
+  <ol>
+    <li>Lancez l’application</li>
+    <li>Sélectionnez votre microphone</li>
+    <li>Choisissez la langue d’entrée et la langue de traduction</li>
+    <li>Cliquez sur Démarrer</li>
+  </ol>
+  <p>Lorsque vous parlez, le texte traduit est envoyé automatiquement au Chatbox de VRChat.</p>
+
+  <h3>Saisie texte</h3>
+  <ol>
+    <li>Saisissez votre texte dans le champ source</li>
+    <li>Appuyez sur Entrée pour traduire et envoyer</li>
+  </ol>
+  <p class="note">
+    Entrée = envoyer<br>
+    Maj + Entrée = nouvelle ligne
+  </p>
+</section>
+
+<section class="card">
+  <h2>🎤 Priorité entre voix et saisie manuelle</h2>
+  <p>
+    Dans les paramètres avancés, vous pouvez choisir la priorité entre l’entrée vocale et la saisie manuelle.
+  </p>
+  <ul>
+    <li>ON : la voix peut remplacer le texte pendant la saisie</li>
+    <li>OFF : la saisie manuelle est prioritaire</li>
+  </ul>
+  <p class="note">
+    Pour l’animation d’événements ou les traductions importantes, il est recommandé de désactiver cette option et d’utiliser la saisie manuelle.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 Traduction avec ChatGPT</h2>
+  <p>
+    Le mode ChatGPT permet des traductions plus naturelles et adaptées à la conversation.
+  </p>
+  <ul>
+    <li>Formulations plus douces</li>
+    <li>Phrases courtes adaptées à VRChat</li>
+    <li>Ajustement naturel du ton</li>
+  </ul>
+  <p class="warning">
+    Une clé API OpenAI est nécessaire. La traduction ChatGPT est facturée selon l’utilisation.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💰 À propos de la facturation OpenAI API</h2>
+  <ul>
+    <li>L’API OpenAI fonctionne avec une tarification à l’usage</li>
+    <li>Vous êtes facturé uniquement selon votre utilisation</li>
+    <li>Si le paiement à l’usage est activé, les frais peuvent continuer selon l’utilisation</li>
+    <li>Il est recommandé de définir une limite d’utilisation</li>
+    <li>Une limite d’environ 5 à 10 dollars est un bon point de départ</li>
+    <li>Avec 10 dollars, environ 100 000 à 300 000 traductions de phrases courtes sont possibles, selon la longueur du texte</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🚫 Fonction de liste noire</h2>
+  <p>
+    La reconnaissance vocale peut parfois afficher un texte que vous n’avez pas prononcé.
+    En ajoutant ce texte à la liste noire, vous pouvez réduire les répétitions de la même erreur.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💻 Configuration requise</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat version PC</li>
+    <li>OSC activé</li>
+    <li>Microphone</li>
+    <li>Connexion Internet</li>
+  </ul>
+  <p class="warning">
+    Ne fonctionne pas sur Quest en mode autonome.
+  </p>
+</section>
+
+<section class="card">
+  <h2>⚠️ Remarques importantes</h2>
+  <ul>
+    <li>La traduction ChatGPT est payante à l’usage</li>
+    <li>Les modèles Whisper peuvent nécessiter un téléchargement au premier lancement</li>
+    <li>Les modèles de haute précision utilisent davantage les ressources du PC</li>
+    <li>Il est recommandé de modifier les paramètres lorsque l’application est arrêtée</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🔄 Mise à jour</h2>
+  <p>Les mises à jour sont actuellement manuelles.</p>
+  <ul>
+    <li>Version ZIP : remplacez les fichiers</li>
+    <li>Version installateur : réinstallez la dernière version</li>
+  </ul>
+  <p>
+    Vous pouvez vérifier la dernière version depuis la page de téléchargement ou le bouton de mise à jour dans l’application.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Message de la créatrice</h2>
+  <p>
+    Rendre les conversations avec les amis du monde entier plus naturelles.<br>
+    Rendre les événements, les discussions et les échanges plus libres.
+  </p>
+  <p>
+    VRC Misa Translator vous aide à créer de nouvelles connexions dans VRChat ✨
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
+</body>
+</html>
