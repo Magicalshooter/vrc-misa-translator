@@ -71,6 +71,10 @@
       margin-bottom: 22px;
     }
 
+    .jp {
+      color: #cbd5e1;
+    }
+
     .buttons a {
       display: inline-block;
       margin: 8px 8px 8px 0;
@@ -80,10 +84,12 @@
       color: #dbeafe;
       text-decoration: none;
       font-weight: 700;
+      transition: 0.15s ease;
     }
 
     .buttons a:hover {
       background: #1e3a8a;
+      transform: translateY(-2px);
     }
 
     .language-grid {
@@ -142,23 +148,30 @@
 
     <section class="hero">
       <h1>VRC Misa Translator</h1>
-      <p class="tagline">Real-time Translation Tool for VRChat</p>
+      <p class="tagline">
+        Real-time Translation Tool for VRChat<br>
+        <span class="jp">VRChat用リアルタイム翻訳ツール</span>
+      </p>
 
       <p>
-        VRC Misa Translator は、音声入力やテキスト入力を翻訳し、
-        VRChat の Chatbox へ送信できるデスクトップアプリです。
+        VRC Misa Translator is a desktop app that translates voice input or typed text
+        and sends it to the VRChat Chatbox.<br>
+        <span class="jp">
+          VRC Misa Translator は、音声入力やテキスト入力を翻訳し、
+          VRChat の Chatbox へ送信できるデスクトップアプリです。
+        </span>
       </p>
 
       <div class="buttons">
-        <a href="#readme">README / Guide</a>
-        <a href="#download">Download</a>
-        <a href="#updates">Update Notes</a>
+        <a href="#readme">README / ガイド</a>
+        <a href="#download">Download / ダウンロード</a>
+        <a href="#updates">Update Notes / 更新内容</a>
       </div>
     </section>
 
     <section id="readme" class="card">
       <h2>🌍 README / Guide</h2>
-      <p class="small">14 Languages Supported</p>
+      <p class="small">14 Languages Supported / 14言語対応</p>
       <p class="small">Please select your language. / 言語を選択してください。</p>
 
       <div class="language-grid priority">
@@ -189,8 +202,11 @@
     </section>
 
     <section id="download" class="card">
-      <h2>Download</h2>
-      <p>Download links are available on BOOTH and itch.io.</p>
+      <h2>Download / ダウンロード</h2>
+      <p>
+        Download links are available on BOOTH and itch.io.<br>
+        <span class="jp">BOOTH と itch.io からダウンロードできます。</span>
+      </p>
 
       <div class="buttons">
         <a href="BOOTHのURLをここに入れる">BOOTH</a>
@@ -199,18 +215,26 @@
     </section>
 
     <section id="updates" class="card">
-      <h2>Update Notes</h2>
+      <h2>Update Notes / 更新内容</h2>
       <p>
-        最新版では、テキスト入力翻訳、手入力優先モード、マーク切替表示、
-        README導線の改善などに対応しました。
+        The latest version improves text input translation, manual-input priority mode,
+        message mark display, and README navigation.<br>
+        <span class="jp">
+          最新版では、テキスト入力翻訳、手入力優先モード、マーク切替表示、
+          README導線の改善などに対応しました。
+        </span>
       </p>
     </section>
 
     <section class="card">
-      <h2>About</h2>
+      <h2>About / このツールについて</h2>
       <p>
         VRC Misa Translator supports voice translation, manual text input,
-        OSC Chatbox sending, and multilingual communication in VRChat.
+        OSC Chatbox sending, and multilingual communication in VRChat.<br>
+        <span class="jp">
+          VRC Misa Translator は、音声翻訳、手入力翻訳、OSC Chatbox送信、
+          VRChatでの多言語コミュニケーションをサポートします。
+        </span>
       </p>
     </section>
 
