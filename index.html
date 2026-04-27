@@ -15,13 +15,16 @@ body::before {
   width: 75vw;
   height: 100vh;
 
-  background-color: transparent;
   background-image: url('./img/misa.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
 
-  opacity: 0.14;
+  opacity: 0.16;
+
+  mix-blend-mode: multiply;
+  filter: brightness(0.85) contrast(1.05);
+
   pointer-events: none;
   z-index: 0;
 }
