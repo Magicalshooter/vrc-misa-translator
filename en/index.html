@@ -12,35 +12,11 @@
       color: #e5e7eb;
       line-height: 1.8;
     }
-    main {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 44px 20px;
-    }
-    h1, h2, h3 {
-      color: #f8fafc;
-      line-height: 1.35;
-    }
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      margin-top: 36px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #334155;
-      color: #bfdbfe;
-    }
-    h3 {
-      margin-top: 24px;
-      color: #dbeafe;
-    }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
+    main { max-width: 880px; margin: 0 auto; padding: 44px 20px; }
+    h1, h2, h3 { color: #f8fafc; line-height: 1.35; }
+    h1 { font-size: 2.2rem; margin-bottom: 0.2em; }
+    h2 { margin-top: 36px; padding-bottom: 6px; border-bottom: 1px solid #334155; color: #bfdbfe; }
+    h3 { margin-top: 24px; color: #dbeafe; }
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -48,49 +24,29 @@
       padding: 22px;
       margin: 20px 0;
     }
-    .hero {
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
-    }
-    .tagline {
-      color: #93c5fd;
-      font-size: 1.08rem;
-      margin-top: 0;
-    }
-    ul, ol {
-      padding-left: 1.35em;
-    }
-    li {
-      margin: 0.25em 0;
-    }
+    .hero { border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+    .tagline { color: #93c5fd; font-size: 1.08rem; margin-top: 0; }
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.25em 0; }
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15,23,42,.8);
       border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
     .warning {
-      background: rgba(127, 29, 29, 0.22);
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
     .small {
       color: #94a3b8;
-      font-size: 0.95rem;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 8px 8px 8px 0;
-      padding: 9px 14px;
-      border: 1px solid #60a5fa;
-      border-radius: 12px;
-      color: #dbeafe;
-      text-decoration: none;
-    }
-    .buttons a:hover {
-      background: #1e3a8a;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
     }
   </style>
 </head>
@@ -98,154 +54,96 @@
 <main>
 
 <section class="hero">
-  <h1>✨ VRC Misa Translator v1.10.8</h1>
-  <p class="tagline">Real-time Translation Tool for VRChat</p>
-
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">A real-time translation tool for VRChat</p>
   <p>
-    VRC Misa Translator is a desktop application that translates microphone input
-    or manually typed text and sends it to the VRChat Chatbox.
+    Translate speech or typed text and automatically send it to the VRChat Chatbox.<br>
+    A desktop app designed to make conversations with international friends, event hosting, and multilingual communication smoother.
   </p>
-
-  <p>
-    It helps international communication, multilingual events, and smoother
-    conversations with friends around the world.
-  </p>
-
-  <div class="buttons">
-    <a href="../">Back to Top Page</a>
-  </div>
 </section>
 
 <section class="card">
-  <h2>🚀 Main Features</h2>
-
-  <h3>🎤 Voice Translation</h3>
+  <h2>✨ Main Features</h2>
   <ul>
-    <li>Real-time speech-to-text with Whisper</li>
-    <li>Supports 14 languages</li>
-    <li>Google Translate / ChatGPT translation modes</li>
-    <li>Selectable lightweight to high-quality models</li>
-  </ul>
-
-  <h3>⌨️ Text Input Translation</h3>
-  <ul>
-    <li>Type directly into the source text box</li>
-    <li>Press Enter to translate and send</li>
-    <li>Shift + Enter for new line</li>
-    <li>Auto-clear after sending</li>
-    <li>Pencil icon for manual text input</li>
-  </ul>
-
-  <h3>📡 VRChat Integration</h3>
-  <ul>
-    <li>Sends translated text to VRChat Chatbox via OSC</li>
-    <li>Automatic sending supported</li>
-    <li>Built for multilingual communication</li>
-  </ul>
-
-  <h3>⚙️ UI & Utility Features</h3>
-  <ul>
-    <li>Presets (Standard / Fast / High Quality)</li>
-    <li>Microphone refresh list</li>
-    <li>Blacklist filter</li>
-    <li>Log viewer & filters</li>
-    <li>UI language switch (Japanese / English)</li>
-    <li>README button</li>
-    <li>Update page button</li>
-    <li>License viewer</li>
-  </ul>
-
-  <h3>💰 ChatGPT Usage Tools</h3>
-  <ul>
-    <li>Today's cost display</li>
-    <li>Usage history</li>
-    <li>Usage limit alerts</li>
+    <li>Real-time voice translation</li>
+    <li>Automatic sending to VRChat Chatbox</li>
+    <li>Text input translation</li>
+    <li><strong>Supports 20 languages</strong></li>
+    <li>ChatGPT translation mode</li>
+    <li>Blacklist feature to reduce false recognition</li>
   </ul>
 </section>
 
 <section class="card">
-  <h2>🆕 v1.10.8 Update</h2>
+  <h2>🆕 Recent Improvements</h2>
 
+  <h3>UI Improvements</h3>
   <ul>
-    <li>Improved top menu layout</li>
-    <li>README / Update / License moved to top bar</li>
-    <li>Text-link style top buttons</li>
-    <li>Large model warning popup resized</li>
-    <li>Update window layout fixed</li>
-    <li>Better text input usability</li>
-    <li>Improved language switching stability</li>
-    <li>Various bug fixes and stability improvements</li>
+    <li>Reorganized the top menu</li>
+    <li>Improved placement of README / Update / License</li>
+    <li>Improved high-load model warning window</li>
+    <li>Fixed layout issues on the update page</li>
+  </ul>
+
+  <h3>Usability Improvements</h3>
+  <ul>
+    <li>Improved text input usability</li>
+    <li>Improved input status indicator</li>
+    <li>Stabilized UI language switching</li>
+    <li>Fixed multilingual linkage for the license button</li>
+  </ul>
+
+  <h3>Practical Improvements</h3>
+  <ul>
+    <li>Enhanced the default blacklist contents</li>
+    <li>Fixed minor issues</li>
+    <li>Improved overall stability</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>▶️ Basic Usage</h2>
 
+  <h3>Voice Translation</h3>
   <ol>
     <li>Launch the app</li>
     <li>Select your microphone</li>
-    <li>Choose source and target languages</li>
-    <li>Press Start</li>
+    <li>Set the input language and target language</li>
+    <li>Press the Start button</li>
   </ol>
 
-  <p>
-    Speak into your microphone and translated text will be sent automatically.
-  </p>
-
-  <h3>Text Input</h3>
-
+  <h3>Text Input Translation</h3>
   <ol>
-    <li>Type in the source text box</li>
+    <li>Type into the “Original Text” field at the bottom</li>
     <li>Press Enter to translate and send</li>
   </ol>
 
   <p class="note">
-    Enter = Send<br>
-    Shift + Enter = New Line
+    Enter: send<br>
+    Shift + Enter: new line
   </p>
 </section>
 
 <section class="card">
-  <h2>🎤 Voice Override While Typing</h2>
-
+  <h2>🤖 About ChatGPT Translation</h2>
   <p>
-    In Advanced Settings, you can choose priority between microphone input
-    and manual typing while entering text.
+    ChatGPT translation mode can make conversation text sound more natural.
   </p>
-
   <ul>
-    <li>ON: Voice input can overwrite typed text</li>
-    <li>OFF: Manual typing has priority</li>
-  </ul>
-
-  <p class="note">
-    Recommended OFF when hosting events or when accuracy is important.
-  </p>
-</section>
-
-<section class="card">
-  <h2>🤖 ChatGPT Translation</h2>
-
-  <p>
-    ChatGPT mode can make translations more natural and conversational.
-  </p>
-
-  <ul>
-    <li>Softer expressions</li>
-    <li>Shorter VRChat-friendly phrasing</li>
-    <li>Natural tone adjustments</li>
+    <li>Softer wording</li>
+    <li>Short sentences suitable for conversation</li>
+    <li>Natural nuance adjustment</li>
   </ul>
 
   <p class="warning">
-    Requires an OpenAI API key. Usage is pay-as-you-go.
+    An OpenAI API key is required. ChatGPT translation is billed based on usage.
   </p>
 </section>
 
 <section class="card">
-  <h2>💻 Requirements</h2>
-
+  <h2>💻 System Requirements</h2>
   <ul>
-    <li>Windows PC</li>
+    <li>Windows</li>
     <li>VRChat PC version</li>
     <li>OSC enabled</li>
     <li>Microphone</li>
@@ -253,33 +151,18 @@
   </ul>
 
   <p class="warning">
-    Not available on standalone Quest devices.
+    It does not work on Quest standalone only.
   </p>
 </section>
 
 <section class="card">
-  <h2>🔄 Updating</h2>
-
-  <ul>
-    <li>ZIP version: overwrite files</li>
-    <li>Installer version: reinstall latest version</li>
-  </ul>
-
+  <h2>💌 From the Developer</h2>
   <p>
-    Check the latest version from the update button or download page.
+    Make conversations with international friends more natural.<br>
+    Make events, chats, and interactions more free.
   </p>
-</section>
-
-<section class="card">
-  <h2>💌 From the Creator</h2>
-
   <p>
-    Make conversations with global friends more natural.<br>
-    Make events and communication easier.
-  </p>
-
-  <p>
-    VRC Misa Translator supports new connections in VRChat ✨
+    VRC Misa Translator supports new encounters in VRChat ✨
   </p>
 </section>
 
