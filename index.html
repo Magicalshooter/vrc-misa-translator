@@ -63,38 +63,50 @@
       background: #1e3a8a;
     }
 
-    .language-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 16px;
-    }
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
 
-    .language-grid a {
-      display: block;
-      padding: 11px 14px;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.8);
-      color: #dbeafe;
-      text-decoration: none;
-      font-weight: 700;
-    }
+.language-grid.priority {
+  margin-bottom: 18px;
+}
 
-    .language-grid a:hover {
-      border-color: #60a5fa;
-      background: #1e3a8a;
-    }
+.language-grid a {
+  display: block;
+  padding: 11px 14px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.15s ease;
+}
 
-    .badge {
-      display: inline-block;
-      min-width: 34px;
-      margin-right: 8px;
-      color: #93c5fd;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-    }
+.language-grid a:hover {
+  border-color: #60a5fa;
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.language-grid.priority a {
+  border-color: #60a5fa;
+  background: rgba(30, 58, 138, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  min-width: 34px;
+  margin-right: 8px;
+  color: #93c5fd;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
 
     .small {
       color: #94a3b8;
@@ -123,38 +135,36 @@
       </div>
     </section>
 
-    <section id="readme" class="card">
-      <h2>🌍 README / Guide</h2>
-      <p class="small">Please select your language. / 言語を選択してください。</p>
+<section id="readme" class="card">
+  <h2>🌍 README / Guide</h2>
+  <p class="small">Please select your language. / 言語を選択してください。</p>
 
-      <div class="language-grid">
+  <div class="language-grid priority">
+    <a href="./ja/"><span class="badge">JP</span>日本語</a>
+    <a href="./en/"><span class="badge">EN</span>English</a>
+    <a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
+    <a href="./zh-cn/"><span class="badge">CN</span>简体中文</a>
+    <a href="./ko/"><span class="badge">KR</span>한국어</a>
+  </div>
 
-        <a href="./ja/"><span class="badge">JP</span>日本語</a>
-        <a href="./en/"><span class="badge">EN</span>English</a>
-        <a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
-        <a href="./zh-cn/"><span class="badge">CN</span>简体中文</a>
-        <a href="./ko/"><span class="badge">KR</span>한국어</a>
-
-        <a href="./fr/"><span class="badge">FR</span>Français</a>
-        <a href="./de/"><span class="badge">DE</span>Deutsch</a>
-        <a href="./es/"><span class="badge">ES</span>Español</a>
-        <a href="./it/"><span class="badge">IT</span>Italiano</a>
-        <a href="./pt/"><span class="badge">PT</span>Português</a>
-
-        <a href="./ru/"><span class="badge">RU</span>Русский</a>
-        <a href="./th/"><span class="badge">TH</span>ไทย</a>
-        <a href="./vi/"><span class="badge">VI</span>Tiếng Việt</a>
-        <a href="./id/"><span class="badge">ID</span>Bahasa Indonesia</a>
-        <a href="./nl/"><span class="badge">NL</span>Nederlands</a>
-
-        <a href="./pl/"><span class="badge">PL</span>Polski</a>
-        <a href="./tr/"><span class="badge">TR</span>Türkçe</a>
-        <a href="./uk/"><span class="badge">UA</span>Українська</a>
-        <a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
-        <a href="./ar/"><span class="badge">AR</span>العربية</a>
-
-      </div>
-    </section>
+  <div class="language-grid">
+    <a href="./fr/"><span class="badge">FR</span>Français</a>
+    <a href="./de/"><span class="badge">DE</span>Deutsch</a>
+    <a href="./es/"><span class="badge">ES</span>Español</a>
+    <a href="./it/"><span class="badge">IT</span>Italiano</a>
+    <a href="./pt/"><span class="badge">PT</span>Português</a>
+    <a href="./ru/"><span class="badge">RU</span>Русский</a>
+    <a href="./th/"><span class="badge">TH</span>ไทย</a>
+    <a href="./vi/"><span class="badge">VI</span>Tiếng Việt</a>
+    <a href="./id/"><span class="badge">ID</span>Bahasa Indonesia</a>
+    <a href="./nl/"><span class="badge">NL</span>Nederlands</a>
+    <a href="./pl/"><span class="badge">PL</span>Polski</a>
+    <a href="./tr/"><span class="badge">TR</span>Türkçe</a>
+    <a href="./uk/"><span class="badge">UA</span>Українська</a>
+    <a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
+    <a href="./ar/"><span class="badge">AR</span>العربية</a>
+  </div>
+</section>
 
     <section id="download" class="card">
       <h2>Download</h2>
