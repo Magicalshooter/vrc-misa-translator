@@ -6,14 +6,18 @@
   <title>VRC Misa Translator</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #0f172a, #111827);
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
-
+    body::before {
+  content: "";
+  position: fixed;
+  right: -80px;
+  bottom: -20px;
+  width: 620px;
+  height: 620px;
+  background: url('./img/misa.png') no-repeat center/contain;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
     .wrap {
       max-width: 880px;
       margin: 0 auto;
