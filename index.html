@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VRC Misa Translator</title>
+
   <style>
     body {
       margin: 0;
@@ -12,11 +13,13 @@
       color: #e5e7eb;
       line-height: 1.7;
     }
+
     .wrap {
       max-width: 880px;
       margin: 0 auto;
       padding: 48px 20px;
     }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -24,22 +27,27 @@
       padding: 24px;
       margin: 20px 0;
     }
+
     .hero {
       box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
+
     h1 {
       font-size: 2.4rem;
       margin: 0 0 8px;
     }
+
     h2 {
       color: #bfdbfe;
       margin-top: 0;
     }
+
     .tagline {
       color: #93c5fd;
       font-size: 1.1rem;
       margin-bottom: 22px;
     }
+
     .buttons a {
       display: inline-block;
       margin: 8px 8px 8px 0;
@@ -50,15 +58,18 @@
       text-decoration: none;
       font-weight: 700;
     }
+
     .buttons a:hover {
       background: #1e3a8a;
     }
+
     .language-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 10px;
       margin-top: 16px;
     }
+
     .language-grid a {
       display: block;
       padding: 11px 14px;
@@ -69,18 +80,33 @@
       text-decoration: none;
       font-weight: 700;
     }
+
     .language-grid a:hover {
       border-color: #60a5fa;
       background: #1e3a8a;
     }
+
+    .badge {
+      display: inline-block;
+      min-width: 34px;
+      margin-right: 8px;
+      color: #93c5fd;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
     .small {
       color: #94a3b8;
       font-size: .95rem;
     }
+
   </style>
 </head>
+
 <body>
   <main class="wrap">
+
     <section class="hero">
       <h1>VRC Misa Translator</h1>
       <p class="tagline">Real-time Translation Tool for VRChat</p>
@@ -102,33 +128,38 @@
       <p class="small">Please select your language. / 言語を選択してください。</p>
 
       <div class="language-grid">
-       <div class="language-grid">
-　　　　  <a href="./ja/">🇯🇵 日本語</a>
-　　　　  <a href="./en/">🇺🇸 English</a>
-　　　　  <a href="./zh-tw/">🇹🇼 繁體中文</a>
-　　　　  <a href="./zh-cn/">🇨🇳 简体中文</a>
-　　　　  <a href="./ko/">🇰🇷 한국어</a>
-　　　　  <a href="./fr/">🇫🇷 Français</a>
-　　　　  <a href="./de/">🇩🇪 Deutsch</a>
-　　　　  <a href="./es/">🇪🇸 Español</a>
-　　　　  <a href="./it/">🇮🇹 Italiano</a>
-　　　　  <a href="./pt/">🇵🇹 Português</a>
-　　　　  <a href="./ru/">🇷🇺 Русский</a>
-　　　　  <a href="./th/">🇹🇭 ไทย</a>
-　　　　  <a href="./vi/">🇻🇳 Tiếng Việt</a>
-　　　　  <a href="./id/">🇮🇩 Bahasa Indonesia</a>
-　　　　  <a href="./nl/">🇳🇱 Nederlands</a>
-　　　　  <a href="./pl/">🇵🇱 Polski</a>
-　　　　  <a href="./tr/">🇹🇷 Türkçe</a>
-　　　　  <a href="./uk/">🇺🇦 Українська</a>
-　　　　  <a href="./hi/">🇮🇳 हिन्दी</a>
-　　　　  <a href="./ar/">🇸🇦 العربية</a>
-　　　　</div>
+
+        <a href="./ja/"><span class="badge">JP</span>日本語</a>
+        <a href="./en/"><span class="badge">EN</span>English</a>
+        <a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
+        <a href="./zh-cn/"><span class="badge">CN</span>简体中文</a>
+        <a href="./ko/"><span class="badge">KR</span>한국어</a>
+
+        <a href="./fr/"><span class="badge">FR</span>Français</a>
+        <a href="./de/"><span class="badge">DE</span>Deutsch</a>
+        <a href="./es/"><span class="badge">ES</span>Español</a>
+        <a href="./it/"><span class="badge">IT</span>Italiano</a>
+        <a href="./pt/"><span class="badge">PT</span>Português</a>
+
+        <a href="./ru/"><span class="badge">RU</span>Русский</a>
+        <a href="./th/"><span class="badge">TH</span>ไทย</a>
+        <a href="./vi/"><span class="badge">VI</span>Tiếng Việt</a>
+        <a href="./id/"><span class="badge">ID</span>Bahasa Indonesia</a>
+        <a href="./nl/"><span class="badge">NL</span>Nederlands</a>
+
+        <a href="./pl/"><span class="badge">PL</span>Polski</a>
+        <a href="./tr/"><span class="badge">TR</span>Türkçe</a>
+        <a href="./uk/"><span class="badge">UA</span>Українська</a>
+        <a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
+        <a href="./ar/"><span class="badge">AR</span>العربية</a>
+
+      </div>
     </section>
 
     <section id="download" class="card">
       <h2>Download</h2>
       <p>Download links are available on BOOTH and itch.io.</p>
+
       <div class="buttons">
         <a href="BOOTHのURLをここに入れる">BOOTH</a>
         <a href="itch.ioのURLをここに入れる">itch.io</a>
@@ -152,6 +183,7 @@
     </section>
 
     <p class="small">© Misa / VRC Misa Translator</p>
+
   </main>
 </body>
 </html>
