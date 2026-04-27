@@ -17,8 +17,6 @@
     h1 { font-size: 2.2rem; margin-bottom: 0.2em; }
     h2 { margin-top: 36px; padding-bottom: 6px; border-bottom: 1px solid #334155; color: #bfdbfe; }
     h3 { margin-top: 24px; color: #dbeafe; }
-    a { color: #93c5fd; text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; }
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -32,214 +30,139 @@
     li { margin: 0.25em 0; }
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15,23,42,.8);
       border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
     .warning {
-      background: rgba(127, 29, 29, 0.22);
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
-    .small { color: #94a3b8; font-size: 0.95rem; }
-    .buttons a {
-      display: inline-block;
-      margin: 8px 8px 8px 0;
-      padding: 9px 14px;
-      border: 1px solid #60a5fa;
-      border-radius: 12px;
-      color: #dbeafe;
-      text-decoration: none;
+    .small {
+      color: #94a3b8;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
     }
-    .buttons a:hover { background: #1e3a8a; }
   </style>
 </head>
 <body>
 <main>
 
 <section class="hero">
-  <h1>✨ VRC Misa Translator v1.10.8</h1>
+  <h1>VRC Misa Translator</h1>
   <p class="tagline">VRChat 实时翻译工具</p>
-
   <p>
-    VRC Misa Translator 是一款桌面应用程序，可以将麦克风语音或手动输入的文字翻译后，
-    发送到 VRChat 的 Chatbox。
+    可翻译语音或输入文本，并自动发送到 VRChat Chatbox。<br>
+    这是一款让海外好友交流、活动主持、多语言沟通更加顺畅的桌面应用程序。
   </p>
-
-  <p>
-    适合用于与海外朋友聊天、活动主持、多语言交流等场景。
-  </p>
-
-  <div class="buttons">
-    <a href="../">返回首页</a>
-  </div>
 </section>
 
 <section class="card">
-  <h2>🚀 主要功能</h2>
-
-  <h3>🎤 语音翻译</h3>
+  <h2>✨ 主要功能</h2>
   <ul>
-    <li>使用 Whisper 进行实时语音识别</li>
-    <li>支持 14 种语言</li>
-    <li>支持 Google 翻译 / ChatGPT 翻译模式</li>
-    <li>可选择轻量模型到高精度模型</li>
-  </ul>
-
-  <h3>⌨️ 文本输入翻译</h3>
-  <ul>
-    <li>可直接在原文输入框中输入文字</li>
-    <li>按 Enter 即可翻译并发送</li>
-    <li>Shift + Enter 可换行</li>
-    <li>发送后自动清空文字</li>
-    <li>手动输入时会显示铅笔图标</li>
-  </ul>
-
-  <h3>📡 VRChat 联动</h3>
-  <ul>
-    <li>通过 OSC 将翻译文字发送到 VRChat Chatbox</li>
-    <li>支持自动发送</li>
-    <li>帮助进行多语言交流</li>
-  </ul>
-
-  <h3>⚙️ UI 与便利功能</h3>
-  <ul>
-    <li>翻译预设模式（标准 / 快速 / 高质量）</li>
-    <li>麦克风列表更新</li>
-    <li>误识别黑名单功能</li>
-    <li>日志显示与筛选</li>
-    <li>UI 语言切换（日语 / English）</li>
-    <li>README 按钮</li>
-    <li>更新页面按钮</li>
-    <li>许可证信息显示</li>
-  </ul>
-
-  <h3>💰 ChatGPT 使用量管理</h3>
-  <ul>
-    <li>显示当天使用金额</li>
-    <li>查看使用记录</li>
-    <li>使用量警告功能</li>
+    <li>实时语音翻译</li>
+    <li>自动发送到 VRChat Chatbox</li>
+    <li>文本输入翻译</li>
+    <li><strong>支持 20 种语言</strong></li>
+    <li>ChatGPT 翻译模式</li>
+    <li>减少误识别的黑名单功能</li>
   </ul>
 </section>
 
 <section class="card">
-  <h2>🆕 v1.10.8 更新内容</h2>
+  <h2>🆕 最近更新</h2>
 
+  <h3>UI 改进</h3>
   <ul>
-    <li>改善顶部菜单布局</li>
-    <li>将 README / 更新 / 许可证 按钮移动到顶部</li>
-    <li>顶部按钮改为文字链接风格</li>
-    <li>调整高负载模型警告窗口大小</li>
-    <li>修复更新页面窗口显示问题</li>
-    <li>改善文本输入功能的使用体验</li>
+    <li>重新整理顶部菜单</li>
+    <li>优化 README / 更新 / 许可证布局</li>
+    <li>改进高负载模型警告窗口</li>
+    <li>修复更新页面显示问题</li>
+  </ul>
+
+  <h3>操作体验提升</h3>
+  <ul>
+    <li>改进文本输入功能</li>
+    <li>优化输入状态标记</li>
     <li>提升 UI 语言切换稳定性</li>
-    <li>修复多项小问题并提升稳定性</li>
+    <li>修复许可证按钮多语言联动</li>
+  </ul>
+
+  <h3>实用改进</h3>
+  <ul>
+    <li>强化黑名单默认内容</li>
+    <li>修复细小问题</li>
+    <li>提升整体稳定性</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>▶️ 基本使用方法</h2>
 
+  <h3>语音翻译</h3>
   <ol>
     <li>启动应用程序</li>
     <li>选择麦克风</li>
-    <li>设置输入语言与翻译目标语言</li>
-    <li>点击“开始”</li>
+    <li>设置输入语言与目标语言</li>
+    <li>点击开始按钮</li>
   </ol>
 
-  <p>
-    对着麦克风说话后，翻译文字会自动发送到 VRChat Chatbox。
-  </p>
-
-  <h3>文本输入</h3>
-
+  <h3>文本输入翻译</h3>
   <ol>
-    <li>在原文输入框中输入文字</li>
+    <li>在下方“原文”栏输入文字</li>
     <li>按 Enter 翻译并发送</li>
   </ol>
 
   <p class="note">
-    Enter = 发送<br>
-    Shift + Enter = 换行
+    Enter：发送<br>
+    Shift + Enter：换行
   </p>
 </section>
 
 <section class="card">
-  <h2>🎤 输入文字时的语音覆盖</h2>
-
+  <h2>🤖 关于 ChatGPT 翻译</h2>
   <p>
-    在高级设置中，可以切换麦克风语音输入与手动文本输入的优先顺序。
+    使用 ChatGPT 翻译模式，可让对话内容更加自然。
   </p>
-
   <ul>
-    <li>ON：输入文字时，语音输入仍可覆盖内容</li>
-    <li>OFF：手动输入优先，输入中会忽略语音输入</li>
-  </ul>
-
-  <p class="note">
-    如果正在主持活动，或需要更准确的翻译，建议关闭此功能并使用手动输入。
-  </p>
-</section>
-
-<section class="card">
-  <h2>🤖 ChatGPT 翻译</h2>
-
-  <p>
-    使用 ChatGPT 翻译模式，可以让翻译内容更自然、更接近日常对话。
-  </p>
-
-  <ul>
-    <li>更柔和的语气</li>
-    <li>适合 VRChat 的短句表达</li>
-    <li>自然的语感调整</li>
+    <li>更柔和的表达方式</li>
+    <li>适合对话的短句</li>
+    <li>自然的语气调整</li>
   </ul>
 
   <p class="warning">
-    需要 OpenAI API Key。ChatGPT 翻译采用按量计费。
+    需要 OpenAI API Key。ChatGPT 翻译按使用量计费。
   </p>
 </section>
 
 <section class="card">
   <h2>💻 系统需求</h2>
-
   <ul>
-    <li>Windows PC</li>
-    <li>VRChat PC 版</li>
-    <li>启用 OSC</li>
+    <li>Windows</li>
+    <li>VRChat（PC版）</li>
+    <li>已启用 OSC</li>
     <li>麦克风</li>
     <li>网络连接</li>
   </ul>
 
   <p class="warning">
-    无法在 Quest 单机模式下使用。
-  </p>
-</section>
-
-<section class="card">
-  <h2>🔄 更新方式</h2>
-
-  <ul>
-    <li>ZIP 版：覆盖文件</li>
-    <li>安装版：重新安装最新版</li>
-  </ul>
-
-  <p>
-    可通过应用程序中的更新按钮或下载页面确认最新版。
+    Quest 单机模式无法使用。
   </p>
 </section>
 
 <section class="card">
   <h2>💌 作者的话</h2>
-
   <p>
-    让你与世界各地朋友的对话更加自然。<br>
-    让活动与交流更加轻松。
+    让与海外朋友的交流更加自然。<br>
+    让活动、聊天与互动更加自由。
   </p>
-
   <p>
-    VRC Misa Translator 希望能帮助你在 VRChat 中建立更多新的连接 ✨
+    VRC Misa Translator 支持你在 VRChat 中开启新的相遇 ✨
   </p>
 </section>
 
