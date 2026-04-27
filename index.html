@@ -63,6 +63,11 @@ p{
   color:#e5e7eb;
 }
 
+a{
+  color:#e5e7eb;
+  text-decoration:none;
+}
+
 .tagline{
   color:#93c5fd;
   font-size:1.1rem;
@@ -84,6 +89,64 @@ ul{
 
 li{
   margin:.45em 0;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+.buttons a{
+  padding:10px 16px;
+  border:1px solid #3b82f6;
+  border-radius:12px;
+  background:rgba(30,41,59,.7);
+  color:#f8fafc;
+  font-weight:700;
+  transition:.15s;
+}
+
+.buttons a:hover{
+  background:#2563eb;
+}
+
+.language-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+  margin-top:18px;
+}
+
+.language-grid a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  border:1px solid #334155;
+  border-radius:14px;
+  background:rgba(15,23,42,.65);
+  color:#f8fafc;
+  font-weight:700;
+}
+
+.language-grid a:hover{
+  border-color:#60a5fa;
+  background:rgba(30,41,59,.9);
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#1d4ed8;
+  color:white;
+  font-size:.82rem;
+  font-weight:800;
 }
 
 .appshot{
@@ -212,7 +275,7 @@ VRC Misa Translator の今後の開発予定です。
 <li>Speech Recognition Correction / 音声認識結果の校正機能</li>
 <li>More Translation Styles / 文体選択肢の追加</li>
 <li>Automatic Language Detection / 話者の言語自動推定</li>
-<li>GPU Accelerated Version / GPU版の開発</li>
+<li>GPU (CUDA) Version / GPU（CUDA）版の開発</li>
 <li>More to come...</li>
 </ul>
 </section>
