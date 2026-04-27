@@ -13,6 +13,21 @@
       color: #e5e7eb;
       line-height: 1.8;
     }
+
+  body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('./img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
+  
     main {
       max-width: 880px;
       margin: 0 auto;
