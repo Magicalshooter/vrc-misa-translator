@@ -1,12 +1,134 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>VRC Misa Translator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+    .hero {
+      padding: 32px;
+      border: 1px solid #334155;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.78);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin: 0 0 8px;
+    }
+    h2 {
+      margin-top: 32px;
+      color: #bfdbfe;
+    }
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 8px 8px 8px 0;
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 1px solid #60a5fa;
+      color: #dbeafe;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .buttons a:hover {
+      background: #1e3a8a;
+    }
+    .card {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #334155;
+      border-radius: 18px;
+      background: rgba(17, 24, 39, 0.85);
+    }
+    ul {
+      padding-left: 1.3em;
+    }
+    .small {
+      color: #94a3b8;
+      font-size: .95rem;
+    }
+  </style>
 </head>
-<body style="background:#0f172a;color:white;font-family:sans-serif;padding:40px;">
-<h1>VRC Misa Translator</h1>
-<p>Official Guide Page</p>
-<p>Coming Soon...</p>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>VRC Misa Translator</h1>
+      <p class="tagline">VRChat用リアルタイム翻訳ツール</p>
+
+      <p>
+        VRC Misa Translator は、音声入力やテキスト入力を翻訳し、
+        VRChat の Chatbox へ送信できるデスクトップアプリです。
+      </p>
+
+      <div class="buttons">
+        <a href="#readme">README / Guide</a>
+        <a href="#download">Download</a>
+        <a href="#updates">Update Notes</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Features</h2>
+      <ul>
+        <li>14か国語対応</li>
+        <li>音声入力翻訳</li>
+        <li>テキスト入力翻訳</li>
+        <li>VRChat Chatbox への OSC 送信</li>
+        <li>ChatGPT翻訳モード対応</li>
+        <li>使用金額表示・アラート機能</li>
+      </ul>
+    </section>
+
+    <section id="readme" class="card">
+      <h2>README / Guide</h2>
+      <p class="small">各言語のREADMEページは順次追加予定です。</p>
+      <div class="buttons">
+        <a href="./ja/">日本語 README</a>
+        <a href="./en/">English README</a>
+        <a href="./zh-tw/">繁體中文 README</a>
+        <a href="./zh-cn/">简体中文 README</a>
+        <a href="./ko/">한국어 README</a>
+      </div>
+    </section>
+
+    <section id="download" class="card">
+      <h2>Download</h2>
+      <p>
+        配布ページは BOOTH / itch.io にて公開予定です。
+      </p>
+      <div class="buttons">
+        <a href="#">BOOTH</a>
+        <a href="#">itch.io</a>
+      </div>
+    </section>
+
+    <section id="updates" class="card">
+      <h2>Update Notes</h2>
+      <p>
+        最新版では、テキスト入力翻訳、手入力優先モード、マーク切替表示などに対応しました。
+      </p>
+    </section>
+
+    <p class="small">
+      © Misa / VRC Misa Translator
+    </p>
+  </main>
 </body>
 </html>
