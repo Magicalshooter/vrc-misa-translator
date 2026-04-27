@@ -1,245 +1,259 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VRC Misa Translator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRC Misa Translator</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #0f172a, #111827);
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
+<style>
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:linear-gradient(180deg,#0f172a,#111827);
+  color:#e5e7eb;
+  line-height:1.7;
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      right: -40px;
-      bottom: 0;
-      width: 75vw;
-      height: 100vh;
-      background-image: url('./img/misa.png');
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-size: contain;
-      opacity: 0.8;
-      pointer-events: none;
-      z-index: 0;
-    }
+body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('./img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
 
-    .wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 48px 20px;
-    }
+.wrap{
+  position:relative;
+  z-index:1;
+  max-width:880px;
+  margin:0 auto;
+  padding:48px 20px;
+}
 
-    .hero, .card {
-      background: rgba(17, 24, 39, 0.86);
-      border: 1px solid #334155;
-      border-radius: 22px;
-      padding: 24px;
-      margin: 20px 0;
-    }
+.hero,.card{
+  background:rgba(17,24,39,.86);
+  border:1px solid #334155;
+  border-radius:22px;
+  padding:24px;
+  margin:20px 0;
+}
 
-    .hero {
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
-    }
+.hero{
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
 
-    h1 {
-      color: #f8fafc;
-      font-size: 2.4rem;
-      margin: 0 0 8px;
-    }
+h1{
+  color:#f8fafc;
+  font-size:2.4rem;
+  margin:0 0 8px;
+}
 
-    h2 {
-      color: #bfdbfe;
-      margin-top: 0;
-    }
+h2{
+  color:#bfdbfe;
+  margin-top:0;
+}
 
-    p {
-      color: #e5e7eb;
-    }
+p{
+  color:#e5e7eb;
+}
 
-    .tagline {
-      color: #93c5fd;
-      font-size: 1.1rem;
-      margin-bottom: 22px;
-    }
+.tagline{
+  color:#93c5fd;
+  font-size:1.1rem;
+  margin-bottom:16px;
+}
 
-    .jp {
-      color: #cbd5e1;
-    }
+.jp{
+  color:#cbd5e1;
+}
 
-    .buttons a {
-      display: inline-block;
-      margin: 8px 8px 8px 0;
-      padding: 10px 15px;
-      border-radius: 12px;
-      border: 1px solid #60a5fa;
-      color: #dbeafe;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.15s ease;
-    }
+.hero-badge{
+  color:#93c5fd;
+  font-size:1.1rem;
+  font-weight:800;
+  margin:14px 0 8px;
+}
 
-    .buttons a:hover {
-      background: #1e3a8a;
-      transform: translateY(-2px);
-    }
+.hero-features{
+  color:#dbeafe;
+  font-weight:700;
+  margin-bottom:18px;
+}
 
-    .language-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 16px;
-    }
+.buttons a{
+  display:inline-block;
+  margin:8px 8px 8px 0;
+  padding:10px 15px;
+  border-radius:12px;
+  border:1px solid #60a5fa;
+  color:#dbeafe;
+  text-decoration:none;
+  font-weight:700;
+  transition:.15s ease;
+}
 
-    .language-grid.priority {
-      margin-bottom: 18px;
-    }
+.buttons a:hover{
+  background:#1e3a8a;
+  transform:translateY(-2px);
+}
 
-    .language-grid a {
-      display: block;
-      padding: 11px 14px;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.8);
-      color: #dbeafe;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.15s ease;
-    }
+.language-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:10px;
+  margin-top:16px;
+}
 
-    .language-grid a:hover {
-      border-color: #60a5fa;
-      background: #1e3a8a;
-      transform: translateY(-2px);
-    }
+.language-grid.priority{
+  margin-bottom:18px;
+}
 
-    .language-grid.priority a {
-      border-color: #60a5fa;
-      background: rgba(30, 58, 138, 0.35);
-    }
+.language-grid a{
+  display:block;
+  padding:11px 14px;
+  border:1px solid #334155;
+  border-radius:12px;
+  background:rgba(15,23,42,.8);
+  color:#dbeafe;
+  text-decoration:none;
+  font-weight:700;
+  transition:.15s ease;
+}
 
-    .badge {
-      display: inline-block;
-      min-width: 34px;
-      margin-right: 8px;
-      color: #93c5fd;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-    }
+.language-grid a:hover{
+  border-color:#60a5fa;
+  background:#1e3a8a;
+  transform:translateY(-2px);
+}
 
-    .small {
-      color: #cbd5e1;
-      font-size: .95rem;
-    }
-  </style>
+.language-grid.priority a{
+  border-color:#60a5fa;
+  background:rgba(30,58,138,.35);
+}
+
+.badge{
+  display:inline-block;
+  min-width:34px;
+  margin-right:8px;
+  color:#93c5fd;
+  font-size:.82rem;
+  font-weight:800;
+}
+
+.small{
+  color:#cbd5e1;
+  font-size:.95rem;
+}
+</style>
 </head>
 
 <body>
-  <main class="wrap">
+<main class="wrap">
 
-    <section class="hero">
-      <h1>VRC Misa Translator</h1>
-      <p class="tagline">
-        Real-time Translation Tool for VRChat<br>
-        <span class="jp">VRChat用リアルタイム翻訳ツール</span>
-      </p>
+<section class="hero">
+<h1>VRC Misa Translator</h1>
 
-      <p>
-        VRC Misa Translator is a desktop app that translates voice input or typed text
-        and sends it to the VRChat Chatbox.<br>
-        <span class="jp">
-          VRC Misa Translator は、音声入力やテキスト入力を翻訳し、
-          VRChat の Chatbox へ送信できるデスクトップアプリです。
-        </span>
-      </p>
+<p class="tagline">
+Real-time Translation Tool for VRChat<br>
+<span class="jp">VRChat用リアルタイム翻訳ツール</span>
+</p>
 
-      <div class="buttons">
-        <a href="#readme">README</a>
-        <a href="#download">Download</a>
-        <a href="#updates">Update Notes / 更新内容</a>
-      </div>
-    </section>
+<p class="hero-badge">
+🌍 Supports 20 Languages<br>
+<span class="jp">20言語対応</span>
+</p>
 
-    <section id="readme" class="card">
-      <h2>🌍 README</h2>
-      <p class="small">20 Languages Supported / 20言語対応</p>
-      <p class="small">Please select your language. / 言語を選択してください。</p>
+<p class="hero-features">
+🎤 Voice Input / ⌨ Text Input / 💬 OSC Chatbox
+</p>
 
-      <div class="language-grid priority">
-        <a href="./ja/"><span class="badge">JP</span>日本語</a>
-        <a href="./en/"><span class="badge">EN</span>English</a>
-        <a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
-        <a href="./zh-cn/"><span class="badge">CN</span>简体中文</a>
-        <a href="./ko/"><span class="badge">KR</span>한국어</a>
-      </div>
+<p>
+VRC Misa Translator is a desktop app that translates voice input or typed text and sends it directly to the VRChat Chatbox.<br>
+<span class="jp">
+音声入力・テキスト入力を翻訳し、VRChat Chatboxへ送信できるデスクトップアプリです。
+</span>
+</p>
 
-      <div class="language-grid">
-        <a href="./fr/"><span class="badge">FR</span>Français</a>
-        <a href="./de/"><span class="badge">DE</span>Deutsch</a>
-        <a href="./es/"><span class="badge">ES</span>Español</a>
-        <a href="./it/"><span class="badge">IT</span>Italiano</a>
-        <a href="./pt/"><span class="badge">PT</span>Português</a>
-        <a href="./ru/"><span class="badge">RU</span>Русский</a>
-        <a href="./th/"><span class="badge">TH</span>ไทย</a>
-        <a href="./vi/"><span class="badge">VI</span>Tiếng Việt</a>
-        <a href="./id/"><span class="badge">ID</span>Bahasa Indonesia</a>
-        <a href="./nl/"><span class="badge">NL</span>Nederlands</a>
-        <a href="./pl/"><span class="badge">PL</span>Polski</a>
-        <a href="./tr/"><span class="badge">TR</span>Türkçe</a>
-        <a href="./uk/"><span class="badge">UA</span>Українська</a>
-        <a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
-        <a href="./ar/"><span class="badge">AR</span>العربية</a>
-      </div>
-    </section>
+<div class="buttons">
+<a href="#readme">README</a>
+<a href="#download">Download</a>
+<a href="#updates">Update Notes / 更新内容</a>
+</div>
+</section>
 
-    <section id="download" class="card">
-      <h2>Download</h2>
-      <p>
-        Download links are available on BOOTH and itch.io.<br>
-        <span class="jp">BOOTH と itch.io からダウンロードできます。</span>
-      </p>
+<section id="readme" class="card">
+<h2>🌍 README</h2>
+<p class="small">20 Languages Supported / 20言語対応</p>
+<p class="small">Please select your language. / 言語を選択してください。</p>
 
-      <div class="buttons">
-        <a href="BOOTHのURLをここに入れる">BOOTH</a>
-        <a href="itch.ioのURLをここに入れる">itch.io</a>
-      </div>
-    </section>
+<div class="language-grid priority">
+<a href="./ja/"><span class="badge">JP</span>日本語</a>
+<a href="./en/"><span class="badge">EN</span>English</a>
+<a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
+<a href="./zh-cn/"><span class="badge">CN</span>简体中文</a>
+<a href="./ko/"><span class="badge">KR</span>한국어</a>
+</div>
 
-    <section id="updates" class="card">
-      <h2>Update Notes / 更新内容</h2>
-      <p>
-        The latest version improves text input translation, manual-input priority mode,
-        message mark display, and README navigation.<br>
-        <span class="jp">
-          最新版では、テキスト入力翻訳、手入力優先モード、マーク切替表示、
-          README導線の改善などに対応しました。
-        </span>
-      </p>
-    </section>
+<div class="language-grid">
+<a href="./fr/"><span class="badge">FR</span>Français</a>
+<a href="./de/"><span class="badge">DE</span>Deutsch</a>
+<a href="./es/"><span class="badge">ES</span>Español</a>
+<a href="./it/"><span class="badge">IT</span>Italiano</a>
+<a href="./pt/"><span class="badge">PT</span>Português</a>
+<a href="./ru/"><span class="badge">RU</span>Русский</a>
+<a href="./th/"><span class="badge">TH</span>ไทย</a>
+<a href="./vi/"><span class="badge">VI</span>Tiếng Việt</a>
+<a href="./id/"><span class="badge">ID</span>Bahasa Indonesia</a>
+<a href="./nl/"><span class="badge">NL</span>Nederlands</a>
+<a href="./pl/"><span class="badge">PL</span>Polski</a>
+<a href="./tr/"><span class="badge">TR</span>Türkçe</a>
+<a href="./uk/"><span class="badge">UA</span>Українська</a>
+<a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
+<a href="./ar/"><span class="badge">AR</span>العربية</a>
+</div>
+</section>
 
-    <section class="card">
-      <h2>About / このツールについて</h2>
-      <p>
-        VRC Misa Translator supports voice translation, manual text input,
-        OSC Chatbox sending, and multilingual communication in VRChat.<br>
-        <span class="jp">
-          VRC Misa Translator は、音声翻訳、手入力翻訳、OSC Chatbox送信、
-          VRChatでの多言語コミュニケーションをサポートします。
-        </span>
-      </p>
-    </section>
+<section id="download" class="card">
+<h2>Download</h2>
+<p>
+Download links are available on BOOTH and itch.io.<br>
+<span class="jp">BOOTH と itch.io からダウンロードできます。</span>
+</p>
 
-    <p class="small">© Misa / VRC Misa Translator</p>
+<div class="buttons">
+<a href="BOOTHのURLをここに入れる">BOOTH</a>
+<a href="itch.ioのURLをここに入れる">itch.io</a>
+</div>
+</section>
 
-  </main>
+<section id="updates" class="card">
+<h2>Update Notes / 更新内容</h2>
+<p>
+The latest version improves text input translation, manual-input priority mode, message mark display, and README navigation.<br>
+<span class="jp">
+最新版では、テキスト入力翻訳、手入力優先モード、マーク切替表示、README導線の改善などに対応しました。
+</span>
+</p>
+</section>
+
+<section class="card">
+<h2>About / このツールについて</h2>
+<p>
+VRC Misa Translator supports voice translation, manual text input, OSC Chatbox sending, and multilingual communication in VRChat.<br>
+<span class="jp">
+VRC Misa Translator は、音声翻訳、手入力翻訳、OSC Chatbox送信、VRChatでの多言語コミュニケーションをサポートします。
+</span>
+</p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
 </body>
 </html>
