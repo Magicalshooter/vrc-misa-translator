@@ -13,51 +13,50 @@
       line-height: 1.8;
     }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
     h1, h2, h3 {
       color: #f8fafc;
       line-height: 1.35;
     }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.2em;
     }
+
     h2 {
       margin-top: 36px;
       padding-bottom: 6px;
       border-bottom: 1px solid #334155;
       color: #bfdbfe;
     }
+
     h3 {
       margin-top: 24px;
       color: #dbeafe;
     }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -65,38 +64,43 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
+
     .hero {
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
+
     .tagline {
       color: #93c5fd;
       font-size: 1.08rem;
       margin-top: 0;
     }
+
     ul, ol {
       padding-left: 1.35em;
     }
+
     li {
       margin: 0.25em 0;
     }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
-      background: rgba(127, 29, 29, 0.22);
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
-      font-size: 0.9rem;
+      font-size: .9rem;
       text-align: center;
       margin-top: 32px;
     }
@@ -104,113 +108,159 @@ main {
 </head>
 <body>
 <main>
-  <section class="hero">
-    <h1>VRC Misa Translator</h1>
-    <p class="tagline">
-      เครื่องมือแปลภาษาแบบเรียลไทม์สำหรับ VRChat
-    </p>
-    <p>
-      แปลเสียงพูดหรือข้อความของคุณ และส่งไปยัง Chatbox ของ VRChat โดยอัตโนมัติ
-      ช่วยให้การสื่อสารกับเพื่อนต่างประเทศเป็นธรรมชาติมากขึ้น
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>✨ ฟังก์ชันหลัก</h2>
-    <ul>
-      <li>แปลเสียงพูดแบบเรียลไทม์</li>
-      <li>ส่งไปยัง VRChat Chatbox อัตโนมัติ</li>
-      <li>แปลจากการพิมพ์ข้อความ</li>
-      <li>รองรับหลายภาษา</li>
-      <li>โหมดแปลด้วย ChatGPT</li>
-      <li>ระบบ Blacklist ลดการรู้จำผิดพลาด</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">เครื่องมือแปลภาษาแบบเรียลไทม์สำหรับ VRChat</p>
+  <p>
+    แปลเสียงหรือข้อความ และส่งผลลัพธ์ไปยัง VRChat Chatbox โดยอัตโนมัติ<br>
+    เป็นแอปเดสก์ท็อปที่ช่วยให้การสื่อสารกับเพื่อนต่างชาติ การจัดอีเวนต์ และการพูดคุยหลายภาษาเป็นไปอย่างราบรื่น
+  </p>
+</section>
 
-  <section class="card">
-    <h2>🆕 การปรับปรุงล่าสุด</h2>
-    <h3>ปรับปรุงการใช้งานจริง</h3>
-    <ul>
-      <li>ปรับปรุงรายการเริ่มต้นของ Blacklist</li>
-      <li>แก้ไขข้อผิดพลาดเล็กน้อย</li>
-      <li>เพิ่มความเสถียรโดยรวม</li>
-    </ul>
-  </section>
+<section class="card">
+  <h2>✨ ฟีเจอร์หลัก</h2>
+  <ul>
+    <li>แปลเสียงแบบเรียลไทม์</li>
+    <li>ส่งไปยัง VRChat Chatbox อัตโนมัติ</li>
+    <li>แปลข้อความที่พิมพ์</li>
+    <li><strong>รองรับ 20 ภาษา</strong></li>
+    <li>การแปลแบบเป็นธรรมชาติ (โหมด ChatGPT)</li>
+    <li>ฟังก์ชันแบล็คลิสต์เพื่อลดความผิดพลาดของการรู้จำเสียง</li>
+  </ul>
+</section>
 
-  <section class="card">
-    <h2>▶️ วิธีใช้งานพื้นฐาน</h2>
+<section class="card">
+  <h2>🆕 อัปเดต v1.9.26 → v1.11.1</h2>
 
-    <h3>การแปลด้วยเสียง</h3>
-    <ol>
-      <li>เปิดแอปพลิเคชัน</li>
-      <li>เลือกไมโครโฟน</li>
-      <li>ตั้งค่าภาษาต้นทางและภาษาปลายทาง</li>
-      <li>กด “เริ่ม”</li>
-    </ol>
-    <p>
-      เมื่อคุณพูด ระบบจะแปลอัตโนมัติและส่งไปยัง VRChat Chatbox
-    </p>
+  <h3>✨ ฟีเจอร์ใหม่</h3>
+  <ul>
+    <li>เพิ่มฟีเจอร์ “ส่งข้อความต้นฉบับไปยังแบล็คลิสต์” แบบคลิกเดียว</li>
+    <li>ปรับปรุงการแปลแบบเป็นธรรมชาติ (โหมด ChatGPT)</li>
+    <li>รองรับ tooltip หลายภาษา</li>
+  </ul>
 
-    <h3>การแปลด้วยข้อความ</h3>
-    <ol>
-      <li>พิมพ์ลงในช่อง “ข้อความต้นฉบับ” ด้านล่าง</li>
-      <li>กด Enter เพื่อแปลและส่ง</li>
-    </ol>
+  <h3>🧹 การปรับปรุงแบล็คลิสต์</h3>
+  <ul>
+    <li>เปลี่ยนระบบแก้ไขเป็นแบบ “อัปเดต” เพื่อความปลอดภัย</li>
+    <li>เสริมรายการแบล็คลิสต์เริ่มต้น</li>
+    <li>ปรับปรุงการกรองเสียงรบกวนและข้อผิดพลาด</li>
+  </ul>
 
-    <p class="note">
-      Enter: ส่ง<br>
-      Shift + Enter: ขึ้นบรรทัดใหม่
-    </p>
-  </section>
+  <h3>🌍 UI และการรองรับหลายภาษา</h3>
+  <ul>
+    <li>UI รองรับ 5 ภาษา: ญี่ปุ่น / อังกฤษ / จีนตัวย่อ / จีนตัวเต็ม / เกาหลี</li>
+    <li>แก้ไขการเชื่อมโยงหลายภาษาในหน้าต่าง License และ Guide</li>
+    <li>ปรับปรุงความเสถียรในการสลับภาษา</li>
+  </ul>
 
-  <section class="card">
-    <h2>🎤 ลำดับความสำคัญระหว่างเสียงและการพิมพ์</h2>
-    <p>
-      ในการตั้งค่าขั้นสูง สามารถสลับลำดับความสำคัญระหว่างการพูดและการพิมพ์ได้
-      ผ่านตัวเลือก “เขียนทับด้วยเสียงระหว่างพิมพ์ข้อความ”
-    </p>
-    <ul>
-      <li>ON: รับเสียงพูดแม้ขณะกำลังพิมพ์</li>
-      <li>OFF: ระหว่างพิมพ์จะไม่รับเสียงพูด และให้ความสำคัญกับข้อความที่พิมพ์</li>
-    </ul>
-  </section>
+  <h3>🎨 การปรับปรุง UI</h3>
+  <ul>
+    <li>จัดระเบียบเมนูด้านบนใหม่</li>
+    <li>ปรับตำแหน่ง README / Update / License</li>
+    <li>ปรับปรุงอินเทอร์เฟซการป้อนข้อมูลและการใช้งาน</li>
+    <li>ปรับปรุงการแสดง tooltip</li>
+  </ul>
 
-  <section class="card">
-    <h2>🤖 เกี่ยวกับการแปลด้วย ChatGPT</h2>
-    <p>
-      เมื่อใช้โหมดแปลด้วย ChatGPT จะได้ประโยคสนทนาที่เป็นธรรมชาติมากขึ้น
-    </p>
-    <p class="warning">
-      ต้องใช้ OpenAI API Key และมีค่าใช้จ่ายตามการใช้งาน
-    </p>
-  </section>
+  <h3>⚙️ ความเสถียรและการปรับปรุงภายใน</h3>
+  <ul>
+    <li>แก้ไขบั๊กเล็กน้อย</li>
+    <li>ปรับปรุงความเสถียรโดยรวม</li>
+    <li>ปรับปรุงกระบวนการแปล</li>
+  </ul>
+</section>
 
-  <section class="card">
-    <h2>💻 ความต้องการของระบบ</h2>
-    <ul>
-      <li>Windows</li>
-      <li>VRChat เวอร์ชัน PC</li>
-      <li>เปิดใช้งาน OSC</li>
-      <li>ไมโครโฟน</li>
-      <li>อินเทอร์เน็ต</li>
-    </ul>
-    <p class="warning">
-      ไม่สามารถใช้งานบน Quest แบบเดี่ยวได้
-    </p>
-  </section>
+<section class="card">
+  <h2>▶️ วิธีใช้งานพื้นฐาน</h2>
 
-  <section class="card">
-    <h2>💌 จากผู้พัฒนา</h2>
-    <p>
-      ทำให้การพูดคุยกับเพื่อนต่างประเทศเป็นธรรมชาติมากขึ้น<br>
-      ทำให้กิจกรรม การสนทนา และการพบปะเป็นอิสระยิ่งขึ้น
-    </p>
-    <p>
-      VRC Misa Translator จะช่วยสร้างการพบเจอใหม่ ๆ ใน VRChat ✨
-    </p>
-  </section>
+  <h3>การแปลเสียง</h3>
+  <ol>
+    <li>เปิดแอป</li>
+    <li>เลือกไมโครโฟน</li>
+    <li>ตั้งค่าภาษาอินพุตและภาษาเป้าหมาย</li>
+    <li>กดปุ่ม Start</li>
+  </ol>
 
-  <p class="small">© Misa / VRC Misa Translator</p>
+  <h3>การแปลข้อความ</h3>
+  <ol>
+    <li>พิมพ์ข้อความในช่อง “Original” ด้านล่าง</li>
+    <li>กด Enter เพื่อแปลและส่ง</li>
+  </ol>
+
+  <p class="note">
+    Enter: ส่ง<br>
+    Shift + Enter: ขึ้นบรรทัดใหม่
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 การแปลแบบเป็นธรรมชาติ (โหมด ChatGPT)</h2>
+  <p>
+    ให้การแปลที่เป็นธรรมชาติยิ่งขึ้นและปรับโทนภาษา
+  </p>
+  <ul>
+    <li>สำนวนที่นุ่มนวลขึ้น</li>
+    <li>ประโยคสั้นเหมาะกับการสนทนา</li>
+    <li>ปรับความหมายให้เป็นธรรมชาติ</li>
+  </ul>
+
+  <p class="warning">
+    ต้องใช้ OpenAI API Key และมีค่าใช้จ่ายตามการใช้งาน
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 ฟังก์ชันแบล็คลิสต์</h2>
+  <p>
+    การรู้จำเสียงอาจแสดงข้อความที่ไม่ได้พูดจริง<br>
+    เช่น ประโยคปิดวิดีโอ เสียงรบกวน หรือการรู้จำผิด
+  </p>
+
+  <p>
+    ข้อความที่เพิ่มในแบล็คลิสต์จะไม่ถูกส่งโดยอัตโนมัติ
+  </p>
+
+  <h3>วิธีใช้</h3>
+  <ul>
+    <li>ใช้ปุ่ม “ส่งข้อความต้นฉบับไปยังแบล็คลิสต์” เพื่อเพิ่มทันที</li>
+    <li>แก้ไขใน Advanced Settings แล้วกด “Update Blacklist” เพื่อบันทึก</li>
+  </ul>
+
+  <h3>หมายเหตุ</h3>
+  <ul>
+    <li>หากเพิ่มมากเกินไป อาจกรองบทสนทนาปกติด้วย</li>
+    <li>แนะนำให้ใช้วลีสั้น ๆ</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 ความต้องการของระบบ</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat (เวอร์ชัน PC)</li>
+    <li>เปิดใช้งาน OSC</li>
+    <li>ไมโครโฟน</li>
+    <li>การเชื่อมต่ออินเทอร์เน็ต</li>
+  </ul>
+
+  <p class="warning">
+    ไม่รองรับ Quest แบบ standalone
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 ข้อความจากผู้พัฒนา</h2>
+  <p>
+    ทำให้การสนทนากับเพื่อนต่างชาติเป็นธรรมชาติมากขึ้น<br>
+    ทำให้อีเวนต์และการสื่อสารเป็นอิสระมากขึ้น
+  </p>
+  <p>
+    VRC Misa Translator ช่วยให้คุณสร้างการพบปะใหม่ ๆ ใน VRChat ✨
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
 </main>
 </body>
 </html>
