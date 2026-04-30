@@ -13,51 +13,50 @@
       line-height: 1.8;
     }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
     h1, h2, h3 {
       color: #f8fafc;
       line-height: 1.35;
     }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.2em;
     }
+
     h2 {
       margin-top: 36px;
       padding-bottom: 6px;
       border-bottom: 1px solid #334155;
       color: #bfdbfe;
     }
+
     h3 {
       margin-top: 24px;
       color: #dbeafe;
     }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -65,38 +64,43 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
+
     .hero {
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
+
     .tagline {
       color: #93c5fd;
       font-size: 1.08rem;
       margin-top: 0;
     }
+
     ul, ol {
       padding-left: 1.35em;
     }
+
     li {
       margin: 0.25em 0;
     }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
-      background: rgba(127, 29, 29, 0.22);
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
-      font-size: 0.9rem;
+      font-size: .9rem;
       text-align: center;
       margin-top: 32px;
     }
@@ -104,99 +108,159 @@ main {
 </head>
 <body>
 <main>
-  <section class="hero">
-    <h1>VRC Misa Translator</h1>
-    <p class="tagline">
-      Narzędzie do tłumaczenia w czasie rzeczywistym dla VRChat.
-    </p>
-    <p>
-      Tłumaczy Twoją mowę lub tekst i automatycznie wysyła je do Chatboxa VRChat.
-      Dzięki temu komunikacja z zagranicznymi znajomymi staje się bardziej naturalna.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>✨ Główne funkcje</h2>
-    <ul>
-      <li>Tłumaczenie mowy w czasie rzeczywistym</li>
-      <li>Automatyczne wysyłanie do VRChat Chatbox</li>
-      <li>Tłumaczenie wpisanego tekstu</li>
-      <li>Obsługa wielu języków</li>
-      <li>Tryb tłumaczenia ChatGPT</li>
-      <li>Funkcja blacklisty zmniejszająca błędne rozpoznanie</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">Narzędzie do tłumaczenia w czasie rzeczywistym dla VRChat</p>
+  <p>
+    Tłumaczy mowę lub tekst, a następnie automatycznie wysyła wynik do VRChat Chatbox.<br>
+    Aplikacja desktopowa ułatwiająca rozmowy z międzynarodowymi znajomymi, prowadzenie wydarzeń i komunikację wielojęzyczną.
+  </p>
+</section>
 
-  <section class="card">
-    <h2>🆕 Najnowsze ulepszenia</h2>
-    <h3>Praktyczne usprawnienia</h3>
-    <ul>
-      <li>Ulepszona domyślna zawartość blacklisty</li>
-      <li>Naprawiono drobne błędy</li>
-      <li>Zwiększono ogólną stabilność</li>
-    </ul>
-  </section>
+<section class="card">
+  <h2>✨ Główne funkcje</h2>
+  <ul>
+    <li>Tłumaczenie mowy w czasie rzeczywistym</li>
+    <li>Automatyczne wysyłanie do VRChat Chatbox</li>
+    <li>Tłumaczenie tekstu wpisywanego ręcznie</li>
+    <li><strong>Obsługa 20 języków</strong></li>
+    <li>Naturalne tłumaczenie (tryb ChatGPT)</li>
+    <li>Funkcja czarnej listy ograniczająca błędy rozpoznawania</li>
+  </ul>
+</section>
 
-  <section class="card">
-    <h2>▶️ Podstawowe użycie</h2>
-    <ol>
-      <li>Uruchom aplikację</li>
-      <li>Wybierz mikrofon</li>
-      <li>Ustaw język wejściowy i język tłumaczenia</li>
-      <li>Naciśnij „Start”</li>
-    </ol>
-    <p>
-      Gdy mówisz, tekst zostanie automatycznie przetłumaczony i wysłany do VRChat Chatbox.
-    </p>
+<section class="card">
+  <h2>🆕 Aktualizacja v1.9.26 → v1.11.1</h2>
 
-    <h3>Tłumaczenie tekstu</h3>
-    <ol>
-      <li>Wpisz tekst w polu „Tekst oryginalny” na dole</li>
-      <li>Naciśnij Enter, aby przetłumaczyć i wysłać</li>
-    </ol>
+  <h3>✨ Nowe funkcje</h3>
+  <ul>
+    <li>Dodano funkcję jednym kliknięciem: „Wyślij oryginalny tekst na czarną listę”</li>
+    <li>Ulepszono naturalne tłumaczenie (tryb ChatGPT)</li>
+    <li>Dodano wielojęzyczną obsługę podpowiedzi</li>
+  </ul>
 
-    <p class="note">
-      Enter: wyślij<br>
-      Shift + Enter: nowa linia
-    </p>
-  </section>
+  <h3>🧹 Ulepszenia czarnej listy</h3>
+  <ul>
+    <li>Zmieniono edycję czarnej listy na bezpieczniejszy system aktualizacji</li>
+    <li>Rozszerzono domyślną zawartość czarnej listy</li>
+    <li>Poprawiono filtrowanie błędów rozpoznawania i tekstów podobnych do szumu</li>
+  </ul>
 
-  <section class="card">
-    <h2>🤖 O tłumaczeniu ChatGPT</h2>
-    <p>
-      Tryb tłumaczenia ChatGPT pozwala uzyskać bardziej naturalne wypowiedzi.
-    </p>
-    <p class="warning">
-      Wymagany jest klucz API OpenAI. Tłumaczenie ChatGPT jest rozliczane według użycia.
-    </p>
-  </section>
+  <h3>🌍 UI i obsługa wielu języków</h3>
+  <ul>
+    <li>Interfejs obsługuje teraz 5 języków: japoński / angielski / chiński uproszczony / chiński tradycyjny / koreański</li>
+    <li>Naprawiono wielojęzyczne powiązania okien License i Guide</li>
+    <li>Poprawiono stabilność przełączania języka interfejsu</li>
+  </ul>
 
-  <section class="card">
-    <h2>💻 Wymagania systemowe</h2>
-    <ul>
-      <li>Windows</li>
-      <li>VRChat (wersja PC)</li>
-      <li>Włączone OSC</li>
-      <li>Mikrofon</li>
-      <li>Połączenie z internetem</li>
-    </ul>
-    <p class="warning">
-      Nie działa na samodzielnym Quest.
-    </p>
-  </section>
+  <h3>🎨 Ulepszenia UI</h3>
+  <ul>
+    <li>Uporządkowano górne menu</li>
+    <li>Poprawiono rozmieszczenie README / Update / License</li>
+    <li>Ulepszono interfejs wprowadzania tekstu i przepływ obsługi</li>
+    <li>Poprawiono wyświetlanie podpowiedzi</li>
+  </ul>
 
-  <section class="card">
-    <h2>💌 Od autora</h2>
-    <p>
-      Spraw, by rozmowy z zagranicznymi znajomymi były bardziej naturalne.<br>
-      Spraw, by wydarzenia, rozmowy i spotkania były swobodniejsze.
-    </p>
-    <p>
-      VRC Misa Translator wspiera nowe spotkania w VRChat ✨
-    </p>
-  </section>
+  <h3>⚙️ Stabilność i ulepszenia wewnętrzne</h3>
+  <ul>
+    <li>Naprawiono drobne błędy</li>
+    <li>Poprawiono ogólną stabilność</li>
+    <li>Ulepszono przetwarzanie tłumaczenia</li>
+  </ul>
+</section>
 
-  <p class="small">© Misa / VRC Misa Translator</p>
+<section class="card">
+  <h2>▶️ Podstawowe użycie</h2>
+
+  <h3>Tłumaczenie głosowe</h3>
+  <ol>
+    <li>Uruchom aplikację</li>
+    <li>Wybierz mikrofon</li>
+    <li>Ustaw język wejściowy i docelowy</li>
+    <li>Naciśnij przycisk Start</li>
+  </ol>
+
+  <h3>Tłumaczenie tekstu</h3>
+  <ol>
+    <li>Wpisz tekst w dolnym polu „Original”</li>
+    <li>Naciśnij Enter, aby przetłumaczyć i wysłać</li>
+  </ol>
+
+  <p class="note">
+    Enter: wyślij<br>
+    Shift + Enter: nowa linia
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 Naturalne tłumaczenie (tryb ChatGPT)</h2>
+  <p>
+    Zapewnia bardziej naturalne tłumaczenie oraz dostosowanie stylu wypowiedzi.
+  </p>
+  <ul>
+    <li>Łagodniejsze sformułowania</li>
+    <li>Krótkie zdania odpowiednie do rozmowy</li>
+    <li>Naturalne dopasowanie niuansów</li>
+  </ul>
+
+  <p class="warning">
+    Wymagany jest klucz OpenAI API. Opłaty naliczane są według użycia.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Funkcja czarnej listy</h2>
+  <p>
+    Rozpoznawanie mowy może czasem wyświetlić tekst, który w rzeczywistości nie został wypowiedziany.<br>
+    Na przykład: frazy kończące filmy, szum lub błędnie rozpoznany tekst.
+  </p>
+
+  <p>
+    Tekst dodany do czarnej listy nie będzie automatycznie wysyłany.
+  </p>
+
+  <h3>Użycie</h3>
+  <ul>
+    <li>Użyj przycisku „Wyślij oryginalny tekst na czarną listę”, aby dodać wpis jednym kliknięciem</li>
+    <li>Edytuj ręcznie w Advanced Settings, a następnie kliknij „Update Blacklist”, aby zapisać</li>
+  </ul>
+
+  <h3>Uwagi</h3>
+  <ul>
+    <li>Zbyt wiele wpisów może filtrować także normalne rozmowy</li>
+    <li>Zaleca się dodawanie krótkich fraz</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Wymagania systemowe</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat w wersji PC</li>
+    <li>Włączone OSC</li>
+    <li>Mikrofon</li>
+    <li>Połączenie z Internetem</li>
+  </ul>
+
+  <p class="warning">
+    Nie działa w trybie standalone na Quest.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Wiadomość od twórcy</h2>
+  <p>
+    Aby rozmowy z międzynarodowymi znajomymi były bardziej naturalne.<br>
+    Aby wydarzenia, rozmowy i interakcje były swobodniejsze.
+  </p>
+  <p>
+    VRC Misa Translator wspiera nowe spotkania w VRChat ✨
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
 </main>
 </body>
 </html>
