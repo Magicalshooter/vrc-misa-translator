@@ -13,51 +13,50 @@
       line-height: 1.8;
     }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
     h1, h2, h3 {
       color: #f8fafc;
       line-height: 1.35;
     }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.2em;
     }
+
     h2 {
       margin-top: 36px;
       padding-bottom: 6px;
       border-bottom: 1px solid #334155;
       color: #bfdbfe;
     }
+
     h3 {
       margin-top: 24px;
       color: #dbeafe;
     }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -65,38 +64,43 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
+
     .hero {
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
+
     .tagline {
       color: #93c5fd;
       font-size: 1.08rem;
       margin-top: 0;
     }
+
     ul, ol {
       padding-left: 1.35em;
     }
+
     li {
       margin: 0.25em 0;
     }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
-      background: rgba(127, 29, 29, 0.22);
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
-      font-size: 0.9rem;
+      font-size: .9rem;
       text-align: center;
       margin-top: 32px;
     }
@@ -104,164 +108,159 @@ main {
 </head>
 <body>
 <main>
-  <section class="hero">
-    <h1>VRC Misa Translator</h1>
-    <p class="tagline">
-      Uma ferramenta de tradução em tempo real para VRChat.
-    </p>
-    <p>
-      Traduza sua fala ou texto e envie automaticamente para o Chatbox do VRChat.
-      Ela ajuda a tornar a comunicação com amigos de outros países mais natural.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>✨ Principais recursos</h2>
-    <ul>
-      <li>Tradução por voz em tempo real</li>
-      <li>Envio automático para o VRChat Chatbox</li>
-      <li>Tradução por entrada de texto</li>
-      <li>Suporte a vários idiomas</li>
-      <li>Modo de tradução com ChatGPT</li>
-      <li>Função de lista negra para reduzir falsos reconhecimentos</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">Ferramenta de tradução em tempo real para VRChat</p>
+  <p>
+    Traduz voz ou texto e envia automaticamente o resultado para o VRChat Chatbox.<br>
+    Um aplicativo de desktop criado para facilitar conversas com amigos internacionais, eventos e comunicação multilíngue.
+  </p>
+</section>
 
-  <section class="card">
-    <h2>🆕 Melhorias recentes</h2>
+<section class="card">
+  <h2>✨ Principais recursos</h2>
+  <ul>
+    <li>Tradução de voz em tempo real</li>
+    <li>Envio automático para o VRChat Chatbox</li>
+    <li>Tradução por entrada de texto</li>
+    <li><strong>Suporte a 20 idiomas</strong></li>
+    <li>Tradução natural (modo ChatGPT)</li>
+    <li>Função de blacklist para reduzir erros de reconhecimento</li>
+  </ul>
+</section>
 
-    <h3>Melhorias práticas</h3>
-    <ul>
-      <li>Conteúdo inicial da lista negra aprimorado</li>
-      <li>Correção de pequenos problemas</li>
-      <li>Melhoria geral da estabilidade</li>
-    </ul>
-  </section>
+<section class="card">
+  <h2>🆕 Atualização v1.9.26 → v1.11.1</h2>
 
-  <section class="card">
-    <h2>▶️ Como usar</h2>
+  <h3>✨ Novos recursos</h3>
+  <ul>
+    <li>Adicionada a função de um clique “Enviar texto original para a blacklist”</li>
+    <li>Melhoria na tradução natural (modo ChatGPT)</li>
+    <li>Adicionado suporte multilíngue para tooltips</li>
+  </ul>
 
-    <h3>Tradução por voz</h3>
-    <ol>
-      <li>Inicie o aplicativo</li>
-      <li>Selecione o microfone</li>
-      <li>Defina o idioma de entrada e o idioma de tradução</li>
-      <li>Pressione “Iniciar”</li>
-    </ol>
-    <p>Ao falar, o texto será traduzido automaticamente e enviado para o VRChat Chatbox.</p>
+  <h3>🧹 Melhorias na blacklist</h3>
+  <ul>
+    <li>O fluxo de edição foi alterado para um sistema de atualização mais seguro</li>
+    <li>Conteúdo padrão da blacklist reforçado</li>
+    <li>Melhor filtragem de erros de reconhecimento e saídas semelhantes a ruído</li>
+  </ul>
 
-    <h3>Tradução por entrada de texto</h3>
-    <ol>
-      <li>Digite o texto no campo “Texto original” na parte inferior</li>
-      <li>Pressione Enter para traduzir e enviar</li>
-    </ol>
+  <h3>🌍 UI e localização</h3>
+  <ul>
+    <li>A interface agora oferece suporte a 5 idiomas: japonês / inglês / chinês simplificado / chinês tradicional / coreano</li>
+    <li>Correções na integração multilíngue das janelas License e Guide</li>
+    <li>Maior estabilidade ao alternar o idioma da interface</li>
+  </ul>
 
-    <p class="note">
-      Enter: enviar<br>
-      Shift + Enter: nova linha
-    </p>
-  </section>
+  <h3>🎨 Melhorias na UI</h3>
+  <ul>
+    <li>Reorganização do menu superior</li>
+    <li>Melhor posicionamento de README / Update / License</li>
+    <li>Melhorias na interface de entrada e no fluxo de operação</li>
+    <li>Melhoria na exibição dos tooltips</li>
+  </ul>
 
-  <section class="card">
-    <h2>🎤 Prioridade entre voz e texto manual</h2>
-    <p>
-      Na opção “Substituir por voz durante entrada de texto” nas configurações avançadas,
-      você pode alterar a prioridade entre entrada por voz e entrada manual.
-    </p>
-    <ul>
-      <li>ON: a entrada por voz será refletida mesmo durante a digitação</li>
-      <li>OFF: durante a digitação, a entrada por voz será ignorada e o texto manual terá prioridade</li>
-    </ul>
-    <p class="note">
-      Quando precisar de uma tradução mais precisa, como ao conduzir um evento,
-      recomendamos desligar a substituição por voz e usar a entrada manual.
-    </p>
-  </section>
+  <h3>⚙️ Estabilidade e melhorias internas</h3>
+  <ul>
+    <li>Correção de pequenos problemas</li>
+    <li>Melhoria geral de estabilidade</li>
+    <li>Melhoria no processamento da tradução</li>
+  </ul>
+</section>
 
-  <section class="card">
-    <h2>🤖 Sobre a tradução com ChatGPT</h2>
-    <p>
-      Ao usar o modo de tradução com ChatGPT, é possível obter frases de conversa mais naturais.
-    </p>
-    <ul>
-      <li>Expressões mais suaves</li>
-      <li>Frases curtas adequadas para conversa</li>
-      <li>Ajuste natural de nuances</li>
-    </ul>
-    <p class="warning">
-      É necessária uma chave de API da OpenAI. A tradução com ChatGPT é cobrada conforme o uso.
-    </p>
-  </section>
+<section class="card">
+  <h2>▶️ Uso básico</h2>
 
-  <section class="card">
-    <h2>💰 Sobre a cobrança da API da OpenAI</h2>
-    <ul>
-      <li>A API da OpenAI é cobrada conforme o uso</li>
-      <li>Você paga apenas pelo que utilizar</li>
-      <li>Se a cobrança automática Pay-as-you-go estiver ativada, os custos continuarão conforme o uso</li>
-      <li>Para evitar uso excessivo, recomendamos configurar um limite de uso</li>
-      <li>Como referência, um limite de cerca de 5 a 10 dólares é uma opção segura</li>
-      <li>Com 10 dólares, é possível traduzir cerca de 100.000 a 300.000 frases comuns de conversa, aproximadamente</li>
-    </ul>
-  </section>
+  <h3>Tradução por voz</h3>
+  <ol>
+    <li>Inicie o aplicativo</li>
+    <li>Selecione o microfone</li>
+    <li>Defina o idioma de entrada e o idioma de destino</li>
+    <li>Pressione o botão Start</li>
+  </ol>
 
-  <section class="card">
-    <h2>🚫 Função de lista negra</h2>
-    <p>
-      Às vezes, o reconhecimento de voz pode exibir frases que você não falou.
-      Ao registrar essas frases na lista negra, elas terão menos chance de serem enviadas novamente.
-    </p>
-  </section>
+  <h3>Tradução por texto</h3>
+  <ol>
+    <li>Digite o texto no campo “Original” na parte inferior</li>
+    <li>Pressione Enter para traduzir e enviar</li>
+  </ol>
 
-  <section class="card">
-    <h2>💻 Requisitos do sistema</h2>
-    <ul>
-      <li>Windows</li>
-      <li>VRChat versão PC</li>
-      <li>OSC ativado</li>
-      <li>Microfone</li>
-      <li>Conexão com a internet</li>
-    </ul>
-    <p class="warning">
-      Não funciona apenas no Quest standalone.
-    </p>
-  </section>
+  <p class="note">
+    Enter: enviar<br>
+    Shift + Enter: nova linha
+  </p>
+</section>
 
-  <section class="card">
-    <h2>⚠️ Observações</h2>
-    <ul>
-      <li>A tradução com ChatGPT é cobrada conforme o uso</li>
-      <li>O modelo Whisper será baixado na primeira execução</li>
-      <li>Modelos de alta precisão usam mais desempenho do PC</li>
-      <li>Recomendamos alterar as configurações enquanto o aplicativo estiver parado</li>
-    </ul>
-  </section>
+<section class="card">
+  <h2>🤖 Tradução natural (modo ChatGPT)</h2>
+  <p>
+    Oferece uma tradução mais natural e ajuste de tom.
+  </p>
+  <ul>
+    <li>Expressões mais suaves</li>
+    <li>Frases curtas adequadas para conversas</li>
+    <li>Ajuste natural de nuances</li>
+  </ul>
 
-  <section class="card">
-    <h2>🔄 Como atualizar</h2>
-    <p>Atualmente, a atualização é manual.</p>
-    <ul>
-      <li>Versão ZIP: sobrescreva os arquivos</li>
-      <li>Versão instalador: reinstale o aplicativo</li>
-    </ul>
-    <p>
-      Você pode verificar a versão mais recente na página de distribuição
-      ou pelo botão de atualização dentro do aplicativo.
-    </p>
-  </section>
+  <p class="warning">
+    É necessária uma chave API da OpenAI. A cobrança é baseada no uso.
+  </p>
+</section>
 
-  <section class="card">
-    <h2>💌 Mensagem da autora</h2>
-    <p>
-      Torne as conversas com amigos de outros países mais naturais.<br>
-      Torne eventos, bate-papos e interações mais livres.
-    </p>
-    <p>
-      O VRC Misa Translator apoia novos encontros no VRChat ✨
-    </p>
-  </section>
+<section class="card">
+  <h2>🧹 Função de blacklist</h2>
+  <p>
+    O reconhecimento de voz às vezes pode gerar texto que não foi realmente falado.<br>
+    Por exemplo: frases de encerramento de vídeo, ruído ou texto reconhecido incorretamente.
+  </p>
 
-  <p class="small">© Misa / VRC Misa Translator</p>
+  <p>
+    O texto adicionado à blacklist não será mais enviado automaticamente.
+  </p>
+
+  <h3>Como usar</h3>
+  <ul>
+    <li>Use o botão “Enviar texto original para a blacklist” para adicionar com um clique</li>
+    <li>Edite manualmente em Advanced Settings e pressione “Update Blacklist” para salvar</li>
+  </ul>
+
+  <h3>Observações</h3>
+  <ul>
+    <li>Muitas entradas podem filtrar também conversas normais</li>
+    <li>Recomenda-se adicionar frases curtas</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Requisitos do sistema</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat (versão PC)</li>
+    <li>OSC ativado</li>
+    <li>Microfone</li>
+    <li>Conexão com a internet</li>
+  </ul>
+
+  <p class="warning">
+    Não funciona no Quest em modo standalone.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Mensagem da desenvolvedora</h2>
+  <p>
+    Tornar as conversas com amigos internacionais mais naturais.<br>
+    Tornar eventos, bate-papos e interações mais livres.
+  </p>
+  <p>
+    O VRC Misa Translator ajuda você a criar novos encontros no VRChat ✨
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
 </main>
 </body>
 </html>
