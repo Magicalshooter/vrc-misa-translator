@@ -13,51 +13,50 @@
       line-height: 1.8;
     }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
     h1, h2, h3 {
       color: #f8fafc;
       line-height: 1.35;
     }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.2em;
     }
+
     h2 {
       margin-top: 36px;
       padding-bottom: 6px;
       border-bottom: 1px solid #334155;
       color: #bfdbfe;
     }
+
     h3 {
       margin-top: 24px;
       color: #dbeafe;
     }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -65,38 +64,43 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
+
     .hero {
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
+
     .tagline {
       color: #93c5fd;
       font-size: 1.08rem;
       margin-top: 0;
     }
+
     ul, ol {
       padding-left: 1.35em;
     }
+
     li {
       margin: 0.25em 0;
     }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15, 23, 42, 0.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
-      background: rgba(127, 29, 29, 0.22);
+      background: rgba(127,29,29,.22);
       border-left: 4px solid #f87171;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
-      font-size: 0.9rem;
+      font-size: .9rem;
       text-align: center;
       margin-top: 32px;
     }
@@ -104,99 +108,159 @@ main {
 </head>
 <body>
 <main>
-  <section class="hero">
-    <h1>VRC Misa Translator</h1>
-    <p class="tagline">
-      Een realtime vertaaltool voor VRChat.
-    </p>
-    <p>
-      Vertaalt je spraak of tekst en verstuurt dit automatisch naar de VRChat Chatbox.
-      Zo wordt communicatie met internationale vrienden natuurlijker.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>✨ Belangrijkste functies</h2>
-    <ul>
-      <li>Realtime spraakvertaling</li>
-      <li>Automatisch verzenden naar VRChat Chatbox</li>
-      <li>Vertaling via tekstinvoer</li>
-      <li>Ondersteuning voor meerdere talen</li>
-      <li>ChatGPT-vertaalmodus</li>
-      <li>Blacklist-functie om foutieve herkenning te verminderen</li>
-    </ul>
-  </section>
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">Realtime vertaaltool voor VRChat</p>
+  <p>
+    Vertaalt spraak of tekst en stuurt het resultaat automatisch naar de VRChat Chatbox.<br>
+    Een desktopapplicatie voor soepelere communicatie met internationale vrienden, evenementen en meertalige gesprekken.
+  </p>
+</section>
 
-  <section class="card">
-    <h2>🆕 Nieuwste verbeteringen</h2>
-    <h3>Praktische verbeteringen</h3>
-    <ul>
-      <li>Standaardinhoud van blacklist verbeterd</li>
-      <li>Kleine bugs opgelost</li>
-      <li>Algemene stabiliteit verbeterd</li>
-    </ul>
-  </section>
+<section class="card">
+  <h2>✨ Belangrijkste functies</h2>
+  <ul>
+    <li>Realtime spraakvertaling</li>
+    <li>Automatisch verzenden naar VRChat Chatbox</li>
+    <li>Tekstinvoer vertaling</li>
+    <li><strong>Ondersteunt 20 talen</strong></li>
+    <li>Natuurlijke vertaling (ChatGPT-modus)</li>
+    <li>Blacklist-functie om herkenningsfouten te verminderen</li>
+  </ul>
+</section>
 
-  <section class="card">
-    <h2>▶️ Basisgebruik</h2>
-    <ol>
-      <li>Start de app</li>
-      <li>Selecteer een microfoon</li>
-      <li>Stel invoertaal en doeltaal in</li>
-      <li>Druk op “Start”</li>
-    </ol>
-    <p>
-      Wanneer je spreekt, wordt de tekst automatisch vertaald en verzonden naar de VRChat Chatbox.
-    </p>
+<section class="card">
+  <h2>🆕 Update v1.9.26 → v1.11.1</h2>
 
-    <h3>Tekstinvoer vertaling</h3>
-    <ol>
-      <li>Voer tekst in het veld “Originele tekst” onderaan in</li>
-      <li>Druk op Enter om te vertalen en te verzenden</li>
-    </ol>
+  <h3>✨ Nieuwe functies</h3>
+  <ul>
+    <li>Toevoeging van “Stuur originele tekst naar blacklist” met één klik</li>
+    <li>Verbeterde natuurlijke vertaling (ChatGPT-modus)</li>
+    <li>Meertalige tooltip-ondersteuning toegevoegd</li>
+  </ul>
 
-    <p class="note">
-      Enter: verzenden<br>
-      Shift + Enter: nieuwe regel
-    </p>
-  </section>
+  <h3>🧹 Blacklist verbeteringen</h3>
+  <ul>
+    <li>Bewerkingssysteem gewijzigd naar een veiliger “update”-systeem</li>
+    <li>Standaard blacklist-inhoud uitgebreid</li>
+    <li>Betere filtering van herkenningsfouten en ruis</li>
+  </ul>
 
-  <section class="card">
-    <h2>🤖 Over ChatGPT-vertaling</h2>
-    <p>
-      Met de ChatGPT-vertaalmodus worden gesprekken natuurlijker vertaald.
-    </p>
-    <p class="warning">
-      Een OpenAI API-sleutel is vereist. ChatGPT-vertaling wordt afgerekend op basis van gebruik.
-    </p>
-  </section>
+  <h3>🌍 UI & meertalige ondersteuning</h3>
+  <ul>
+    <li>UI ondersteunt nu 5 talen: Japans / Engels / Vereenvoudigd Chinees / Traditioneel Chinees / Koreaans</li>
+    <li>Problemen met meertalige koppeling in License en Guide vensters opgelost</li>
+    <li>Stabiliteit van taalwisseling verbeterd</li>
+  </ul>
 
-  <section class="card">
-    <h2>💻 Systeemvereisten</h2>
-    <ul>
-      <li>Windows</li>
-      <li>VRChat (PC-versie)</li>
-      <li>OSC ingeschakeld</li>
-      <li>Microfoon</li>
-      <li>Internetverbinding</li>
-    </ul>
-    <p class="warning">
-      Werkt niet op standalone Quest.
-    </p>
-  </section>
+  <h3>🎨 UI verbeteringen</h3>
+  <ul>
+    <li>Bovenmenu herstructurering</li>
+    <li>Verbeterde plaatsing van README / Update / License</li>
+    <li>Verbeterde invoerinterface en workflow</li>
+    <li>Verbeterde tooltip-weergave</li>
+  </ul>
 
-  <section class="card">
-    <h2>💌 Van de maker</h2>
-    <p>
-      Maak gesprekken met internationale vrienden natuurlijker.<br>
-      Maak evenementen, chats en ontmoetingen vrijer.
-    </p>
-    <p>
-      VRC Misa Translator ondersteunt nieuwe ontmoetingen in VRChat ✨
-    </p>
-  </section>
+  <h3>⚙️ Stabiliteit & interne verbeteringen</h3>
+  <ul>
+    <li>Kleine bugfixes</li>
+    <li>Algemene stabiliteit verbeterd</li>
+    <li>Verbeterde vertaalverwerking</li>
+  </ul>
+</section>
 
-  <p class="small">© Misa / VRC Misa Translator</p>
+<section class="card">
+  <h2>▶️ Basisgebruik</h2>
+
+  <h3>Spraakvertaling</h3>
+  <ol>
+    <li>Start de applicatie</li>
+    <li>Selecteer de microfoon</li>
+    <li>Stel invoer- en doeltaal in</li>
+    <li>Druk op Start</li>
+  </ol>
+
+  <h3>Tekstvertaling</h3>
+  <ol>
+    <li>Voer tekst in het veld “Original” onderaan in</li>
+    <li>Druk op Enter om te vertalen en te verzenden</li>
+  </ol>
+
+  <p class="note">
+    Enter: verzenden<br>
+    Shift + Enter: nieuwe regel
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 Natuurlijke vertaling (ChatGPT-modus)</h2>
+  <p>
+    Biedt natuurlijkere vertaling en toonaanpassing.
+  </p>
+  <ul>
+    <li>Zachtere formuleringen</li>
+    <li>Korte zinnen geschikt voor gesprekken</li>
+    <li>Natuurlijke nuance-aanpassing</li>
+  </ul>
+
+  <p class="warning">
+    Een OpenAI API-sleutel is vereist. Kosten zijn gebaseerd op gebruik.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Blacklist-functie</h2>
+  <p>
+    Spraakherkenning kan soms tekst genereren die niet daadwerkelijk is uitgesproken.<br>
+    Bijvoorbeeld: video-eindzinnen, ruis of foutieve herkenning.
+  </p>
+
+  <p>
+    Tekst die aan de blacklist wordt toegevoegd, wordt niet automatisch verzonden.
+  </p>
+
+  <h3>Gebruik</h3>
+  <ul>
+    <li>Gebruik de knop “Stuur originele tekst naar blacklist” om direct toe te voegen</li>
+    <li>Bewerk handmatig in Advanced Settings en klik op “Blacklist bijwerken” om op te slaan</li>
+  </ul>
+
+  <h3>Opmerkingen</h3>
+  <ul>
+    <li>Te veel items kunnen ook normale gesprekken filteren</li>
+    <li>Korte zinnen worden aanbevolen</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Systeemvereisten</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat (PC-versie)</li>
+    <li>OSC ingeschakeld</li>
+    <li>Microfoon</li>
+    <li>Internetverbinding</li>
+  </ul>
+
+  <p class="warning">
+    Werkt niet op Quest in standalone modus.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Bericht van de ontwikkelaar</h2>
+  <p>
+    Maak gesprekken met internationale vrienden natuurlijker.<br>
+    Maak evenementen en communicatie vrijer.
+  </p>
+  <p>
+    VRC Misa Translator helpt je nieuwe ontmoetingen te creëren in VRChat ✨
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
 </main>
 </body>
 </html>
