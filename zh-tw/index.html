@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -14,31 +13,50 @@
       line-height: 1.8;
     }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
-    h1, h2, h3 { color: #f8fafc; line-height: 1.35; }
-    h1 { font-size: 2.2rem; margin-bottom: 0.2em; }
-    h2 { margin-top: 36px; padding-bottom: 6px; border-bottom: 1px solid #334155; color: #bfdbfe; }
-    h3 { margin-top: 24px; color: #dbeafe; }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -46,17 +64,32 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
-    .hero { border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-    .tagline { color: #93c5fd; font-size: 1.08rem; margin-top: 0; }
-    ul, ol { padding-left: 1.35em; }
-    li { margin: 0.25em 0; }
+
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+
+    ul, ol {
+      padding-left: 1.35em;
+    }
+
+    li {
+      margin: 0.25em 0;
+    }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15,23,42,.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
       background: rgba(127,29,29,.22);
@@ -64,6 +97,7 @@ main {
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
       font-size: .9rem;
@@ -79,8 +113,8 @@ main {
   <h1>VRC Misa Translator</h1>
   <p class="tagline">VRChat 即時翻譯工具</p>
   <p>
-    可翻譯語音或輸入文字，並自動傳送到 VRChat Chatbox。<br>
-    讓與海外朋友的對話、活動主持、多語交流更加順暢的桌面應用程式。
+    翻譯語音或文字，並自動傳送到 VRChat Chatbox。<br>
+    這是一款讓海外朋友交流、活動主持、多語溝通更加順暢的桌面應用程式。
   </p>
 </section>
 
@@ -88,38 +122,51 @@ main {
   <h2>✨ 主要功能</h2>
   <ul>
     <li>即時語音翻譯</li>
-    <li>自動傳送至 VRChat Chatbox</li>
+    <li>自動傳送到 VRChat Chatbox</li>
     <li>文字輸入翻譯</li>
     <li><strong>支援 20 種語言</strong></li>
-    <li>ChatGPT 翻譯模式</li>
+    <li>自然翻譯（ChatGPT 模式）</li>
     <li>降低誤辨識的黑名單功能</li>
   </ul>
 </section>
 
 <section class="card">
-  <h2>🆕 最近更新</h2>
+  <h2>🆕 v1.9.26 → v1.11.1 更新</h2>
 
-  <h3>UI 改善</h3>
+  <h3>✨ 新功能</h3>
+  <ul>
+    <li>新增「將原文送至黑名單」一鍵登錄功能</li>
+    <li>改善自然翻譯（ChatGPT 模式）</li>
+    <li>新增多語言工具提示支援</li>
+  </ul>
+
+  <h3>🧹 黑名單強化</h3>
+  <ul>
+    <li>將黑名單編輯改為「更新」流程，提高安全性</li>
+    <li>強化預設黑名單內容</li>
+    <li>改善誤辨識與雜訊類輸出的過濾</li>
+  </ul>
+
+  <h3>🌍 UI・多語言支援</h3>
+  <ul>
+    <li>UI 支援 5 種語言：日文 / 英文 / 簡體中文 / 繁體中文 / 韓文</li>
+    <li>修正 License 與 Guide 視窗的多語言連動</li>
+    <li>提升 UI 語言切換穩定性</li>
+  </ul>
+
+  <h3>🎨 UI 改善</h3>
   <ul>
     <li>重新整理上方選單</li>
-    <li>優化 README / 更新 / 授權配置</li>
-    <li>改善高負載模型警告視窗</li>
-    <li>修正更新頁面顯示錯誤</li>
+    <li>改善 README / 更新 / 授權 的配置</li>
+    <li>改善輸入 UI 與操作流程</li>
+    <li>改善工具提示顯示</li>
   </ul>
 
-  <h3>操作性提升</h3>
+  <h3>⚙️ 穩定性與內部改善</h3>
   <ul>
-    <li>改善文字輸入功能</li>
-    <li>改善輸入中標記顯示</li>
-    <li>提升 UI 語言切換穩定性</li>
-    <li>修正授權按鈕多語系連動</li>
-  </ul>
-
-  <h3>實用改善</h3>
-  <ul>
-    <li>強化黑名單預設內容</li>
     <li>修正細部問題</li>
     <li>提升整體穩定性</li>
+    <li>改善翻譯處理</li>
   </ul>
 </section>
 
@@ -137,29 +184,53 @@ main {
   <h3>文字輸入翻譯</h3>
   <ol>
     <li>在下方「原文」欄位輸入文字</li>
-    <li>按 Enter 翻譯並送出</li>
+    <li>按 Enter 翻譯並傳送</li>
   </ol>
 
   <p class="note">
-    Enter：送出<br>
+    Enter：傳送<br>
     Shift + Enter：換行
   </p>
 </section>
 
 <section class="card">
-  <h2>🤖 關於 ChatGPT 翻譯</h2>
+  <h2>🤖 自然翻譯（ChatGPT 模式）</h2>
   <p>
-    使用 ChatGPT 翻譯模式，可讓對話內容更自然。
+    提供更自然的翻譯與語氣調整。
   </p>
   <ul>
-    <li>更柔和的表達方式</li>
+    <li>更柔和的表達</li>
     <li>適合對話的短句</li>
-    <li>自然的語氣調整</li>
+    <li>自然的語氣與細微差異調整</li>
   </ul>
 
   <p class="warning">
-    需要 OpenAI API 金鑰。ChatGPT 翻譯依使用量計費。
+    需要 OpenAI API Key。費用依使用量計算。
   </p>
+</section>
+
+<section class="card">
+  <h2>🧹 黑名單功能</h2>
+  <p>
+    語音辨識有時會顯示實際上沒有說出的文字。<br>
+    例如影片結尾常見語句、雜訊或誤辨識文字。
+  </p>
+
+  <p>
+    登錄到黑名單的文字，之後將不會自動傳送。
+  </p>
+
+  <h3>使用方式</h3>
+  <ul>
+    <li>使用「將原文送至黑名單」按鈕一鍵登錄</li>
+    <li>在詳細設定中手動編輯後，按下「更新黑名單」保存</li>
+  </ul>
+
+  <h3>注意事項</h3>
+  <ul>
+    <li>登錄過多內容時，正常對話也可能被過濾</li>
+    <li>建議以短句為單位登錄</li>
+  </ul>
 </section>
 
 <section class="card">
@@ -184,7 +255,7 @@ main {
     讓活動、聊天與互動更加自由。
   </p>
   <p>
-    VRC Misa Translator 支援你在 VRChat 的全新相遇 ✨
+    VRC Misa Translator 支援你在 VRChat 中遇見新的朋友 ✨
   </p>
 </section>
 
