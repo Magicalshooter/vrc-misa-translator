@@ -236,6 +236,69 @@ li{
   border-color:#60a5fa;
   transform:translateY(-2px);
 }
+  
+/* ラジオボタン非表示 */
+input[name="ui"]{
+  display:none;
+}
+
+/* メイン画像 */
+.ui-view{
+  position:relative;
+  margin-top:12px;
+}
+
+.ui-view img{
+  width:100%;
+  border-radius:16px;
+  border:1px solid #334155;
+  box-shadow:0 16px 36px rgba(0,0,0,.35);
+  display:none;
+}
+
+/* 選択状態に応じて表示 */
+#ui1:checked ~ .ui-view img:nth-child(1),
+#ui2:checked ~ .ui-view img:nth-child(2),
+#ui3:checked ~ .ui-view img:nth-child(3),
+#ui4:checked ~ .ui-view img:nth-child(4),
+#ui5:checked ~ .ui-view img:nth-child(5){
+  display:block;
+}
+
+/* サムネ */
+.ui-thumbs{
+  display:flex;
+  gap:8px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+
+.ui-thumbs label{
+  cursor:pointer;
+}
+
+.ui-thumbs img{
+  width:100px;
+  border-radius:10px;
+  border:1px solid #334155;
+  opacity:.8;
+  transition:.15s;
+}
+
+.ui-thumbs img:hover{
+  opacity:1;
+  border-color:#60a5fa;
+}
+
+/* 選択中ハイライト */
+#ui1:checked ~ .ui-thumbs label:nth-child(1) img,
+#ui2:checked ~ .ui-thumbs label:nth-child(2) img,
+#ui3:checked ~ .ui-thumbs label:nth-child(3) img,
+#ui4:checked ~ .ui-thumbs label:nth-child(4) img,
+#ui5:checked ~ .ui-thumbs label:nth-child(5) img{
+  border-color:#60a5fa;
+  opacity:1;
+}
 </style>
 </head>
 
@@ -299,15 +362,29 @@ UI languages currently available: Japanese / English / Traditional Chinese / Sim
 UI言語は現在、日本語 / 英語 / 繁體中文 / 简体中文 / 한국어 に対応しています。
 </p>
 
-<!-- 1枚目（大） -->
-<img src="./img/vrc-misa-translator-ui-1.png" class="ui-main">
+<!-- ラジオボタン（状態管理） -->
+<input type="radio" name="ui" id="ui1" checked>
+<input type="radio" name="ui" id="ui2">
+<input type="radio" name="ui" id="ui3">
+<input type="radio" name="ui" id="ui4">
+<input type="radio" name="ui" id="ui5">
 
-<!-- 2〜5枚目（小） -->
-<div class="ui-sub">
+<!-- メイン表示 -->
+<div class="ui-view">
+  <img src="./img/vrc-misa-translator-ui-1.png">
   <img src="./img/vrc-misa-translator-ui-2.png">
   <img src="./img/vrc-misa-translator-ui-3.png">
   <img src="./img/vrc-misa-translator-ui-4.png">
   <img src="./img/vrc-misa-translator-ui-5.png">
+</div>
+
+<!-- サムネ -->
+<div class="ui-thumbs">
+  <label for="ui1"><img src="./img/vrc-misa-translator-ui-1.png"></label>
+  <label for="ui2"><img src="./img/vrc-misa-translator-ui-2.png"></label>
+  <label for="ui3"><img src="./img/vrc-misa-translator-ui-3.png"></label>
+  <label for="ui4"><img src="./img/vrc-misa-translator-ui-4.png"></label>
+  <label for="ui5"><img src="./img/vrc-misa-translator-ui-5.png"></label>
 </div>
 </section>
 
