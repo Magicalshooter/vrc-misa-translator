@@ -12,32 +12,51 @@
       color: #e5e7eb;
       line-height: 1.8;
     }
-    
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('../img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
 
-main {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 44px 20px;
-}
-    h1, h2, h3 { color: #f8fafc; line-height: 1.35; }
-    h1 { font-size: 2.2rem; margin-bottom: 0.2em; }
-    h2 { margin-top: 36px; padding-bottom: 6px; border-bottom: 1px solid #334155; color: #bfdbfe; }
-    h3 { margin-top: 24px; color: #dbeafe; }
+    body::before{
+      content:"";
+      position:fixed;
+      right:-40px;
+      bottom:0;
+      width:75vw;
+      height:100vh;
+      background:url('../img/misa.png') no-repeat right bottom;
+      background-size:contain;
+      opacity:0.8;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+
     .hero, .card {
       background: rgba(17, 24, 39, 0.86);
       border: 1px solid #334155;
@@ -45,17 +64,32 @@ main {
       padding: 22px;
       margin: 20px 0;
     }
-    .hero { border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-    .tagline { color: #93c5fd; font-size: 1.08rem; margin-top: 0; }
-    ul, ol { padding-left: 1.35em; }
-    li { margin: 0.25em 0; }
+
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+
+    ul, ol {
+      padding-left: 1.35em;
+    }
+
+    li {
+      margin: 0.25em 0;
+    }
+
     .note {
       color: #cbd5e1;
-      background: rgba(15,23,42,.8);
-      border-left: 4px solid #60a5fa;
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .warning {
       color: #fecaca;
       background: rgba(127,29,29,.22);
@@ -63,6 +97,7 @@ main {
       padding: 12px 14px;
       border-radius: 10px;
     }
+
     .small {
       color: #94a3b8;
       font-size: .9rem;
@@ -76,49 +111,62 @@ main {
 
 <section class="hero">
   <h1>VRC Misa Translator</h1>
-  <p class="tagline">A real-time translation tool for VRChat</p>
+  <p class="tagline">Real-time Translation Tool for VRChat</p>
   <p>
-    Translate speech or typed text and automatically send it to the VRChat Chatbox.<br>
-    A desktop app designed to make conversations with international friends, event hosting, and multilingual communication smoother.
+    Translates speech and text, then automatically sends the result to the VRChat Chatbox.<br>
+    A desktop app designed for smoother conversations with international friends, event hosting, and multilingual communication.
   </p>
 </section>
 
 <section class="card">
   <h2>✨ Main Features</h2>
   <ul>
-    <li>Real-time voice translation</li>
+    <li>Real-time speech translation</li>
     <li>Automatic sending to VRChat Chatbox</li>
     <li>Text input translation</li>
     <li><strong>Supports 20 languages</strong></li>
-    <li>ChatGPT translation mode</li>
-    <li>Blacklist feature to reduce false recognition</li>
+    <li>Natural Translation (ChatGPT Mode)</li>
+    <li>Blacklist feature to reduce misrecognition</li>
   </ul>
 </section>
 
 <section class="card">
-  <h2>🆕 Recent Improvements</h2>
+  <h2>🆕 v1.9.26 → v1.11.1 Update</h2>
 
-  <h3>UI Improvements</h3>
+  <h3>✨ New Features</h3>
+  <ul>
+    <li>Added one-click “Send Original to Blacklist” feature</li>
+    <li>Improved Natural Translation (ChatGPT Mode)</li>
+    <li>Added multilingual tooltip support</li>
+  </ul>
+
+  <h3>🧹 Blacklist Improvements</h3>
+  <ul>
+    <li>Changed blacklist editing to an update-based workflow for better safety</li>
+    <li>Enhanced the default blacklist contents</li>
+    <li>Improved filtering for misrecognition and noise-like outputs</li>
+  </ul>
+
+  <h3>🌍 UI & Localization</h3>
+  <ul>
+    <li>UI now supports 5 languages: Japanese / English / Simplified Chinese / Traditional Chinese / Korean</li>
+    <li>Fixed multilingual linkage for License and Guide windows</li>
+    <li>Improved stability when switching UI languages</li>
+  </ul>
+
+  <h3>🎨 UI Improvements</h3>
   <ul>
     <li>Reorganized the top menu</li>
     <li>Improved placement of README / Update / License</li>
-    <li>Improved high-load model warning window</li>
-    <li>Fixed layout issues on the update page</li>
+    <li>Improved input UI and operation flow</li>
+    <li>Improved tooltip display</li>
   </ul>
 
-  <h3>Usability Improvements</h3>
+  <h3>⚙️ Stability & Internal Improvements</h3>
   <ul>
-    <li>Improved text input usability</li>
-    <li>Improved input status indicator</li>
-    <li>Stabilized UI language switching</li>
-    <li>Fixed multilingual linkage for the license button</li>
-  </ul>
-
-  <h3>Practical Improvements</h3>
-  <ul>
-    <li>Enhanced the default blacklist contents</li>
     <li>Fixed minor issues</li>
     <li>Improved overall stability</li>
+    <li>Improved translation processing</li>
   </ul>
 </section>
 
@@ -140,25 +188,49 @@ main {
   </ol>
 
   <p class="note">
-    Enter: send<br>
-    Shift + Enter: new line
+    Enter: Send<br>
+    Shift + Enter: New line
   </p>
 </section>
 
 <section class="card">
-  <h2>🤖 About ChatGPT Translation</h2>
+  <h2>🤖 Natural Translation (ChatGPT Mode)</h2>
   <p>
-    ChatGPT translation mode can make conversation text sound more natural.
+    Provides more natural translation and tone adjustment.
   </p>
   <ul>
-    <li>Softer wording</li>
-    <li>Short sentences suitable for conversation</li>
+    <li>Softer phrasing</li>
+    <li>Conversation-friendly short sentences</li>
     <li>Natural nuance adjustment</li>
   </ul>
 
   <p class="warning">
-    An OpenAI API key is required. ChatGPT translation is billed based on usage.
+    An OpenAI API key is required. Usage-based charges apply.
   </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Blacklist Feature</h2>
+  <p>
+    Speech recognition may sometimes display text that was not actually spoken.<br>
+    Examples include video-ending phrases, noise, or misrecognized text.
+  </p>
+
+  <p>
+    Text added to the blacklist will no longer be sent automatically.
+  </p>
+
+  <h3>How to Use</h3>
+  <ul>
+    <li>Use the “Send Original to Blacklist” button for one-click registration</li>
+    <li>Edit manually in Advanced Settings, then press “Update Blacklist” to save</li>
+  </ul>
+
+  <h3>Notes</h3>
+  <ul>
+    <li>Adding too many entries may also filter normal conversations</li>
+    <li>Registering short phrases is recommended</li>
+  </ul>
 </section>
 
 <section class="card">
@@ -172,7 +244,7 @@ main {
   </ul>
 
   <p class="warning">
-    It does not work on Quest standalone only.
+    It does not work on Quest standalone.
   </p>
 </section>
 
