@@ -14,23 +14,7 @@ body{
   line-height:1.7;
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  right:-40px;
-  bottom:0;
-  width:75vw;
-  height:100vh;
-  background:url('./img/misa.png') no-repeat right bottom;
-  background-size:contain;
-  opacity:0.8;
-  pointer-events:none;
-  z-index:0;
-}
-
 .wrap{
-  position:relative;
-  z-index:1;
   max-width:880px;
   margin:0 auto;
   padding:48px 20px;
@@ -44,66 +28,8 @@ body::before{
   margin:20px 0;
 }
 
-.hero{
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
-
-h1{
-  color:#f8fafc;
-  font-size:2.4rem;
-  margin:0 0 8px;
-}
-
-h2{
-  color:#bfdbfe;
-  margin-top:0;
-}
-
-p{ color:#e5e7eb; }
-
-a{
-  color:#e5e7eb;
-  text-decoration:none;
-}
-
-.small{
-  color:#cbd5e1;
-  font-size:.95rem;
-}
-
-ul{ padding-left:1.3em; }
-li{ margin:.45em 0; }
-
-.top-bar{
-  display:flex;
-  justify-content:flex-end;
-  margin-bottom:14px;
-}
-
-.language-select{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border:1px solid #334155;
-  border-radius:14px;
-  background:rgba(15,23,42,.78);
-}
-
-.language-select label{
-  color:#cbd5e1;
-  font-size:.9rem;
-  font-weight:700;
-}
-
-.language-select select{
-  color:#f8fafc;
-  background:#111827;
-  border:1px solid #475569;
-  border-radius:10px;
-  padding:7px 10px;
-  font-weight:700;
-}
+h1{font-size:2.4rem;margin:0 0 8px;}
+h2{color:#bfdbfe;margin-top:0;}
 
 .buttons{
   display:flex;
@@ -117,21 +43,22 @@ li{ margin:.45em 0; }
   border:1px solid #3b82f6;
   border-radius:12px;
   background:rgba(30,41,59,.7);
-  color:#f8fafc;
+  color:#fff;
   font-weight:700;
-  transition:.15s;
 }
 
-.buttons a:hover{ background:#2563eb; }
-
-.buttons a.x-button{
-  border-color:#94a3b8;
-  background:rgba(15,23,42,.82);
+.language-switch{
+  margin-bottom:16px;
 }
 
-.buttons a.x-button:hover{
-  background:#0f172a;
-  border-color:#f8fafc;
+.language-switch button{
+  margin-right:6px;
+  padding:6px 10px;
+  border-radius:8px;
+  border:none;
+  background:#334155;
+  color:white;
+  cursor:pointer;
 }
 
 .language-grid{
@@ -145,125 +72,15 @@ li{ margin:.45em 0; }
   display:flex;
   align-items:center;
   gap:10px;
-  padding:12px 14px;
+  padding:12px;
   border:1px solid #334155;
   border-radius:14px;
-  background:rgba(15,23,42,.65);
-  color:#f8fafc;
-  font-weight:700;
-}
-
-.language-grid a:hover{
-  border-color:#60a5fa;
-  background:rgba(30,41,59,.9);
 }
 
 .badge{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:34px;
-  height:34px;
-  border-radius:10px;
   background:#1d4ed8;
-  color:white;
-  font-size:.82rem;
-  font-weight:800;
-}
-
-.hero-badge{
-  display:inline-block;
-  padding:8px 14px;
-  border:1px solid #60a5fa;
-  border-radius:999px;
-  background:rgba(37,99,235,.18);
-  color:#dbeafe;
-  font-weight:800;
-}
-
-.hero-features{
-  color:#f8fafc;
-  font-weight:700;
-}
-
-.version-badge{
-  display:inline-block;
-  margin-top:8px;
-  padding:6px 12px;
-  border-radius:999px;
-  background:rgba(236,72,153,.18);
-  border:1px solid #f472b6;
-  color:#fce7f3;
-  font-weight:800;
-}
-
-/* UI image selector */
-input[name="ui"]{ display:none; }
-
-.ui-view{
-  position:relative;
-  margin-top:12px;
-}
-
-.ui-view img{
-  width:100%;
-  border-radius:16px;
-  border:1px solid #334155;
-  box-shadow:0 16px 36px rgba(0,0,0,.35);
-  display:none;
-}
-
-#ui1:checked ~ .ui-view img:nth-child(1),
-#ui2:checked ~ .ui-view img:nth-child(2),
-#ui3:checked ~ .ui-view img:nth-child(3),
-#ui4:checked ~ .ui-view img:nth-child(4),
-#ui5:checked ~ .ui-view img:nth-child(5){
-  display:block;
-}
-
-.ui-thumbs{
-  display:flex;
-  gap:8px;
-  margin-top:12px;
-  flex-wrap:wrap;
-}
-
-.ui-thumbs label{ cursor:pointer; }
-
-.ui-thumbs img{
-  width:100px;
-  border-radius:10px;
-  border:1px solid #334155;
-  opacity:.8;
-  transition:.15s;
-}
-
-.ui-thumbs img:hover{
-  opacity:1;
-  border-color:#60a5fa;
-}
-
-#ui1:checked ~ .ui-thumbs label:nth-child(1) img,
-#ui2:checked ~ .ui-thumbs label:nth-child(2) img,
-#ui3:checked ~ .ui-thumbs label:nth-child(3) img,
-#ui4:checked ~ .ui-thumbs label:nth-child(4) img,
-#ui5:checked ~ .ui-thumbs label:nth-child(5) img{
-  border-color:#60a5fa;
-  opacity:1;
-}
-
-.store-btn small{
-  display:block;
-  color:#cbd5e1;
-  font-size:.78rem;
-  font-weight:600;
-}
-
-@media (max-width:560px){
-  h1{ font-size:2rem; }
-  .wrap{ padding:28px 14px; }
-  body::before{ opacity:.38; width:100vw; right:-70px; }
-  .buttons a{ flex:1 1 auto; text-align:center; }
+  padding:6px;
+  border-radius:8px;
 }
 </style>
 </head>
@@ -271,91 +88,40 @@ input[name="ui"]{ display:none; }
 <body>
 <main class="wrap">
 
-<div class="top-bar">
-  <div class="language-select">
-    <label for="language" data-i18n="languageLabel">Language</label>
-    <select id="language" aria-label="Language">
-      <option value="ja">日本語</option>
-      <option value="en">English</option>
-      <option value="zh-tw">繁體中文</option>
-      <option value="zh-cn">简体中文</option>
-      <option value="ko">한국어</option>
-    </select>
-  </div>
+<!-- 言語切替 -->
+<div class="language-switch">
+<button onclick="setLang('ja')">JP</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('zh_tw')">TW</button>
+<button onclick="setLang('zh_cn')">CN</button>
+<button onclick="setLang('ko')">KR</button>
 </div>
 
 <section class="hero">
 <h1>VRC Misa Translator</h1>
 
-<p class="version-badge" data-i18n="version">v1.11.1 Released</p>
-
-<p style="font-size:1.2rem; font-weight:800; margin-top:12px;">
-🎤 Speak → 🌍 Translate → 💬 Send
-</p>
-
-<p data-i18n="heroLead">No Unity required. Ready to use as a desktop app.</p>
-
-<p class="small" data-i18n="tagline">Real-time Translation Tool for VRChat</p>
-
-<p class="hero-badge" data-i18n="supportBadge">🌍 Supports 5 UI Languages</p>
-
-<p class="hero-features" data-i18n="heroFeatures">🎤 Voice Input / ⌨ Text Input / 💬 OSC Chatbox</p>
-
-<p data-i18n="heroDescription">
-VRC Misa Translator is a desktop app that translates voice input or typed text and sends it directly to the VRChat Chatbox.
+<p data-i18n="tagline">
+VRChat用リアルタイム翻訳ツール
 </p>
 
 <div class="buttons">
-<a href="#readme" data-i18n="navReadme">README</a>
-<a href="#download" data-i18n="navDownload">Download</a>
-<a href="#updates" data-i18n="navUpdates">Update Notes</a>
-<a href="https://x.com/Magical_Shooter" target="_blank" rel="noopener noreferrer" class="x-button" data-i18n="navContact">Contact X</a>
+<a href="#readme">README</a>
+<a href="#download">Download</a>
+<a href="#updates">Updates</a>
+<a href="https://x.com/Magical_Shooter" target="_blank">X</a>
 </div>
 </section>
 
-<section class="card">
-<h2 data-i18n="uiTitle">Application UI</h2>
-
-<p data-i18n="uiDescription">
-Clean desktop interface with real-time voice translation, text input, OSC Chatbox sending, and multilingual UI support.
-</p>
-
-<p class="small" data-i18n="uiLanguages">
-UI languages currently available: Japanese / English / Traditional Chinese / Simplified Chinese / Korean
-</p>
-
-<input type="radio" name="ui" id="ui1" checked>
-<input type="radio" name="ui" id="ui2">
-<input type="radio" name="ui" id="ui3">
-<input type="radio" name="ui" id="ui4">
-<input type="radio" name="ui" id="ui5">
-
-<div class="ui-view">
-  <img src="./img/vrc-misa-translator-ui-1.png" alt="VRC Misa Translator UI screenshot 1">
-  <img src="./img/vrc-misa-translator-ui-2.png" alt="VRC Misa Translator UI screenshot 2">
-  <img src="./img/vrc-misa-translator-ui-3.png" alt="VRC Misa Translator UI screenshot 3">
-  <img src="./img/vrc-misa-translator-ui-4.png" alt="VRC Misa Translator UI screenshot 4">
-  <img src="./img/vrc-misa-translator-ui-5.png" alt="VRC Misa Translator UI screenshot 5">
-</div>
-
-<div class="ui-thumbs">
-  <label for="ui1"><img src="./img/vrc-misa-translator-ui-1.png" alt="UI thumbnail 1"></label>
-  <label for="ui2"><img src="./img/vrc-misa-translator-ui-2.png" alt="UI thumbnail 2"></label>
-  <label for="ui3"><img src="./img/vrc-misa-translator-ui-3.png" alt="UI thumbnail 3"></label>
-  <label for="ui4"><img src="./img/vrc-misa-translator-ui-4.png" alt="UI thumbnail 4"></label>
-  <label for="ui5"><img src="./img/vrc-misa-translator-ui-5.png" alt="UI thumbnail 5"></label>
-</div>
-</section>
-
+<!-- README -->
 <section id="readme" class="card">
 <h2 data-i18n="readme_title">🌍 README</h2>
 
 <p class="small" data-i18n="readme_desc">
-Please select your language.
+Please select your language (20 languages supported)
 </p>
 
-<!-- 主要5言語 -->
-<div class="language-grid priority">
+<!-- 5言語 -->
+<div class="language-grid">
 <a href="./ja/"><span class="badge">JP</span>日本語</a>
 <a href="./en/"><span class="badge">EN</span>English</a>
 <a href="./zh-tw/"><span class="badge">TW</span>繁體中文</a>
@@ -363,7 +129,7 @@ Please select your language.
 <a href="./ko/"><span class="badge">KR</span>한국어</a>
 </div>
 
-<!-- その他15言語 -->
+<!-- その他 -->
 <div class="language-grid">
 <a href="./fr/"><span class="badge">FR</span>Français</a>
 <a href="./de/"><span class="badge">DE</span>Deutsch</a>
@@ -384,316 +150,65 @@ Please select your language.
 </section>
 
 <section id="download" class="card">
-<h2 data-i18n="downloadTitle">Download</h2>
-
-<p data-i18n="downloadDescription">
-Choose your preferred platform to download VRC Misa Translator.
-</p>
-
-<div class="buttons download-buttons">
-<a href="https://booth.pm/ja/items/8172536" class="store-btn">
-BOOTH 🇯🇵
-<small data-i18n="boothNote">For JP users</small>
-</a>
-
-<a href="https://magicalshooter.itch.io/vrc-misa-translator" class="store-btn">
-itch.io 🌍
-<small data-i18n="itchNote">For global users</small>
-</a>
+<h2>Download</h2>
+<div class="buttons">
+<a href="https://booth.pm/ja/items/8172536">BOOTH</a>
+<a href="https://magicalshooter.itch.io/vrc-misa-translator">itch.io</a>
 </div>
 </section>
 
 <section id="updates" class="card">
-<h2 data-i18n="updatesTitle">Update Notes</h2>
-<p data-i18n="updatesDescription">
-v1.11.1 includes improved blacklist workflow, Natural Translation labeling, multilingual tooltips, and UI stability improvements.
-</p>
-
-<ul>
-<li data-i18n="update1">One-click blacklist registration</li>
-<li data-i18n="update2">Natural Translation wording update</li>
-<li data-i18n="update3">Multilingual tooltip fixes</li>
-<li data-i18n="update4">5-language UI support</li>
-<li data-i18n="update5">README updated for 5 languages</li>
-</ul>
+<h2>Updates</h2>
+<p>v1.11.1 improvements</p>
 </section>
-
-<section class="card">
-<h2 data-i18n="roadmapTitle">🗺️ Roadmap</h2>
-
-<p data-i18n="roadmapDescription">
-Future updates currently being considered for VRC Misa Translator.
-</p>
-
-<ul>
-<li data-i18n="roadmap1">Speech Recognition Correction</li>
-<li data-i18n="roadmap2">More Translation Styles</li>
-<li data-i18n="roadmap3">Automatic Language Detection</li>
-<li data-i18n="roadmap4">GPU (CUDA) Version</li>
-<li data-i18n="roadmap5">More to come...</li>
-</ul>
-</section>
-
-<section class="card">
-<h2 data-i18n="aboutTitle">About</h2>
-<p data-i18n="aboutDescription">
-VRC Misa Translator supports voice translation, manual text input, OSC Chatbox sending, and multilingual communication in VRChat.
-</p>
-</section>
-
-<p class="small">© Misa / VRC Misa Translator</p>
 
 </main>
 
 <script>
 const translations = {
-  ja: {
-    languageLabel: "表示言語",
-    version: "v1.11.1 公開",
-    heroLead: "Unity不要。デスクトップアプリとしてすぐに使えます。",
-    tagline: "VRChat用リアルタイム翻訳ツール",
-    supportBadge: "🌍 5言語UI対応",
-    heroFeatures: "🎤 音声入力 / ⌨ テキスト入力 / 💬 OSC Chatbox",
-    heroDescription: "VRC Misa Translatorは、音声入力・テキスト入力を翻訳し、VRChat Chatboxへ直接送信できるデスクトップアプリです。",
-    navReadme: "README",
-    navDownload: "ダウンロード",
-    navUpdates: "更新内容",
-    navContact: "問い合わせ X",
-    uiTitle: "アプリ画面",
-    uiDescription: "リアルタイム音声翻訳・テキスト入力・OSC Chatbox送信・多言語UIに対応した、見やすいデスクトップアプリ画面です。",
-    uiLanguages: "現在のUI対応言語：日本語 / English / 繁體中文 / 简体中文 / 한국어",
-    readmeTitle: "🌍 README",
-    readmeLead: "READMEは5言語に対応しています。",
-    readmeSelect: "言語を選択してください。",
-    downloadTitle: "ダウンロード",
-    downloadDescription: "お好みの配布サイトからVRC Misa Translatorをダウンロードできます。",
-    boothNote: "日本向け",
-    itchNote: "海外向け",
-    updatesTitle: "更新内容",
-    updatesDescription: "v1.11.1では、ブラックリスト機能、自然な翻訳の表記、多言語ツールチップ、UI安定性を改善しました。",
-    update1: "ワンクリックでブラックリスト登録",
-    update2: "自然な翻訳の表記を調整",
-    update3: "ツールチップの多言語対応を修正",
-    update4: "5言語UI対応",
-    update5: "READMEを5言語対応へ更新",
-    roadmapTitle: "🗺️ 開発予定",
-    roadmapDescription: "VRC Misa Translatorで今後検討している更新内容です。",
-    roadmap1: "音声認識結果の校正機能",
-    roadmap2: "文体選択肢の追加",
-    roadmap3: "話者の言語自動推定",
-    roadmap4: "GPU（CUDA）版の開発",
-    roadmap5: "今後も追加予定",
-    aboutTitle: "このツールについて",
-    aboutDescription: "VRC Misa Translatorは、音声翻訳、手入力翻訳、OSC Chatbox送信、VRChatでの多言語コミュニケーションをサポートします。"
+  tagline:{
+    ja:"VRChat用リアルタイム翻訳ツール",
+    en:"Real-time Translation Tool for VRChat",
+    zh_tw:"VRChat即時翻譯工具",
+    zh_cn:"VRChat实时翻译工具",
+    ko:"VRChat 실시간 번역 도구"
   },
-  en: {
-    languageLabel: "Language",
-    version: "v1.11.1 Released",
-    heroLead: "No Unity required. Ready to use as a desktop app.",
-    tagline: "Real-time Translation Tool for VRChat",
-    supportBadge: "🌍 Supports 5 UI Languages",
-    heroFeatures: "🎤 Voice Input / ⌨ Text Input / 💬 OSC Chatbox",
-    heroDescription: "VRC Misa Translator is a desktop app that translates voice input or typed text and sends it directly to the VRChat Chatbox.",
-    navReadme: "README",
-    navDownload: "Download",
-    navUpdates: "Update Notes",
-    navContact: "Contact X",
-    uiTitle: "Application UI",
-    uiDescription: "Clean desktop interface with real-time voice translation, text input, OSC Chatbox sending, and multilingual UI support.",
-    uiLanguages: "UI languages currently available: Japanese / English / Traditional Chinese / Simplified Chinese / Korean",
-    readmeTitle: "🌍 README",
-    readmeLead: "README pages are available in 5 languages.",
-    readmeSelect: "Please select your language.",
-    downloadTitle: "Download",
-    downloadDescription: "Choose your preferred platform to download VRC Misa Translator.",
-    boothNote: "For JP users",
-    itchNote: "For global users",
-    updatesTitle: "Update Notes",
-    updatesDescription: "v1.11.1 includes improved blacklist workflow, Natural Translation labeling, multilingual tooltips, and UI stability improvements.",
-    update1: "One-click blacklist registration",
-    update2: "Natural Translation wording update",
-    update3: "Multilingual tooltip fixes",
-    update4: "5-language UI support",
-    update5: "README updated for 5 languages",
-    roadmapTitle: "🗺️ Roadmap",
-    roadmapDescription: "Future updates currently being considered for VRC Misa Translator.",
-    roadmap1: "Speech Recognition Correction",
-    roadmap2: "More Translation Styles",
-    roadmap3: "Automatic Language Detection",
-    roadmap4: "GPU (CUDA) Version",
-    roadmap5: "More to come...",
-    aboutTitle: "About",
-    aboutDescription: "VRC Misa Translator supports voice translation, manual text input, OSC Chatbox sending, and multilingual communication in VRChat."
+  readme_title:{
+    ja:"🌍 README",
+    en:"🌍 README",
+    zh_tw:"🌍 說明文件",
+    zh_cn:"🌍 说明文档",
+    ko:"🌍 설명서"
   },
-  "zh-tw": {
-    languageLabel: "顯示語言",
-    version: "v1.11.1 已發布",
-    heroLead: "不需要 Unity。作為桌面應用程式即可立即使用。",
-    tagline: "VRChat 即時翻譯工具",
-    supportBadge: "🌍 支援 5 種 UI 語言",
-    heroFeatures: "🎤 語音輸入 / ⌨ 文字輸入 / 💬 OSC Chatbox",
-    heroDescription: "VRC Misa Translator 是一款桌面應用程式，可翻譯語音輸入或文字輸入，並直接傳送到 VRChat Chatbox。",
-    navReadme: "README",
-    navDownload: "下載",
-    navUpdates: "更新內容",
-    navContact: "聯絡 X",
-    uiTitle: "應用程式畫面",
-    uiDescription: "簡潔的桌面介面，支援即時語音翻譯、文字輸入、OSC Chatbox 傳送與多語言 UI。",
-    uiLanguages: "目前 UI 支援語言：日本語 / English / 繁體中文 / 简体中文 / 한국어",
-    readmeTitle: "🌍 README",
-    readmeLead: "README 提供 5 種語言版本。",
-    readmeSelect: "請選擇語言。",
-    downloadTitle: "下載",
-    downloadDescription: "請選擇偏好的平台下載 VRC Misa Translator。",
-    boothNote: "日本使用者向",
-    itchNote: "全球使用者向",
-    updatesTitle: "更新內容",
-    updatesDescription: "v1.11.1 改善了黑名單流程、自然翻譯標示、多語言工具提示與 UI 穩定性。",
-    update1: "一鍵加入黑名單",
-    update2: "調整 Natural Translation 標示",
-    update3: "修正多語言工具提示",
-    update4: "支援 5 種 UI 語言",
-    update5: "README 更新為 5 種語言",
-    roadmapTitle: "🗺️ 開發計畫",
-    roadmapDescription: "目前正在考慮的 VRC Misa Translator 未來更新。",
-    roadmap1: "語音辨識結果校正功能",
-    roadmap2: "增加更多翻譯風格",
-    roadmap3: "自動判斷說話者語言",
-    roadmap4: "GPU（CUDA）版本",
-    roadmap5: "更多功能陸續追加",
-    aboutTitle: "關於這個工具",
-    aboutDescription: "VRC Misa Translator 支援語音翻譯、手動文字輸入、OSC Chatbox 傳送，以及 VRChat 中的多語言交流。"
-  },
-  "zh-cn": {
-    languageLabel: "显示语言",
-    version: "v1.11.1 已发布",
-    heroLead: "无需 Unity。作为桌面应用即可立即使用。",
-    tagline: "VRChat 实时翻译工具",
-    supportBadge: "🌍 支持 5 种 UI 语言",
-    heroFeatures: "🎤 语音输入 / ⌨ 文字输入 / 💬 OSC Chatbox",
-    heroDescription: "VRC Misa Translator 是一款桌面应用，可翻译语音输入或文字输入，并直接发送到 VRChat Chatbox。",
-    navReadme: "README",
-    navDownload: "下载",
-    navUpdates: "更新内容",
-    navContact: "联系 X",
-    uiTitle: "应用界面",
-    uiDescription: "清爽的桌面界面，支持实时语音翻译、文字输入、OSC Chatbox 发送和多语言 UI。",
-    uiLanguages: "当前 UI 支持语言：日本語 / English / 繁體中文 / 简体中文 / 한국어",
-    readmeTitle: "🌍 README",
-    readmeLead: "README 提供 5 种语言版本。",
-    readmeSelect: "请选择语言。",
-    downloadTitle: "下载",
-    downloadDescription: "请选择喜欢的平台下载 VRC Misa Translator。",
-    boothNote: "面向日本用户",
-    itchNote: "面向全球用户",
-    updatesTitle: "更新内容",
-    updatesDescription: "v1.11.1 改进了黑名单流程、自然翻译标注、多语言工具提示和 UI 稳定性。",
-    update1: "一键加入黑名单",
-    update2: "调整 Natural Translation 表述",
-    update3: "修正多语言工具提示",
-    update4: "支持 5 种 UI 语言",
-    update5: "README 更新为 5 种语言",
-    roadmapTitle: "🗺️ 开发计划",
-    roadmapDescription: "VRC Misa Translator 目前正在考虑的未来更新。",
-    roadmap1: "语音识别结果校正功能",
-    roadmap2: "增加更多翻译风格",
-    roadmap3: "自动判断说话者语言",
-    roadmap4: "GPU（CUDA）版本",
-    roadmap5: "更多内容陆续追加",
-    aboutTitle: "关于这个工具",
-    aboutDescription: "VRC Misa Translator 支持语音翻译、手动文字输入、OSC Chatbox 发送，以及 VRChat 中的多语言交流。"
-  },
-  ko: {
-    languageLabel: "표시 언어",
-    version: "v1.11.1 공개",
-    heroLead: "Unity가 필요 없습니다. 데스크톱 앱으로 바로 사용할 수 있습니다.",
-    tagline: "VRChat용 실시간 번역 도구",
-    supportBadge: "🌍 5개 UI 언어 지원",
-    heroFeatures: "🎤 음성 입력 / ⌨ 텍스트 입력 / 💬 OSC Chatbox",
-    heroDescription: "VRC Misa Translator는 음성 입력 또는 직접 입력한 텍스트를 번역해 VRChat Chatbox로 바로 전송할 수 있는 데스크톱 앱입니다.",
-    navReadme: "README",
-    navDownload: "다운로드",
-    navUpdates: "업데이트 내용",
-    navContact: "문의 X",
-    uiTitle: "앱 화면",
-    uiDescription: "실시간 음성 번역, 텍스트 입력, OSC Chatbox 전송, 다국어 UI를 지원하는 깔끔한 데스크톱 인터페이스입니다.",
-    uiLanguages: "현재 UI 지원 언어: 日本語 / English / 繁體中文 / 简体中文 / 한국어",
-    readmeTitle: "🌍 README",
-    readmeLead: "README는 5개 언어로 제공됩니다.",
-    readmeSelect: "언어를 선택해 주세요.",
-    downloadTitle: "다운로드",
-    downloadDescription: "원하는 배포 플랫폼에서 VRC Misa Translator를 다운로드할 수 있습니다.",
-    boothNote: "일본 사용자용",
-    itchNote: "글로벌 사용자용",
-    updatesTitle: "업데이트 내용",
-    updatesDescription: "v1.11.1에서는 블랙리스트 기능, Natural Translation 표기, 다국어 툴팁, UI 안정성을 개선했습니다.",
-    update1: "원클릭 블랙리스트 등록",
-    update2: "Natural Translation 문구 조정",
-    update3: "다국어 툴팁 수정",
-    update4: "5개 UI 언어 지원",
-    update5: "README를 5개 언어로 업데이트",
-    roadmapTitle: "🗺️ 개발 예정",
-    roadmapDescription: "VRC Misa Translator에서 앞으로 검토 중인 업데이트입니다.",
-    roadmap1: "음성 인식 결과 보정 기능",
-    roadmap2: "더 다양한 번역 스타일",
-    roadmap3: "화자 언어 자동 추정",
-    roadmap4: "GPU(CUDA) 버전",
-    roadmap5: "추가 기능 예정",
-    aboutTitle: "이 도구에 대해",
-    aboutDescription: "VRC Misa Translator는 음성 번역, 수동 텍스트 입력, OSC Chatbox 전송, VRChat에서의 다국어 커뮤니케이션을 지원합니다."
+  readme_desc:{
+    ja:"言語を選択してください（20言語対応）",
+    en:"Please select your language (20 languages supported)",
+    zh_tw:"請選擇您的語言（支援20種語言）",
+    zh_cn:"请选择您的语言（支持20种语言）",
+    ko:"언어를 선택하세요 (20개 언어 지원)"
   }
 };
 
-const langAliases = {
-  ja: "ja",
-  en: "en",
-  ko: "ko",
-  kr: "ko",
-  "zh-tw": "zh-tw",
-  "zh-hant": "zh-tw",
-  "zh-hk": "zh-tw",
-  "zh-mo": "zh-tw",
-  "zh-cn": "zh-cn",
-  "zh-hans": "zh-cn",
-  "zh-sg": "zh-cn"
-};
-
-function normalizeLanguage(languageCode){
-  const lower = (languageCode || "").toLowerCase();
-  if(langAliases[lower]) return langAliases[lower];
-  const base = lower.split("-")[0];
-  return langAliases[base] || "en";
-}
-
-function getInitialLanguage(){
-  const saved = localStorage.getItem("vrc-misa-site-language");
-  if(saved && translations[saved]) return saved;
-
-  for(const language of navigator.languages || [navigator.language]){
-    const normalized = normalizeLanguage(language);
-    if(translations[normalized]) return normalized;
-  }
-  return "en";
-}
-
-function applyLanguage(lang){
-  const dictionary = translations[lang] || translations.en;
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-    if(dictionary[key]) element.textContent = dictionary[key];
+function setLang(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(translations[key]){
+      el.textContent = translations[key][lang];
+    }
   });
-  const selector = document.getElementById("language");
-  if(selector.value !== lang) selector.value = lang;
-  localStorage.setItem("vrc-misa-site-language", lang);
+  localStorage.setItem("lang",lang);
 }
 
-const initialLanguage = getInitialLanguage();
-applyLanguage(initialLanguage);
+// 自動言語判定
+const browserLang = navigator.language.toLowerCase();
+let lang = "en";
 
-document.getElementById("language").addEventListener("change", (event) => {
-  applyLanguage(event.target.value);
-});
+if(browserLang.startsWith("ja")) lang="ja";
+else if(browserLang.startsWith("zh")) lang="zh_cn";
+else if(browserLang.startsWith("ko")) lang="ko";
+
+setLang(localStorage.getItem("lang") || lang);
 </script>
+
 </body>
 </html>
