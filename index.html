@@ -376,7 +376,7 @@ input[name="ui"]{
 <section class="hero">
 <h1>VRC Misa Translator</h1>
 
-<p class="version-badge" data-i18n="version_badge">v1.11.1 公開</p>
+<p class="version-badge" data-i18n="version_badge">v1.12.3 公開</p>
 
 <p style="font-size:1.2rem; font-weight:800; margin-top:12px;" data-i18n="hero_flow">
 🎤 話す → 🌍 翻訳 → 💬 送信
@@ -391,11 +391,11 @@ VRChat用リアルタイム翻訳ツール
 </p>
 
 <p class="hero-badge" data-i18n="hero_badge">
-🌍 20言語対応
+🌍 24言語対応
 </p>
 
 <p class="hero-features" data-i18n="hero_features">
-🎤 音声入力 / ⌨ テキスト入力 / 💬 OSC Chatbox
+🎤 VAD / 🪟 原文Overlay / 🚀 Pro版公開
 </p>
 
 <p data-i18n="hero_desc">
@@ -446,7 +446,7 @@ UI言語は現在、日本語 / 英語 / 繁體中文 / 简体中文 / 한국어
 
 <section id="readme" class="card">
 <h2 data-i18n="readme_title">🌍 README</h2>
-<p class="small" data-i18n="readme_desc">言語を選択してください（20言語対応）</p>
+<p class="small" data-i18n="readme_desc">言語を選択してください（24言語対応）</p>
 
 <div class="language-grid priority">
 <a href="./ja/"><span class="badge">JP</span>日本語</a>
@@ -472,6 +472,10 @@ UI言語は現在、日本語 / 英語 / 繁體中文 / 简体中文 / 한국어
 <a href="./uk/"><span class="badge">UA</span>Українська</a>
 <a href="./hi/"><span class="badge">IN</span>हिन्दी</a>
 <a href="./ar/"><span class="badge">AR</span>العربية</a>
+<a href="./tl/"><span class="badge">TL</span>Tagalog</a>
+<a href="./fil/"><span class="badge">FIL</span>Filipino</a>
+<a href="./sv/"><span class="badge">SV</span>Swedish</a>
+<a href="./fi/"><span class="badge">FI</span>Finnish</a>
 </div>
 </section>
 
@@ -498,15 +502,15 @@ itch.io 🌍
 <section id="updates" class="card">
 <h2 data-i18n="updates_title">更新内容</h2>
 <p data-i18n="updates_desc">
-v1.11.1では、ブラックリスト機能、自然な翻訳（ChatGPTモード）の表記、多言語ツールチップ、UI安定性を改善しました。
+v1.12.3では、VAD、原文Overlay、セーフリスト、24言語対応、Pro版/GPU版を追加・改善しました。
 </p>
 
 <ul>
-<li data-i18n="update_1">原文をブラックリストへ送る機能</li>
-<li data-i18n="update_2">自然な翻訳（ChatGPTモード）表記へ統一</li>
-<li data-i18n="update_3">ツールチップ多言語対応</li>
-<li data-i18n="update_4">5言語UI対応</li>
-<li data-i18n="update_5">README 20言語対応</li>
+<li data-i18n="update_1">🎤 VAD（Voice Activity Detection）</li>
+<li data-i18n="update_2">🪟 原文Overlay</li>
+<li data-i18n="update_3">🛡️ セーフリスト</li>
+<li data-i18n="update_4">🌍 24言語対応</li>
+<li data-i18n="update_5">🚀 Pro版 / GPU版リリース</li>
 </ul>
 </section>
 
@@ -519,9 +523,9 @@ VRC Misa Translator の今後の開発予定です。
 
 <ul>
 <li data-i18n="roadmap_1">音声認識結果の校正機能</li>
-<li data-i18n="roadmap_2">文体選択肢の追加</li>
-<li data-i18n="roadmap_3">話者の言語自動推定</li>
-<li data-i18n="roadmap_4">GPU（CUDA）版の開発</li>
+<li data-i18n="roadmap_2">Speaker Language Detection</li>
+<li data-i18n="roadmap_3">Incoming Voice Translation Overlay</li>
+<li data-i18n="roadmap_4">Translation Quality Improvements</li>
 <li data-i18n="roadmap_5">More to come...</li>
 </ul>
 </section>
@@ -540,11 +544,11 @@ VRC Misa Translator は、音声翻訳、手入力翻訳、OSC Chatbox送信、V
 <script>
 const translations = {
   version_badge:{
-    ja:"v1.11.1 公開",
-    en:"v1.11.1 Released",
-    zh_tw:"v1.11.1 已發布",
-    zh_cn:"v1.11.1 已发布",
-    ko:"v1.11.1 공개"
+    ja:"v1.12.3 公開",
+    en:"v1.12.3 Released",
+    zh_tw:"v1.12.3 已發布",
+    zh_cn:"v1.12.3 已发布",
+    ko:"v1.12.3 공개"
   },
   hero_flow:{
     ja:"🎤 話す → 🌍 翻訳 → 💬 送信",
@@ -568,18 +572,18 @@ const translations = {
     ko:"VRChat 실시간 번역 도구"
   },
   hero_badge:{
-    ja:"🌍 20言語対応",
-    en:"🌍 Supports 20 Languages",
-    zh_tw:"🌍 支援20種語言",
-    zh_cn:"🌍 支持20种语言",
-    ko:"🌍 20개 언어 지원"
+    ja:"🌍 24言語対応",
+    en:"🌍 Supports 24 Languages",
+    zh_tw:"🌍 支援24種語言",
+    zh_cn:"🌍 支持24种语言",
+    ko:"🌍 24개 언어 지원"
   },
   hero_features:{
-    ja:"🎤 音声入力 / ⌨ テキスト入力 / 💬 OSC Chatbox",
-    en:"🎤 Voice Input / ⌨ Text Input / 💬 OSC Chatbox",
-    zh_tw:"🎤 語音輸入 / ⌨ 文字輸入 / 💬 OSC Chatbox",
-    zh_cn:"🎤 语音输入 / ⌨ 文本输入 / 💬 OSC Chatbox",
-    ko:"🎤 음성 입력 / ⌨ 텍스트 입력 / 💬 OSC Chatbox"
+    ja:"🎤 VAD / 🪟 原文Overlay / 🚀 Pro版公開",
+    en:"🎤 VAD / 🪟 Original Overlay / 🚀 Pro Edition Available",
+    zh_tw:"🎤 VAD / 🪟 原文Overlay / 🚀 Pro版已公開",
+    zh_cn:"🎤 VAD / 🪟 原文Overlay / 🚀 Pro版已发布",
+    ko:"🎤 VAD / 🪟 원문 Overlay / 🚀 Pro판 공개"
   },
   hero_desc:{
     ja:"VRC Misa Translator は、音声入力・テキスト入力を翻訳し、VRChat Chatboxへ送信できるデスクトップアプリです。",
@@ -631,11 +635,11 @@ const translations = {
     ko:"🌍 설명서"
   },
   readme_desc:{
-    ja:"言語を選択してください（20言語対応）",
-    en:"Please select your language (20 languages supported)",
-    zh_tw:"請選擇您的語言（支援20種語言）",
-    zh_cn:"请选择您的语言（支持20种语言）",
-    ko:"언어를 선택하세요 (20개 언어 지원)"
+    ja:"言語を選択してください（24言語対応）",
+    en:"Please select your language (24 languages supported)",
+    zh_tw:"請選擇您的語言（支援24種語言）",
+    zh_cn:"请选择您的语言（支持24种语言）",
+    ko:"언어를 선택하세요 (24개 언어 지원)"
   },
   download_desc:{
     ja:"お好みの配布サイトからダウンロードできます。",
@@ -666,46 +670,46 @@ const translations = {
     ko:"업데이트 내용"
   },
   updates_desc:{
-    ja:"v1.11.1では、ブラックリスト機能、自然な翻訳（ChatGPTモード）の表記、多言語ツールチップ、UI安定性を改善しました。",
-    en:"v1.11.1 includes improved blacklist workflow, Natural Translation (ChatGPT Mode) labeling, multilingual tooltips, and UI stability improvements.",
-    zh_tw:"v1.11.1 改善了黑名單流程、Natural Translation（ChatGPT Mode）標示、多語言工具提示與UI穩定性。",
-    zh_cn:"v1.11.1 改进了黑名单流程、Natural Translation（ChatGPT Mode）标记、多语言工具提示和UI稳定性。",
-    ko:"v1.11.1에서는 블랙리스트 흐름, Natural Translation(ChatGPT Mode) 표기, 다국어 툴팁, UI 안정성이 개선되었습니다."
+    ja:"v1.12.3では、VAD、原文Overlay、セーフリスト、24言語対応、Pro版/GPU版を追加・改善しました。",
+    en:"v1.12.3 adds and improves VAD, Original Text Overlay, Safelist, 24-language support, and the Pro/GPU edition.",
+    zh_tw:"v1.12.3 新增並改善 VAD、原文Overlay、安全清單、24種語言支援，以及 Pro/GPU 版。",
+    zh_cn:"v1.12.3 新增并改进了 VAD、原文Overlay、安全列表、24种语言支持，以及 Pro/GPU 版。",
+    ko:"v1.12.3에서는 VAD, 원문 Overlay, 세이프리스트, 24개 언어 지원, Pro/GPU판을 추가 및 개선했습니다."
   },
   update_1:{
-    ja:"原文をブラックリストへ送る機能",
-    en:"One-click blacklist registration",
-    zh_tw:"一鍵加入黑名單功能",
-    zh_cn:"一键加入黑名单功能",
-    ko:"원클릭 블랙리스트 등록"
+    ja:"🎤 VAD（Voice Activity Detection）",
+    en:"🎤 VAD (Voice Activity Detection)",
+    zh_tw:"🎤 VAD（語音活動偵測）",
+    zh_cn:"🎤 VAD（语音活动检测）",
+    ko:"🎤 VAD（음성 활동 감지）"
   },
   update_2:{
-    ja:"自然な翻訳（ChatGPTモード）表記へ統一",
-    en:"Natural Translation (ChatGPT Mode) wording update",
-    zh_tw:"統一 Natural Translation（ChatGPT Mode）表記",
-    zh_cn:"统一 Natural Translation（ChatGPT Mode）表述",
-    ko:"Natural Translation(ChatGPT Mode) 표기 통일"
+    ja:"🪟 原文Overlay",
+    en:"🪟 Original Text Overlay",
+    zh_tw:"🪟 原文Overlay",
+    zh_cn:"🪟 原文Overlay",
+    ko:"🪟 원문 Overlay"
   },
   update_3:{
-    ja:"ツールチップ多言語対応",
-    en:"Multilingual tooltip fixes",
-    zh_tw:"多語言工具提示修正",
-    zh_cn:"多语言工具提示修正",
-    ko:"다국어 툴팁 수정"
+    ja:"🛡️ セーフリスト",
+    en:"🛡️ Safelist",
+    zh_tw:"🛡️ 安全清單",
+    zh_cn:"🛡️ 安全列表",
+    ko:"🛡️ 세이프리스트"
   },
   update_4:{
-    ja:"5言語UI対応",
-    en:"5-language UI support",
-    zh_tw:"支援5種語言UI",
-    zh_cn:"支持5种语言UI",
-    ko:"5개 언어 UI 지원"
+    ja:"🌍 24言語対応",
+    en:"🌍 24 Language Support",
+    zh_tw:"🌍 支援24種語言",
+    zh_cn:"🌍 支持24种语言",
+    ko:"🌍 24개 언어 지원"
   },
   update_5:{
-    ja:"README 20言語対応",
-    en:"README updated for 20 languages",
-    zh_tw:"README 支援20種語言",
-    zh_cn:"README 支持20种语言",
-    ko:"README 20개 언어 지원"
+    ja:"🚀 Pro版 / GPU版リリース",
+    en:"🚀 Pro Edition / GPU Edition Release",
+    zh_tw:"🚀 Pro版 / GPU版發布",
+    zh_cn:"🚀 Pro版 / GPU版发布",
+    ko:"🚀 Pro판 / GPU판 릴리스"
   },
   roadmap_title:{
     ja:"🗺️ 開発予定",
@@ -729,25 +733,25 @@ const translations = {
     ko:"음성 인식 결과 보정 기능"
   },
   roadmap_2:{
-    ja:"文体選択肢の追加",
-    en:"More Translation Styles",
-    zh_tw:"增加更多翻譯風格",
-    zh_cn:"增加更多翻译风格",
-    ko:"번역 스타일 추가"
+    ja:"Speaker Language Detection",
+    en:"Speaker Language Detection",
+    zh_tw:"Speaker Language Detection",
+    zh_cn:"Speaker Language Detection",
+    ko:"Speaker Language Detection"
   },
   roadmap_3:{
-    ja:"話者の言語自動推定",
-    en:"Automatic Language Detection",
-    zh_tw:"說話者語言自動推定",
-    zh_cn:"说话者语言自动推定",
-    ko:"화자 언어 자동 추정"
+    ja:"Incoming Voice Translation Overlay",
+    en:"Incoming Voice Translation Overlay",
+    zh_tw:"Incoming Voice Translation Overlay",
+    zh_cn:"Incoming Voice Translation Overlay",
+    ko:"Incoming Voice Translation Overlay"
   },
   roadmap_4:{
-    ja:"GPU（CUDA）版の開発",
-    en:"GPU (CUDA) Version",
-    zh_tw:"GPU（CUDA）版本開發",
-    zh_cn:"GPU（CUDA）版本开发",
-    ko:"GPU(CUDA) 버전 개발"
+    ja:"Translation Quality Improvements",
+    en:"Translation Quality Improvements",
+    zh_tw:"Translation Quality Improvements",
+    zh_cn:"Translation Quality Improvements",
+    ko:"Translation Quality Improvements"
   },
   roadmap_5:{
     ja:"More to come...",
