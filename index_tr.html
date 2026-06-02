@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator README Türkçe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: #e5e7eb;
+      line-height: 1.8;
+    }
+
+body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('../img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 44px 20px;
+}
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+    .hero, .card {
+      background: rgba(17, 24, 39, 0.86);
+      border: 1px solid #334155;
+      border-radius: 18px;
+      padding: 22px;
+      margin: 20px 0;
+    }
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.25em 0; }
+
+    .note {
+      color: #cbd5e1;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(15,23,42,.45);
+    }
+
+    .warning {
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
+      border-left: 4px solid #f87171;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #60a5fa;
+      border-radius: 999px;
+      background: rgba(37,99,235,.18);
+      color: #dbeafe;
+      font-weight: 800;
+      margin: 4px 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">VRChat için gerçek zamanlı ses çeviri aracı</p>
+
+  <p>
+    Sesleri ve metinleri çevirir, ardından sonucu otomatik olarak VRChat Chatbox'a gönderir.<br>
+    Uluslararası arkadaşlarla sohbeti, etkinlik yönetimini ve çok dilli iletişimi daha rahat hale getiren bir masaüstü uygulamasıdır.
+  </p>
+
+  <p>
+    <span class="badge">v1.12.3</span>
+    <span class="badge">Free & Pro</span>
+    <span class="badge">24 dil desteği</span>
+    <span class="badge">VAD destekli</span>
+    <span class="badge">Orijinal metin overlay'i</span>
+  </p>
+</section>
+
+<section class="card">
+  <h2>✨ Ana özellikler</h2>
+  <ul>
+    <li>Gerçek zamanlı ses çevirisi</li>
+    <li>VRChat Chatbox'a otomatik gönderim</li>
+    <li>Metin girişiyle çeviri</li>
+    <li><strong>24 dil desteği</strong></li>
+    <li>ChatGPT modu ile doğal çeviri</li>
+    <li>VAD (Voice Activity Detection) ile ses algılama</li>
+    <li>Algılanan orijinal metni overlay olarak gösterme</li>
+    <li>Blacklist / Safelist işlevleri</li>
+    <li>Desktop+, XSOverlay ve benzeri araçlarla VR içinde kontrol</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🚀 Free / Pro sürümleri hakkında</h2>
+
+  <p>
+    VRC Misa Translator iki sürüm olarak sunulur: Free ve Pro.
+  </p>
+
+  <h3>Free sürümü</h3>
+  <ul>
+    <li>CPU ile çalışır</li>
+    <li>Tüm temel özellikler kullanılabilir</li>
+    <li>Manuel güncelleme</li>
+  </ul>
+
+  <h3>Pro sürümü</h3>
+  <ul>
+    <li>GPU hızlandırmalı Whisper desteği</li>
+    <li>large-v3-turbo gibi yüksek performanslı modelleri kullanabilme</li>
+    <li>Daha hızlı ses tanıma</li>
+    <li>Otomatik güncelleme desteği</li>
+  </ul>
+
+  <p class="note">
+    * Çeviri özellikleri ve temel işlevler Free ve Pro sürümlerinde ortaktır.<br>
+    * Temel farklar GPU desteği ve otomatik güncellemedir.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🆕 v1.12.3 güncellemesi</h2>
+
+  <h3>🎤 VAD (Voice Activity Detection) eklendi</h3>
+  <p>
+    Sessiz bölümleri otomatik olarak algılar ve gereksiz tanıma sonuçlarını azaltır.<br>
+    Böylece VRChat sohbetlerinde ses tanıma daha konforlu hale gelir.
+  </p>
+
+  <h3>🪟 Yeni orijinal metin overlay'i</h3>
+  <p>
+    Whisper tarafından algılanan orijinal metin ayrı bir pencerede görüntülenebilir ve Desktop+, XSOverlay veya benzeri araçlarla VR içinde gösterilebilir.<br>
+    Böylece VR içindeyken bile sesinizin nasıl tanındığını daha kolay kontrol edebilirsiniz.
+  </p>
+
+  <h3>🛡️ Yeni Safelist işlevi</h3>
+  <p>
+    Blacklist veya doğal olmayan sonuç algılama tarafından engellenmesini istemediğiniz kelimeleri kaydedebilirsiniz.<br>
+    Özel adlar, kısa tepkiler, alkış ifadeleri ve VRChat'e özgü terimler için kullanışlıdır.
+  </p>
+
+  <h3>🌍 24 dil desteği</h3>
+  <p>
+    Aşağıdaki diller yeni eklendi:
+  </p>
+  <ul>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>İsveççe</li>
+    <li>Fince</li>
+  </ul>
+
+  <h3>🚀 Pro sürümü eklendi</h3>
+  <p>
+    GPU hızlandırmalı Whisper kullanabilen Pro sürümü eklendi.<br>
+    Daha güçlü ses tanıma modelleri kullanmak veya daha yüksek hız ve doğruluk isteyen kullanıcılar için uygundur.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🌍 Desteklenen diller</h2>
+  <p>
+    Ses tanıma ve çeviri için aşağıdaki diller desteklenir.
+  </p>
+
+  <ul>
+    <li>Japonca</li>
+    <li>İngilizce</li>
+    <li>Geleneksel Çince</li>
+    <li>Basitleştirilmiş Çince</li>
+    <li>Korece</li>
+    <li>Fransızca</li>
+    <li>Almanca</li>
+    <li>İspanyolca</li>
+    <li>İtalyanca</li>
+    <li>Portekizce</li>
+    <li>Rusça</li>
+    <li>Tayca</li>
+    <li>Vietnamca</li>
+    <li>Endonezce</li>
+    <li>Felemenkçe</li>
+    <li>Lehçe</li>
+    <li>Türkçe</li>
+    <li>Ukraynaca</li>
+    <li>Hintçe</li>
+    <li>Arapça</li>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>İsveççe</li>
+    <li>Fince</li>
+  </ul>
+
+  <p class="note">
+    Kullanıcı arayüzü şu anda Japonca / İngilizce / Geleneksel Çince / Basitleştirilmiş Çince / Korece dillerini destekler.
+  </p>
+</section>
+
+<section class="card">
+  <h2>▶️ Temel kullanım</h2>
+
+  <h3>Ses çevirisi</h3>
+  <ol>
+    <li>Uygulamayı başlatın.</li>
+    <li>Mikrofonu seçin.</li>
+    <li>Giriş dilini ve hedef dili ayarlayın.</li>
+    <li>Gerekirse çeviri motorunu seçin.</li>
+    <li>Başlat düğmesine basın.</li>
+    <li>Konuştuğunuzda ses otomatik olarak çevrilir ve VRChat Chatbox'a gönderilir.</li>
+  </ol>
+
+  <h3>Metin girişiyle çeviri</h3>
+  <ol>
+    <li>Alt kısımdaki “Original Text” alanına metin girin.</li>
+    <li>Çevirmek ve göndermek için Enter tuşuna basın.</li>
+  </ol>
+
+  <p class="note">
+    Enter: gönder<br>
+    Shift + Enter: yeni satır
+  </p>
+</section>
+
+<section class="card">
+  <h2>🎚️ Ses kalibrasyonu</h2>
+
+  <p>
+    VRC Misa Translator, ses tanıma hassasiyetini ortamınıza ve mikrofonunuza göre otomatik ayarlayan bir ses kalibrasyonu özelliği içerir.
+  </p>
+
+  <p>
+    Kalibrasyon hem ortam gürültüsünü hem de gerçek konuşma sesinizi ölçer.
+    Ardından algılama başlangıç eşiği, algılama bitiş eşiği ve sessizlik süresi otomatik olarak ayarlanır.
+  </p>
+
+  <h3>Kalibrasyon adımları</h3>
+
+  <ol>
+    <li>“Voice Calibration” özelliğini açın.</li>
+    <li>Uygulama önce birkaç saniye ortam gürültüsünü ölçer.</li>
+    <li>Ardından örnek cümleyi, VRChat'te normalde konuştuğunuz ses seviyesi ve mikrofon mesafesiyle okuyun.</li>
+    <li>Ölçüm sonuçlarından en uygun eşik değerleri hesaplanır ve otomatik olarak uygulanır.</li>
+  </ol>
+
+  <h3>Otomatik ayarlanan değerler</h3>
+
+  <ul>
+    <li>Ses tanıma başlangıç eşiği</li>
+    <li>Ses tanıma bitiş eşiği</li>
+    <li>Bitiş için sessizlik süresi</li>
+  </ul>
+
+  <h3>Ne zaman kalibrasyon önerilir?</h3>
+
+  <ul>
+    <li>Uygulamayı ilk kez kullanırken</li>
+    <li>Mikrofonu değiştirdikten sonra</li>
+    <li>Sesiniz güvenilir şekilde algılanmıyorsa</li>
+    <li>Sessizlik sırasında yanlış algılama oluyorsa</li>
+    <li>Odadaki arka plan gürültüsü belirgin şekilde değiştiyse</li>
+  </ul>
+
+  <p class="note">
+    Ses kayıtları saklanmaz.<br>
+    Yalnızca hesaplanan kalibrasyon ayarları kaydedilir.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 ChatGPT modu ile doğal çeviri</h2>
+  <p>
+    ChatGPT kullanarak daha doğal çeviriler elde edebilir ve ifade tarzını daha ayrıntılı şekilde ayarlayabilirsiniz.
+  </p>
+
+  <ul>
+    <li>Daha yumuşak ve doğal ifadeler</li>
+    <li>Sohbete uygun kısa cümleler</li>
+    <li>Nezaket düzeyi ve nüans ayarı</li>
+    <li>Orijinal metne daha fazla odaklanan çeviri</li>
+  </ul>
+
+  <p class="warning">
+    OpenAI API anahtarı gereklidir.<br>
+    ChatGPT çevirisi kullanım miktarına göre ücretlendirilir. Lütfen kullanımınızı takip edin.
+  </p>
+
+  <p class="note">
+    ChatGPT kullanmasanız bile uygulamayı Google Translate ile normal şekilde kullanabilirsiniz.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Blacklist / Safelist işlevleri</h2>
+
+  <h3>Blacklist</h3>
+  <p>
+    Ses tanımada bazen aslında söylemediğiniz cümleler görünebilir.<br>
+    Örneğin: video kapanış ifadeleri, gürültü veya yanlış tanıma sonuçları.
+  </p>
+
+  <p>
+    Blacklist'e kaydedilen cümleler otomatik olarak gönderilmez.
+  </p>
+
+  <ul>
+    <li>Doğal olmayan tanıma sonuçlarını özel düğme ile tek tıklamayla blacklist'e ekleyebilirsiniz.</li>
+    <li>Gelişmiş ayarlardan manuel düzenleme yapılabilir.</li>
+    <li>Düzenleme sonrası “Update Blacklist” ile kaydedin.</li>
+  </ul>
+
+  <h3>Safelist</h3>
+  <p>
+    Safelist'e kaydedilen kelimeler doğal olmayan sonuç olarak değerlendirilse bile gönderilir.<br>
+    “clap clap”, “www” veya özel adlar gibi kısa ama doğal ifadeleri korumak için kullanışlıdır.
+  </p>
+
+  <h3>Notlar</h3>
+  <ul>
+    <li>Blacklist'e çok fazla öğe eklenirse normal konuşmalar da filtrelenebilir.</li>
+    <li>Kararsızsanız uzun cümleler yerine kısa ifadeler kaydetmeniz önerilir.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🪟 Orijinal metin overlay'i hakkında</h2>
+  <p>
+    Whisper tarafından algılanan orijinal metin ayrı bir pencerede görüntülenebilir.<br>
+    Desktop+, XSOverlay ve benzeri araçları kullanarak tanıma sonuçlarını VRChat içinde kontrol edebilirsiniz.
+  </p>
+
+  <ul>
+    <li>Tanıma sonuçlarını VR içinde görüntüleme</li>
+    <li>Şeffaflık ayarı desteği</li>
+    <li>Ses tanımayı açma/kapatma desteği</li>
+    <li>VR içinde çeviri yaparken belirsizliği azaltır</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Sistem gereksinimleri</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat PC sürümü</li>
+    <li>OSC Chatbox etkin</li>
+    <li>Mikrofon</li>
+    <li>İnternet bağlantısı</li>
+  </ul>
+
+  <h3>Pro sürümü için önerilen ortam</h3>
+  <ul>
+    <li>NVIDIA GPU</li>
+    <li>CUDA uyumlu ortam</li>
+    <li>Yüksek performanslı modeller kullanırken yeterli VRAM</li>
+  </ul>
+
+  <p class="warning">
+    Quest standalone modunda çalışmaz.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🔄 Güncellemeler hakkında</h2>
+
+  <h3>Free sürümü</h3>
+  <p>
+    Free sürümü manuel olarak güncellenir.<br>
+    Yeni sürümü indirin ve yeniden kurun veya mevcut kurulumun üzerine yazın.
+  </p>
+
+  <h3>Pro sürümü</h3>
+  <p>
+    Pro sürümü otomatik güncellemeyi destekler.<br>
+    Yeni bir sürüm yayınlandığında güncellemeyi uygulama içinden kontrol edebilirsiniz.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Geliştiriciden mesaj</h2>
+  <p>
+    Uluslararası arkadaşlarla sohbeti daha doğal hale getirmek için.<br>
+    Etkinlikleri, sohbetleri ve etkileşimleri daha özgür kılmak için.
+  </p>
+
+  <p>
+    VRC Misa Translator, VRChat'te yeni karşılaşmaları destekler ✨
+  </p>
+
+  <p>
+    Hem Free hem de Pro sürümleri daha kolay ve rahat kullanılabilmesi için geliştirilmeye devam edecektir.
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
+</body>
+</html>

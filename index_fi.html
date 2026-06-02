@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator README Suomi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: #e5e7eb;
+      line-height: 1.8;
+    }
+
+body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('../img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 44px 20px;
+}
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+    .hero, .card {
+      background: rgba(17, 24, 39, 0.86);
+      border: 1px solid #334155;
+      border-radius: 18px;
+      padding: 22px;
+      margin: 20px 0;
+    }
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.25em 0; }
+
+    .note {
+      color: #cbd5e1;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(15,23,42,.45);
+    }
+
+    .warning {
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
+      border-left: 4px solid #f87171;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #60a5fa;
+      border-radius: 999px;
+      background: rgba(37,99,235,.18);
+      color: #dbeafe;
+      font-weight: 800;
+      margin: 4px 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">Reaaliaikainen puheenkäännöstyökalu VRChatille</p>
+
+  <p>
+    Kääntää puheen ja tekstin sekä lähettää tuloksen automaattisesti VRChat Chatboxiin.<br>
+    Työpöytäsovellus, joka tekee keskusteluista kansainvälisten ystävien kanssa, tapahtumien juontamisesta ja monikielisestä viestinnästä sujuvampaa.
+  </p>
+
+  <p>
+    <span class="badge">v1.12.3</span>
+    <span class="badge">Free & Pro</span>
+    <span class="badge">24 kieltä</span>
+    <span class="badge">VAD mukana</span>
+    <span class="badge">Alkuperäistekstin overlay</span>
+  </p>
+</section>
+
+<section class="card">
+  <h2>✨ Pääominaisuudet</h2>
+  <ul>
+    <li>Reaaliaikainen puheenkäännös</li>
+    <li>Automaattinen lähetys VRChat Chatboxiin</li>
+    <li>Tekstinsyötön käännös</li>
+    <li><strong>24 kielen tuki</strong></li>
+    <li>Luonnollinen käännös ChatGPT-tilassa</li>
+    <li>Puheentunnistus VAD:lla (Voice Activity Detection)</li>
+    <li>Tunnistetun alkuperäistekstin näyttäminen overlaynä</li>
+    <li>Blacklist- ja safelist-toiminnot</li>
+    <li>Tulosten tarkistus VR:ssä Desktop+:n, XSOverlayn ja vastaavien työkalujen avulla</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🚀 Free- ja Pro-versio</h2>
+
+  <p>
+    VRC Misa Translator on saatavilla kahtena versiona: Free ja Pro.
+  </p>
+
+  <h3>Free-versio</h3>
+  <ul>
+    <li>Toimii CPU:lla</li>
+    <li>Kaikki perustoiminnot käytettävissä</li>
+    <li>Manuaalinen päivitys</li>
+  </ul>
+
+  <h3>Pro-versio</h3>
+  <ul>
+    <li>Tuki GPU-kiihdytetylle Whisperille</li>
+    <li>Mahdollisuus käyttää tehokkaita malleja, kuten large-v3-turbo</li>
+    <li>Nopeampi puheentunnistus</li>
+    <li>Automaattisten päivitysten tuki</li>
+  </ul>
+
+  <p class="note">
+    * Käännöstoiminnot ja perustoiminnot ovat samat Free- ja Pro-versioissa.<br>
+    * Tärkeimmät erot ovat GPU-tuki ja automaattiset päivitykset.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🆕 v1.12.3-päivitys</h2>
+
+  <h3>🎤 VAD (Voice Activity Detection) lisätty</h3>
+  <p>
+    Hiljaiset kohdat tunnistetaan automaattisesti, mikä vähentää tarpeettomia tunnistustuloksia.<br>
+    Tämä tekee puheentunnistuksesta VRChat-keskustelujen aikana mukavampaa.
+  </p>
+
+  <h3>🪟 Uusi alkuperäistekstin overlay</h3>
+  <p>
+    Whisperin tunnistama alkuperäinen teksti voidaan näyttää erillisessä ikkunassa ja tuoda VR-näkymään Desktop+:n, XSOverlayn tai vastaavien työkalujen avulla.<br>
+    Näin voit tarkistaa helpommin myös VR:ssä, miten puheesi tunnistetaan.
+  </p>
+
+  <h3>🛡️ Uusi safelist-toiminto</h3>
+  <p>
+    Voit rekisteröidä sanoja, joita ei haluta estettävän blacklistin tai epäluonnollisten tulosten suodatuksen takia.<br>
+    Tämä on hyödyllistä erisnimille, lyhyille reaktioille, taputusilmauksille ja VRChatille ominaisille sanoille.
+  </p>
+
+  <h3>🌍 Tuki 24 kielelle</h3>
+  <p>
+    Seuraavat kielet on lisätty:
+  </p>
+  <ul>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>Ruotsi</li>
+    <li>Suomi</li>
+  </ul>
+
+  <h3>🚀 Pro-versio julkaistu</h3>
+  <p>
+    GPU-kiihdytettyä Whisperiä tukeva Pro-versio on lisätty.<br>
+    Se on tarkoitettu käyttäjille, jotka haluavat käyttää tehokkaampia puheentunnistusmalleja tai tarvitsevat suurempaa nopeutta ja tarkkuutta.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🌍 Tuetut kielet</h2>
+  <p>
+    Seuraavia kieliä tuetaan puheentunnistuksessa ja käännöksessä.
+  </p>
+
+  <ul>
+    <li>Japani</li>
+    <li>Englanti</li>
+    <li>Perinteinen kiina</li>
+    <li>Yksinkertaistettu kiina</li>
+    <li>Korea</li>
+    <li>Ranska</li>
+    <li>Saksa</li>
+    <li>Espanja</li>
+    <li>Italia</li>
+    <li>Portugali</li>
+    <li>Venäjä</li>
+    <li>Thai</li>
+    <li>Vietnam</li>
+    <li>Indonesia</li>
+    <li>Hollanti</li>
+    <li>Puola</li>
+    <li>Turkki</li>
+    <li>Ukraina</li>
+    <li>Hindi</li>
+    <li>Arabia</li>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>Ruotsi</li>
+    <li>Suomi</li>
+  </ul>
+
+  <p class="note">
+    Käyttöliittymä on tällä hetkellä saatavilla japaniksi, englanniksi, perinteiseksi kiinaksi, yksinkertaistetuksi kiinaksi ja koreaksi.
+  </p>
+</section>
+
+<section class="card">
+  <h2>▶️ Peruskäyttö</h2>
+
+  <h3>Puheenkäännös</h3>
+  <ol>
+    <li>Käynnistä sovellus.</li>
+    <li>Valitse mikrofoni.</li>
+    <li>Aseta syötekieli ja kohdekieli.</li>
+    <li>Valitse tarvittaessa käännösmoottori.</li>
+    <li>Paina käynnistyspainiketta.</li>
+    <li>Kun puhut, puhe käännetään automaattisesti ja lähetetään VRChat Chatboxiin.</li>
+  </ol>
+
+  <h3>Tekstinsyötön käännös</h3>
+  <ol>
+    <li>Kirjoita teksti alareunan “Original Text” -kenttään.</li>
+    <li>Paina Enter kääntääksesi ja lähettääksesi.</li>
+  </ol>
+
+  <p class="note">
+    Enter: lähetä<br>
+    Shift + Enter: uusi rivi
+  </p>
+</section>
+
+<section class="card">
+  <h2>🎚️ Äänikalibrointi</h2>
+
+  <p>
+    VRC Misa Translator sisältää äänikalibrointitoiminnon, joka säätää puheentunnistuksen herkkyyden automaattisesti ympäristösi ja mikrofonisi mukaan.
+  </p>
+
+  <p>
+    Kalibrointi mittaa sekä ympäristön taustamelun että todellisen puheäänesi.
+    Sen jälkeen tunnistuksen aloituskynnys, lopetuskynnys ja hiljaisuuden aikaraja asetetaan automaattisesti.
+  </p>
+
+  <h3>Kalibroinnin vaiheet</h3>
+
+  <ol>
+    <li>Avaa “Voice Calibration” -toiminto.</li>
+    <li>Sovellus mittaa ensin taustamelua muutaman sekunnin ajan.</li>
+    <li>Lue sen jälkeen esimerkkilause sillä äänenvoimakkuudella ja mikrofonietäisyydellä, jota normaalisti käytät VRChatissa.</li>
+    <li>Optimaaliset kynnysarvot lasketaan mittaustuloksista ja otetaan käyttöön automaattisesti.</li>
+  </ol>
+
+  <h3>Automaattisesti säädettävät asetukset</h3>
+
+  <ul>
+    <li>Puheentunnistuksen aloituskynnys</li>
+    <li>Puheentunnistuksen lopetuskynnys</li>
+    <li>Hiljaisuuden kesto ennen lopetusta</li>
+  </ul>
+
+  <h3>Milloin kalibrointi kannattaa tehdä</h3>
+
+  <ul>
+    <li>Kun käytät sovellusta ensimmäistä kertaa</li>
+    <li>Mikrofonin vaihtamisen jälkeen</li>
+    <li>Jos puhetta ei tunnisteta vakaasti</li>
+    <li>Jos hiljaisuuden aikana tapahtuu virheellisiä tunnistuksia</li>
+    <li>Kun huoneen taustamelu muuttuu merkittävästi</li>
+  </ul>
+
+  <p class="note">
+    Varsinaisia äänitallenteita ei tallenneta.<br>
+    Vain lasketut kalibrointiasetukset tallennetaan.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 Luonnollinen käännös ChatGPT-tilassa</h2>
+  <p>
+    ChatGPT:n avulla voit saada luonnollisempia käännöksiä ja säätää ilmaisun tyyliä tarkemmin.
+  </p>
+
+  <ul>
+    <li>Pehmeämpiä ja luonnollisempia ilmauksia</li>
+    <li>Keskusteluun sopivia lyhyitä lauseita</li>
+    <li>Kohteliaisuuden ja vivahteiden säätö</li>
+    <li>Käännös, joka painottaa enemmän alkuperäistä tekstiä</li>
+  </ul>
+
+  <p class="warning">
+    OpenAI API -avain vaaditaan.<br>
+    ChatGPT-käännös laskutetaan käytön mukaan. Seuraa käyttömäärääsi.
+  </p>
+
+  <p class="note">
+    Vaikka et käyttäisi ChatGPT:tä, sovellusta voi käyttää normaalisti Google Translaten kanssa.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Blacklist- / Safelist-toiminnot</h2>
+
+  <h3>Blacklist</h3>
+  <p>
+    Puheentunnistuksessa voi joskus ilmestyä lauseita, joita et oikeasti sanonut.<br>
+    Esimerkiksi videoiden lopetusfraaseja, kohinaa tai tunnistusvirheitä.
+  </p>
+
+  <p>
+    Blacklistiin rekisteröityjä lauseita ei lähetetä automaattisesti.
+  </p>
+
+  <ul>
+    <li>Lisää epäluonnollinen tunnistustulos blacklistiin yhdellä napsautuksella omalla painikkeella.</li>
+    <li>Manuaalinen muokkaus on mahdollista lisäasetuksissa.</li>
+    <li>Tallenna muutokset muokkauksen jälkeen painamalla “Update Blacklist”.</li>
+  </ul>
+
+  <h3>Safelist</h3>
+  <p>
+    Safelistissä olevat sanat lähetetään, vaikka ne arvioitaisiin epäluonnollisiksi.<br>
+    Tämä on hyödyllistä lyhyiden mutta luonnollisten ilmausten, kuten “clap clap”, “www” tai erisnimien, suojaamiseen.
+  </p>
+
+  <h3>Huomio</h3>
+  <ul>
+    <li>Jos lisäät blacklistiin liikaa kohteita, myös tavallisia keskusteluja saatetaan suodattaa pois.</li>
+    <li>Jos et ole varma, lyhyiden fraasien rekisteröinti on suositeltavampaa kuin pitkien lauseiden.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🪟 Alkuperäistekstin overlay</h2>
+  <p>
+    Whisperin tunnistama alkuperäinen teksti voidaan näyttää erillisessä ikkunassa.<br>
+    Desktop+:n, XSOverlayn ja vastaavien työkalujen avulla voit tarkistaa tunnistustulokset VRChatin sisällä.
+  </p>
+
+  <ul>
+    <li>Tunnistustulokset näkyvät VR:ssä</li>
+    <li>Läpinäkyvyyden säätö tuettu</li>
+    <li>Puheentunnistuksen ON/OFF-ohjaus tuettu</li>
+    <li>Vähentää epävarmuutta kääntäessä VR:ssä</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Järjestelmävaatimukset</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat PC-versio</li>
+    <li>OSC Chatbox käytössä</li>
+    <li>Mikrofoni</li>
+    <li>Internet-yhteys</li>
+  </ul>
+
+  <h3>Suositeltu ympäristö Pro-versiolle</h3>
+  <ul>
+    <li>NVIDIA GPU</li>
+    <li>CUDA-yhteensopiva ympäristö</li>
+    <li>Riittävästi VRAM-muistia tehokkaita malleja käytettäessä</li>
+  </ul>
+
+  <p class="warning">
+    Ei toimi Questin standalone-tilassa.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🔄 Päivityksistä</h2>
+
+  <h3>Free-versio</h3>
+  <p>
+    Free-versio päivitetään manuaalisesti.<br>
+    Lataa uusi versio ja asenna se uudelleen tai korvaa nykyinen asennus.
+  </p>
+
+  <h3>Pro-versio</h3>
+  <p>
+    Pro-versio tukee automaattisia päivityksiä.<br>
+    Kun uusi versio julkaistaan, voit tarkistaa päivityksen suoraan sovelluksesta.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Viesti tekijältä</h2>
+  <p>
+    Jotta keskustelut kansainvälisten ystävien kanssa olisivat luonnollisempia.<br>
+    Jotta tapahtumat, jutustelu ja vuorovaikutus olisivat vapaampia.
+  </p>
+
+  <p>
+    VRC Misa Translator tukee uusia kohtaamisia VRChatissa ✨
+  </p>
+
+  <p>
+    Sekä Free- että Pro-versiota parannetaan jatkossakin, jotta niiden käyttö olisi entistä helpompaa ja mukavampaa.
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
+</body>
+</html>

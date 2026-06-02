@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator README 한국어</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: #e5e7eb;
+      line-height: 1.8;
+    }
+
+body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('../img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 44px 20px;
+}
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+    .hero, .card {
+      background: rgba(17, 24, 39, 0.86);
+      border: 1px solid #334155;
+      border-radius: 18px;
+      padding: 22px;
+      margin: 20px 0;
+    }
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.25em 0; }
+
+    .note {
+      color: #cbd5e1;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(15,23,42,.45);
+    }
+
+    .warning {
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
+      border-left: 4px solid #f87171;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #60a5fa;
+      border-radius: 999px;
+      background: rgba(37,99,235,.18);
+      color: #dbeafe;
+      font-weight: 800;
+      margin: 4px 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">VRChat용 실시간 음성 번역 도구</p>
+
+  <p>
+    음성이나 텍스트를 번역하여 VRChat Chatbox로 자동 전송합니다.<br>
+    해외 친구와의 대화, 이벤트 진행, 다국어 교류를 더 편하게 만들어 주는 데스크톱 앱입니다.
+  </p>
+
+  <p>
+    <span class="badge">v1.12.3</span>
+    <span class="badge">Free & Pro</span>
+    <span class="badge">24개 언어 지원</span>
+    <span class="badge">VAD 탑재</span>
+    <span class="badge">원문 Overlay</span>
+  </p>
+</section>
+
+<section class="card">
+  <h2>✨ 주요 기능</h2>
+  <ul>
+    <li>실시간 음성 번역</li>
+    <li>VRChat Chatbox 자동 전송</li>
+    <li>텍스트 입력 번역</li>
+    <li><strong>24개 언어 지원</strong></li>
+    <li>자연스러운 번역(ChatGPT 모드)</li>
+    <li>VAD(Voice Activity Detection)를 통한 음성 감지</li>
+    <li>원문 Overlay 표시</li>
+    <li>블랙리스트 / 세이프리스트 기능</li>
+    <li>Desktop+ / XSOverlay 등을 이용한 VR 내 확인</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🚀 Free 버전 / Pro 버전 안내</h2>
+
+  <p>
+    VRC Misa Translator는 Free 버전과 Pro 버전, 두 가지 버전을 제공합니다.
+  </p>
+
+  <h3>Free 버전</h3>
+  <ul>
+    <li>CPU 동작</li>
+    <li>기본 기능 모두 사용 가능</li>
+    <li>수동 업데이트</li>
+  </ul>
+
+  <h3>Pro 버전</h3>
+  <ul>
+    <li>GPU 지원 Whisper 사용 가능</li>
+    <li>large-v3-turbo 등 고성능 모델 사용 가능</li>
+    <li>빠른 음성 인식</li>
+    <li>자동 업데이트 지원</li>
+  </ul>
+
+  <p class="note">
+    ※ 번역 기능과 기본 기능은 Free / Pro 버전 모두 공통입니다.<br>
+    ※ 주요 차이는 GPU 지원과 자동 업데이트 기능입니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🆕 v1.12.3 업데이트</h2>
+
+  <h3>🎤 VAD(Voice Activity Detection) 도입</h3>
+  <p>
+    무음 구간을 자동으로 판단하여 불필요한 인식을 줄입니다.<br>
+    VRChat 대화 중에도 더 쾌적하게 음성 인식을 사용할 수 있습니다.
+  </p>
+
+  <h3>🪟 원문 Overlay 기능 추가</h3>
+  <p>
+    Whisper가 인식한 원문을 Desktop+ 또는 XSOverlay 등을 통해 VR 안에서 표시할 수 있습니다.<br>
+    VR 중에도 “현재 어떻게 인식되고 있는지” 확인하기 쉬워집니다.
+  </p>
+
+  <h3>🛡️ 세이프리스트 기능 추가</h3>
+  <p>
+    블랙리스트나 비정상 판정으로 제외하고 싶지 않은 단어를 등록할 수 있습니다.<br>
+    고유명사, 맞장구, 박수 표현, VRChat 특유의 표현 등에 유용합니다.
+  </p>
+
+  <h3>🌍 24개 언어 지원</h3>
+  <p>
+    다음 언어가 새롭게 추가되었습니다.
+  </p>
+  <ul>
+    <li>Tagalog(타갈로그어)</li>
+    <li>Filipino(필리핀어)</li>
+    <li>Swedish(스웨덴어)</li>
+    <li>Finnish(핀란드어)</li>
+  </ul>
+
+  <h3>🚀 Pro 버전 출시</h3>
+  <p>
+    GPU 지원 Whisper를 사용할 수 있는 Pro 버전이 추가되었습니다.<br>
+    고성능 음성 인식 모델을 사용하고 싶거나, 더 빠르고 정확하게 사용하고 싶은 분에게 적합합니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🌍 지원 언어</h2>
+  <p>
+    음성 인식 및 번역을 지원하는 언어는 다음과 같습니다.
+  </p>
+
+  <ul>
+    <li>日本語</li>
+    <li>English</li>
+    <li>繁體中文</li>
+    <li>简体中文</li>
+    <li>한국어</li>
+    <li>Français</li>
+    <li>Deutsch</li>
+    <li>Español</li>
+    <li>Italiano</li>
+    <li>Português</li>
+    <li>Русский</li>
+    <li>ไทย</li>
+    <li>Tiếng Việt</li>
+    <li>Bahasa Indonesia</li>
+    <li>Nederlands</li>
+    <li>Polski</li>
+    <li>Türkçe</li>
+    <li>Українська</li>
+    <li>हिन्दी</li>
+    <li>العربية</li>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>Swedish</li>
+    <li>Finnish</li>
+  </ul>
+
+  <p class="note">
+    현재 UI 표시는 日本語 / English / 繁體中文 / 简体中文 / 한국어를 지원합니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>▶️ 기본 사용 방법</h2>
+
+  <h3>음성 번역</h3>
+  <ol>
+    <li>앱을 실행합니다</li>
+    <li>마이크를 선택합니다</li>
+    <li>입력 언어와 번역 대상 언어를 설정합니다</li>
+    <li>필요에 따라 번역 엔진을 선택합니다</li>
+    <li>시작 버튼을 누릅니다</li>
+    <li>말하면 자동으로 번역되어 VRChat Chatbox로 전송됩니다</li>
+  </ol>
+
+  <h3>텍스트 입력 번역</h3>
+  <ol>
+    <li>하단의 “원문” 입력란에 텍스트를 입력합니다</li>
+    <li>Enter 키로 번역 및 전송합니다</li>
+  </ol>
+
+  <p class="note">
+    Enter: 전송<br>
+    Shift + Enter: 줄바꿈
+  </p>
+</section>
+
+<section class="card">
+  <h2>🎚️ 음성 캘리브레이션</h2>
+
+  <p>
+    VRC Misa Translator에는 사용 환경에 맞춰 음성 인식 감도를 자동으로 조정하는
+    “음성 캘리브레이션” 기능이 탑재되어 있습니다.
+  </p>
+
+  <p>
+    방 안의 환경 소음과 실제 말소리를 측정하여,
+    음성 인식 시작 임계값, 종료 임계값, 무음 종료 시간을 자동으로 설정합니다.
+  </p>
+
+  <h3>캘리브레이션 절차</h3>
+
+  <ol>
+    <li>“음성 캘리브레이션”을 실행합니다</li>
+    <li>먼저 몇 초 동안 주변 환경 소음을 측정합니다</li>
+    <li>이어서 평소 VRChat에서 말하는 음량과 마이크 거리로 샘플 문장을 읽습니다</li>
+    <li>측정 결과를 바탕으로 최적의 임계값이 자동 설정됩니다</li>
+  </ol>
+
+  <h3>자동 조정되는 항목</h3>
+
+  <ul>
+    <li>음성 인식 시작 임계값</li>
+    <li>음성 인식 종료 임계값</li>
+    <li>무음 종료 시간</li>
+  </ul>
+
+  <h3>이럴 때 실행을 권장합니다</h3>
+
+  <ul>
+    <li>처음 사용할 때</li>
+    <li>마이크를 변경했을 때</li>
+    <li>음성이 잘 인식되지 않을 때</li>
+    <li>무음 상태인데도 오인식이 발생할 때</li>
+    <li>방의 소음 환경이 크게 바뀌었을 때</li>
+  </ul>
+
+  <p class="note">
+    음성 데이터 자체는 저장되지 않습니다.<br>
+    계산된 캘리브레이션 설정만 저장됩니다.
+  </p>
+</section>
+  
+<section class="card">
+  <h2>🤖 자연스러운 번역(ChatGPT 모드)</h2>
+  <p>
+    ChatGPT를 사용하면 더 자연스러운 번역과 문체 조정이 가능합니다.
+  </p>
+
+  <ul>
+    <li>부드러운 표현</li>
+    <li>대화에 적합한 자연스러운 짧은 문장</li>
+    <li>존댓말 및 뉘앙스 조정</li>
+    <li>원문을 중시한 번역</li>
+  </ul>
+
+  <p class="warning">
+    OpenAI API 키가 필요합니다.<br>
+    ChatGPT 번역은 사용량 기반 과금 방식입니다. 사용량에 주의해 주세요.
+  </p>
+
+  <p class="note">
+    ChatGPT를 사용하지 않아도 Google 번역으로 일반적인 이용이 가능합니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 블랙리스트 / 세이프리스트 기능</h2>
+
+  <h3>블랙리스트</h3>
+  <p>
+    음성 인식에서는 실제로 말하지 않은 문장이 표시될 수 있습니다.<br>
+    예: 영상의 마무리 문구, 잡음, 오인식 등.
+  </p>
+
+  <p>
+    블랙리스트에 등록한 문장은 자동 전송되지 않습니다.
+  </p>
+
+  <ul>
+    <li>“비정상 인식 결과를 블랙리스트로 보내기” 버튼으로 원클릭 등록</li>
+    <li>상세 설정에서 수동 편집</li>
+    <li>편집 후 “블랙리스트 업데이트”로 저장</li>
+  </ul>
+
+  <h3>세이프리스트</h3>
+  <p>
+    세이프리스트에 등록한 단어는 비정상으로 판정되어도 전송됩니다.<br>
+    “짝짝짝”, “www”, 고유명사처럼 짧아도 자연스러운 표현을 보호하는 데 유용합니다.
+  </p>
+
+  <h3>주의</h3>
+  <ul>
+    <li>블랙리스트를 너무 많이 등록하면 일반 대화도 제외될 수 있습니다</li>
+    <li>망설여질 때는 짧은 문구 단위로 등록하는 것을 추천합니다</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🪟 원문 Overlay 안내</h2>
+  <p>
+    Whisper가 인식한 원문을 별도의 창에 표시할 수 있습니다.<br>
+    Desktop+ 또는 XSOverlay 등을 사용하면 VRChat 중에도 인식 결과를 확인할 수 있습니다.
+  </p>
+
+  <ul>
+    <li>인식 결과를 VR 안에서 확인 가능</li>
+    <li>투명도 조정 지원</li>
+    <li>음성 인식 ON/OFF 조작 지원</li>
+    <li>VR 중 번역 불안을 줄여 줍니다</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 동작 환경</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat(PC 버전)</li>
+    <li>OSC Chatbox 활성화</li>
+    <li>마이크</li>
+    <li>인터넷 연결</li>
+  </ul>
+
+  <h3>Pro 버전 권장 환경</h3>
+  <ul>
+    <li>NVIDIA GPU</li>
+    <li>CUDA 지원 환경</li>
+    <li>고성능 모델 사용 시 충분한 VRAM</li>
+  </ul>
+
+  <p class="warning">
+    Quest 단독 환경에서는 동작하지 않습니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🔄 업데이트 안내</h2>
+
+  <h3>Free 버전</h3>
+  <p>
+    Free 버전은 수동 업데이트 방식입니다.<br>
+    새 버전을 다운로드한 뒤 재설치하거나 덮어써 주세요.
+  </p>
+
+  <h3>Pro 버전</h3>
+  <p>
+    Pro 버전은 자동 업데이트를 지원합니다.<br>
+    새 버전이 공개된 경우 앱에서 업데이트를 확인할 수 있습니다.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 제작자 메시지</h2>
+  <p>
+    해외 친구와의 대화를 더 자연스럽게.<br>
+    이벤트, 잡담, 교류를 더 자유롭게.
+  </p>
+
+  <p>
+    VRC Misa Translator가 VRChat에서의 새로운 만남을 도와드립니다 ✨
+  </p>
+
+  <p>
+    Free 버전과 Pro 버전 모두 앞으로도 더욱 사용하기 쉽게 개선해 나갈 예정입니다.
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
+</body>
+</html>

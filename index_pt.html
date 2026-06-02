@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VRC Misa Translator README Português</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #0f172a, #111827);
+      color: #e5e7eb;
+      line-height: 1.8;
+    }
+
+body::before{
+  content:"";
+  position:fixed;
+  right:-40px;
+  bottom:0;
+  width:75vw;
+  height:100vh;
+  background:url('../img/misa.png') no-repeat right bottom;
+  background-size:contain;
+  opacity:0.8;
+  pointer-events:none;
+  z-index:0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 44px 20px;
+}
+    h1, h2, h3 {
+      color: #f8fafc;
+      line-height: 1.35;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      margin-top: 36px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #334155;
+      color: #bfdbfe;
+    }
+    h3 {
+      margin-top: 24px;
+      color: #dbeafe;
+    }
+    .hero, .card {
+      background: rgba(17, 24, 39, 0.86);
+      border: 1px solid #334155;
+      border-radius: 18px;
+      padding: 22px;
+      margin: 20px 0;
+    }
+    .hero {
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .tagline {
+      color: #93c5fd;
+      font-size: 1.08rem;
+      margin-top: 0;
+    }
+    ul, ol { padding-left: 1.35em; }
+    li { margin: 0.25em 0; }
+
+    .note {
+      color: #cbd5e1;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: rgba(15,23,42,.45);
+    }
+
+    .warning {
+      color: #fecaca;
+      background: rgba(127,29,29,.22);
+      border-left: 4px solid #f87171;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: .9rem;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #60a5fa;
+      border-radius: 999px;
+      background: rgba(37,99,235,.18);
+      color: #dbeafe;
+      font-weight: 800;
+      margin: 4px 4px 4px 0;
+    }
+  </style>
+</head>
+<body>
+<main>
+
+<section class="hero">
+  <h1>VRC Misa Translator</h1>
+  <p class="tagline">Ferramenta de tradução de voz em tempo real para VRChat</p>
+
+  <p>
+    Traduz voz e texto e envia automaticamente o resultado para o Chatbox do VRChat.<br>
+    É um aplicativo desktop criado para tornar mais confortáveis as conversas com amigos internacionais, a condução de eventos e a comunicação multilíngue.
+  </p>
+
+  <p>
+    <span class="badge">v1.12.3</span>
+    <span class="badge">Free & Pro</span>
+    <span class="badge">24 idiomas</span>
+    <span class="badge">Com VAD</span>
+    <span class="badge">Overlay do texto original</span>
+  </p>
+</section>
+
+<section class="card">
+  <h2>✨ Principais recursos</h2>
+  <ul>
+    <li>Tradução de voz em tempo real</li>
+    <li>Envio automático para o Chatbox do VRChat</li>
+    <li>Tradução por entrada de texto</li>
+    <li><strong>Suporte a 24 idiomas</strong></li>
+    <li>Tradução natural com o modo ChatGPT</li>
+    <li>Detecção de voz com VAD (Voice Activity Detection)</li>
+    <li>Exibição do texto original reconhecido em overlay</li>
+    <li>Recursos de blacklist e safelist</li>
+    <li>Verificação dentro do VR usando Desktop+, XSOverlay e ferramentas semelhantes</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🚀 Sobre as versões Free e Pro</h2>
+
+  <p>
+    O VRC Misa Translator está disponível em duas versões: Free e Pro.
+  </p>
+
+  <h3>Versão Free</h3>
+  <ul>
+    <li>Execução por CPU</li>
+    <li>Todas as funções básicas disponíveis</li>
+    <li>Atualização manual</li>
+  </ul>
+
+  <h3>Versão Pro</h3>
+  <ul>
+    <li>Suporte ao Whisper acelerado por GPU</li>
+    <li>Permite usar modelos de alto desempenho, como large-v3-turbo</li>
+    <li>Reconhecimento de voz mais rápido</li>
+    <li>Suporte a atualização automática</li>
+  </ul>
+
+  <p class="note">
+    * As funções de tradução e os recursos básicos são comuns às versões Free e Pro.<br>
+    * As principais diferenças são o suporte a GPU e a atualização automática.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🆕 Atualização v1.12.3</h2>
+
+  <h3>🎤 Introdução do VAD (Voice Activity Detection)</h3>
+  <p>
+    Detecta automaticamente períodos de silêncio e reduz reconhecimentos desnecessários.<br>
+    Isso torna o reconhecimento de voz mais confortável durante conversas no VRChat.
+  </p>
+
+  <h3>🪟 Novo overlay do texto original</h3>
+  <p>
+    O texto original reconhecido pelo Whisper pode ser exibido em uma janela separada e visualizado dentro do VR com Desktop+, XSOverlay e ferramentas semelhantes.<br>
+    Assim, mesmo em VR, fica mais fácil verificar como sua fala está sendo reconhecida.
+  </p>
+
+  <h3>🛡️ Novo recurso de safelist</h3>
+  <p>
+    Você pode registrar palavras que não deseja que sejam bloqueadas pela blacklist ou pela detecção de resultados não naturais.<br>
+    É útil para nomes próprios, reações curtas, expressões de aplauso e termos específicos do VRChat.
+  </p>
+
+  <h3>🌍 Suporte a 24 idiomas</h3>
+  <p>
+    Os seguintes idiomas foram adicionados:
+  </p>
+  <ul>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>Sueco</li>
+    <li>Finlandês</li>
+  </ul>
+
+  <h3>🚀 Chegada da versão Pro</h3>
+  <p>
+    Foi adicionada uma versão Pro compatível com Whisper acelerado por GPU.<br>
+    Ela é voltada para quem deseja usar modelos de reconhecimento de voz mais potentes ou obter mais velocidade e precisão.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🌍 Idiomas compatíveis</h2>
+  <p>
+    Os seguintes idiomas são compatíveis com reconhecimento de voz e tradução.
+  </p>
+
+  <ul>
+    <li>Japonês</li>
+    <li>Inglês</li>
+    <li>Chinês tradicional</li>
+    <li>Chinês simplificado</li>
+    <li>Coreano</li>
+    <li>Francês</li>
+    <li>Alemão</li>
+    <li>Espanhol</li>
+    <li>Italiano</li>
+    <li>Português</li>
+    <li>Russo</li>
+    <li>Tailandês</li>
+    <li>Vietnamita</li>
+    <li>Indonésio</li>
+    <li>Holandês</li>
+    <li>Polonês</li>
+    <li>Turco</li>
+    <li>Ucraniano</li>
+    <li>Hindi</li>
+    <li>Árabe</li>
+    <li>Tagalog</li>
+    <li>Filipino</li>
+    <li>Sueco</li>
+    <li>Finlandês</li>
+  </ul>
+
+  <p class="note">
+    Atualmente, a interface está disponível em japonês, inglês, chinês tradicional, chinês simplificado e coreano.
+  </p>
+</section>
+
+<section class="card">
+  <h2>▶️ Uso básico</h2>
+
+  <h3>Tradução de voz</h3>
+  <ol>
+    <li>Inicie o aplicativo.</li>
+    <li>Selecione o microfone.</li>
+    <li>Configure o idioma de entrada e o idioma de destino.</li>
+    <li>Escolha o mecanismo de tradução, se necessário.</li>
+    <li>Pressione o botão de início.</li>
+    <li>Ao falar, sua voz será traduzida automaticamente e enviada para o Chatbox do VRChat.</li>
+  </ol>
+
+  <h3>Tradução por texto</h3>
+  <ol>
+    <li>Digite no campo “Original Text” na parte inferior.</li>
+    <li>Pressione Enter para traduzir e enviar.</li>
+  </ol>
+
+  <p class="note">
+    Enter: enviar<br>
+    Shift + Enter: quebra de linha
+  </p>
+</section>
+
+<section class="card">
+  <h2>🎚️ Calibração de voz</h2>
+
+  <p>
+    O VRC Misa Translator inclui um recurso de calibração de voz que ajusta automaticamente a sensibilidade do reconhecimento de voz de acordo com seu ambiente e microfone.
+  </p>
+
+  <p>
+    A calibração mede tanto o ruído ambiente quanto sua voz real ao falar.
+    Em seguida, configura automaticamente o limiar de início da detecção, o limiar de término e o tempo de silêncio.
+  </p>
+
+  <h3>Etapas da calibração</h3>
+
+  <ol>
+    <li>Abra o recurso “Voice Calibration”.</li>
+    <li>Primeiro, o aplicativo medirá o ruído ambiente por alguns segundos.</li>
+    <li>Depois, leia a frase de exemplo usando o volume e a distância do microfone que você normalmente usa no VRChat.</li>
+    <li>Os limiares ideais serão calculados a partir dos resultados e aplicados automaticamente.</li>
+  </ol>
+
+  <h3>Configurações ajustadas automaticamente</h3>
+
+  <ul>
+    <li>Limiar de início do reconhecimento de voz</li>
+    <li>Limiar de término do reconhecimento de voz</li>
+    <li>Duração do silêncio antes do término</li>
+  </ul>
+
+  <h3>Quando é recomendado calibrar</h3>
+
+  <ul>
+    <li>Ao usar o aplicativo pela primeira vez</li>
+    <li>Depois de trocar o microfone</li>
+    <li>Quando a voz não é detectada de forma confiável</li>
+    <li>Quando ocorrem detecções falsas durante o silêncio</li>
+    <li>Quando o ruído ambiente do local muda significativamente</li>
+  </ul>
+
+  <p class="note">
+    As gravações de áudio não são armazenadas.<br>
+    Apenas as configurações de calibração calculadas são salvas.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🤖 Tradução natural com o modo ChatGPT</h2>
+  <p>
+    Usando o ChatGPT, você pode obter traduções mais naturais e ajustar melhor o estilo da expressão.
+  </p>
+
+  <ul>
+    <li>Formulações mais suaves e naturais</li>
+    <li>Frases curtas adequadas para conversas</li>
+    <li>Ajuste de formalidade e nuances</li>
+    <li>Tradução com maior fidelidade ao texto original</li>
+  </ul>
+
+  <p class="warning">
+    É necessária uma chave de API da OpenAI.<br>
+    A tradução com ChatGPT é cobrada conforme o uso. Verifique seu consumo com atenção.
+  </p>
+
+  <p class="note">
+    Mesmo sem usar ChatGPT, você pode utilizar o aplicativo normalmente com o Google Translate.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🧹 Recursos de blacklist / safelist</h2>
+
+  <h3>Blacklist</h3>
+  <p>
+    No reconhecimento de voz, às vezes podem aparecer frases que você não disse de verdade.<br>
+    Por exemplo: frases típicas de encerramento de vídeos, ruído ou erros de reconhecimento.
+  </p>
+
+  <p>
+    Frases registradas na blacklist não serão enviadas automaticamente.
+  </p>
+
+  <ul>
+    <li>Registre resultados não naturais com um clique usando o botão dedicado.</li>
+    <li>Também é possível editar manualmente nas configurações avançadas.</li>
+    <li>Após editar, salve usando “Update Blacklist”.</li>
+  </ul>
+
+  <h3>Safelist</h3>
+  <p>
+    Palavras registradas na safelist serão enviadas mesmo que sejam classificadas como não naturais.<br>
+    Isso é útil para proteger expressões curtas, mas naturais, como “clap clap”, “www” ou nomes próprios.
+  </p>
+
+  <h3>Observações</h3>
+  <ul>
+    <li>Se você registrar itens demais na blacklist, conversas normais também podem ser filtradas.</li>
+    <li>Em caso de dúvida, recomenda-se registrar frases curtas em vez de frases longas.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>🪟 Sobre o overlay do texto original</h2>
+  <p>
+    O texto original reconhecido pelo Whisper pode ser exibido em uma janela separada.<br>
+    Usando Desktop+, XSOverlay e ferramentas semelhantes, você pode verificar os resultados do reconhecimento dentro do VRChat.
+  </p>
+
+  <ul>
+    <li>Permite visualizar os resultados reconhecidos em VR</li>
+    <li>Suporte a ajuste de transparência</li>
+    <li>Permite ligar/desligar o reconhecimento de voz</li>
+    <li>Reduz a insegurança durante a tradução em VR</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>💻 Requisitos do sistema</h2>
+  <ul>
+    <li>Windows</li>
+    <li>VRChat versão PC</li>
+    <li>OSC Chatbox ativado</li>
+    <li>Microfone</li>
+    <li>Conexão com a internet</li>
+  </ul>
+
+  <h3>Ambiente recomendado para a versão Pro</h3>
+  <ul>
+    <li>GPU NVIDIA</li>
+    <li>Ambiente compatível com CUDA</li>
+    <li>VRAM suficiente ao usar modelos de alto desempenho</li>
+  </ul>
+
+  <p class="warning">
+    Não funciona no Quest em modo standalone.
+  </p>
+</section>
+
+<section class="card">
+  <h2>🔄 Atualizações</h2>
+
+  <h3>Versão Free</h3>
+  <p>
+    A versão Free é atualizada manualmente.<br>
+    Baixe a nova versão e reinstale ou sobrescreva a instalação existente.
+  </p>
+
+  <h3>Versão Pro</h3>
+  <p>
+    A versão Pro oferece suporte a atualização automática.<br>
+    Quando uma nova versão for lançada, você poderá verificar a atualização diretamente pelo aplicativo.
+  </p>
+</section>
+
+<section class="card">
+  <h2>💌 Mensagem da autora</h2>
+  <p>
+    Para tornar as conversas com amigos internacionais mais naturais.<br>
+    Para deixar eventos, bate-papos e trocas mais livres.
+  </p>
+
+  <p>
+    O VRC Misa Translator ajuda a criar novos encontros no VRChat ✨
+  </p>
+
+  <p>
+    Tanto a versão Free quanto a versão Pro continuarão sendo aprimoradas para ficarem ainda mais fáceis e confortáveis de usar.
+  </p>
+</section>
+
+<p class="small">© Misa / VRC Misa Translator</p>
+
+</main>
+</body>
+</html>
