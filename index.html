@@ -537,7 +537,17 @@ VRC Misa Translator は、音声翻訳、手入力翻訳、OSC Chatbox送信、V
 </p>
 </section>
 
-<p class="small">© Misa / VRC Misa Translator</p>
+<footer>
+
+  <p class="muted" style="font-size:0.9rem;">
+    本サイトでは利用状況の把握のため
+    Cloudflare Web Analytics を利用しています。
+    Cookie は使用していません。
+  </p>
+
+  VRC Misa Translator README
+
+</footer>
 
 </main>
 
@@ -776,6 +786,8 @@ const translations = {
   }
 };
 
+
+  
 function normalizeLang(lang){
   const lower = (lang || "").toLowerCase();
 
@@ -824,6 +836,13 @@ const browserLang = normalizeLang(navigator.language);
 setLang(savedLang || browserLang);
 </script>
 
+<!-- Cloudflare Web Analytics -->
+<script defer
+src="https://static.cloudflareinsights.com/beacon.min.js"
+data-cf-beacon='{"token":"cb332ccaad58465cb9fb35a1da41f8f0"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+  
 </body>
 </html>
 
