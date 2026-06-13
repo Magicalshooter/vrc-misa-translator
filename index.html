@@ -406,6 +406,8 @@ VRC Misa Translator は、音声入力・テキスト入力を翻訳し、VRChat
 <a href="#readme">README</a>
 <a href="#download">Download</a>
 <a href="#updates" data-i18n="nav_updates">更新内容</a>
+<a href="#terms-license" data-i18n="nav_terms">利用規約・ライセンス</a>
+<a href="#license-faq" data-i18n="nav_license_faq">認証FAQ</a>
 <a href="https://x.com/Magical_Shooter" target="_blank" rel="noopener noreferrer" class="contact-x" data-i18n="nav_contact">問い合わせ X</a>
 <a class="button secondary" href="https://github.com/Magicalshooter/misa-support/issues/new/choose"    
   target="_blank">    
@@ -451,6 +453,14 @@ UI言語は現在、日本語 / 英語 / 繁體中文 / 简体中文 / 한국어
 <section id="readme" class="card">
 <h2 data-i18n="readme_title">🌍 README</h2>
 <p class="small" data-i18n="readme_desc">言語を選択してください（24言語対応）</p>
+<p class="small" data-i18n="readme_license_desc">
+CPU版 / GPU(Pro)版 / ライセンス認証については、下記の利用規約・FAQをご確認ください。
+</p>
+
+<div class="buttons">
+<a href="#terms-license" data-i18n="nav_terms">利用規約・ライセンス</a>
+<a href="#license-faq" data-i18n="nav_license_faq">認証FAQ</a>
+</div>
 
 <div class="language-grid priority">
 <a href="./index_ja.html"><span class="badge">JP</span>日本語</a>
@@ -531,6 +541,39 @@ VRC Misa Translator の今後の開発予定です。
 <li data-i18n="roadmap_3">Incoming Voice Translation Overlay</li>
 <li data-i18n="roadmap_4">Translation Quality Improvements</li>
 <li data-i18n="roadmap_5">More to come...</li>
+</ul>
+</section>
+
+<section id="terms-license" class="card">
+<h2 data-i18n="terms_title">利用規約・ライセンス</h2>
+<p data-i18n="terms_intro">
+VRC Misa Translator は、VRChatでの多言語コミュニケーションを支援するためのデスクトップアプリです。以下の条件を守ってご利用ください。
+</p>
+
+<ul>
+<li data-i18n="terms_personal">個人利用可</li>
+<li data-i18n="terms_commercial">商用利用可（配信・イベント等）</li>
+<li data-i18n="terms_no_redistribution">再配布禁止</li>
+<li data-i18n="terms_no_resale">再販売禁止</li>
+<li data-i18n="terms_no_source">ソース公開禁止</li>
+<li data-i18n="terms_no_modification">無断改変禁止</li>
+<li data-i18n="terms_no_icon">アイコンの別利用禁止</li>
+</ul>
+
+<p class="small" data-i18n="terms_note">
+CPU版、GPU版、Proライセンス、ギフトライセンス等の詳細は、今後このページへ順次追加予定です。
+</p>
+</section>
+
+<section id="license-faq" class="card">
+<h2 data-i18n="license_faq_title">ライセンス認証FAQ</h2>
+
+<ul>
+<li data-i18n="license_faq_cpu">CPU版は無料配布版として利用できます。</li>
+<li data-i18n="license_faq_gpu">GPU(Pro)版はライセンス認証対象として運用予定です。</li>
+<li data-i18n="license_faq_existing">ライセンス認証導入前の既存Proユーザーにも、後から正式ライセンスを発行できる形を検討しています。</li>
+<li data-i18n="license_faq_gift">イベント、キャンペーン、特典配布向けのギフトライセンスにも対応できる構成を目指しています。</li>
+<li data-i18n="license_faq_auth">アプリ内のライセンス画面は認証操作用、このREADMEサイトは説明と規約確認用として分けて運用します。</li>
 </ul>
 </section>
 
@@ -619,6 +662,20 @@ const translations = {
     zh_cn:"更新内容",
     ko:"업데이트 내용"
   },
+  nav_terms:{
+    ja:"利用規約・ライセンス",
+    en:"Terms and License",
+    zh_tw:"使用條款與授權",
+    zh_cn:"使用条款与许可证",
+    ko:"약관 및 라이선스"
+  },
+  nav_license_faq:{
+    ja:"認証FAQ",
+    en:"Auth FAQ",
+    zh_tw:"認證FAQ",
+    zh_cn:"认证FAQ",
+    ko:"인증 FAQ"
+  },
   nav_contact:{
     ja:"問い合わせ X",
     en:"Contact on X",
@@ -660,6 +717,13 @@ const translations = {
     zh_tw:"請選擇您的語言（支援24種語言）",
     zh_cn:"请选择您的语言（支持24种语言）",
     ko:"언어를 선택하세요 (24개 언어 지원)"
+  },
+  readme_license_desc:{
+    ja:"CPU版 / GPU(Pro)版 / ライセンス認証については、下記の利用規約・FAQをご確認ください。",
+    en:"For the CPU edition, GPU (Pro) edition, and license authentication, please see the terms and FAQ below.",
+    zh_tw:"關於CPU版、GPU(Pro)版與授權認證，請查看下方使用條款與FAQ。",
+    zh_cn:"关于CPU版、GPU(Pro)版与许可证认证，请查看下方使用条款与FAQ。",
+    ko:"CPU판 / GPU(Pro)판 / 라이선스 인증에 대해서는 아래 약관과 FAQ를 확인해 주세요."
   },
   download_desc:{
     ja:"お好みの配布サイトからダウンロードできます。",
@@ -780,6 +844,118 @@ const translations = {
     zh_cn:"更多内容即将推出...",
     ko:"More to come..."
   },
+  terms_title:{
+    ja:"利用規約・ライセンス",
+    en:"Terms and License",
+    zh_tw:"使用條款與授權",
+    zh_cn:"使用条款与许可证",
+    ko:"이용 약관 및 라이선스"
+  },
+  terms_intro:{
+    ja:"VRC Misa Translator は、VRChatでの多言語コミュニケーションを支援するためのデスクトップアプリです。以下の条件を守ってご利用ください。",
+    en:"VRC Misa Translator is a desktop app for supporting multilingual communication in VRChat. Please use it under the following terms.",
+    zh_tw:"VRC Misa Translator 是一款協助 VRChat 多語言交流的桌面應用程式。使用時請遵守以下條款。",
+    zh_cn:"VRC Misa Translator 是一款用于支持 VRChat 多语言交流的桌面应用。使用时请遵守以下条款。",
+    ko:"VRC Misa Translator는 VRChat에서 다국어 커뮤니케이션을 돕기 위한 데스크톱 앱입니다. 아래 조건을 지켜 사용해 주세요."
+  },
+  terms_personal:{
+    ja:"個人利用可",
+    en:"Personal use allowed",
+    zh_tw:"允許個人使用",
+    zh_cn:"允许个人使用",
+    ko:"개인 사용 가능"
+  },
+  terms_commercial:{
+    ja:"商用利用可（配信・イベント等）",
+    en:"Commercial use allowed (streams, events, etc.)",
+    zh_tw:"允許商業使用（直播、活動等）",
+    zh_cn:"允许商业使用（直播、活动等）",
+    ko:"상업적 사용 가능（방송, 이벤트 등）"
+  },
+  terms_no_redistribution:{
+    ja:"再配布禁止",
+    en:"Redistribution prohibited",
+    zh_tw:"禁止重新散布",
+    zh_cn:"禁止重新分发",
+    ko:"재배포 금지"
+  },
+  terms_no_resale:{
+    ja:"再販売禁止",
+    en:"Resale prohibited",
+    zh_tw:"禁止轉售",
+    zh_cn:"禁止转售",
+    ko:"재판매 금지"
+  },
+  terms_no_source:{
+    ja:"ソース公開禁止",
+    en:"Source publication prohibited",
+    zh_tw:"禁止公開原始碼",
+    zh_cn:"禁止公开源代码",
+    ko:"소스 공개 금지"
+  },
+  terms_no_modification:{
+    ja:"無断改変禁止",
+    en:"Unauthorized modification prohibited",
+    zh_tw:"禁止未經授權的修改",
+    zh_cn:"禁止未经授权的修改",
+    ko:"무단 수정 금지"
+  },
+  terms_no_icon:{
+    ja:"アイコンの別利用禁止",
+    en:"Separate use of the icon prohibited",
+    zh_tw:"禁止單獨使用圖示",
+    zh_cn:"禁止单独使用图标",
+    ko:"아이콘 단독 사용 금지"
+  },
+  terms_note:{
+    ja:"CPU版、GPU版、Proライセンス、ギフトライセンス等の詳細は、今後このページへ順次追加予定です。",
+    en:"Details for the CPU edition, GPU edition, Pro licenses, gift licenses, and related items will be added to this page over time.",
+    zh_tw:"CPU版、GPU版、Pro授權、禮物授權等詳細內容，預計日後陸續新增到此頁面。",
+    zh_cn:"CPU版、GPU版、Pro许可证、礼品许可证等详细内容，计划今后陆续添加到本页面。",
+    ko:"CPU판, GPU판, Pro 라이선스, 선물 라이선스 등의 자세한 내용은 앞으로 이 페이지에 순차적으로 추가할 예정입니다."
+  },
+  license_faq_title:{
+    ja:"ライセンス認証FAQ",
+    en:"License Auth FAQ",
+    zh_tw:"授權認證FAQ",
+    zh_cn:"许可证认证FAQ",
+    ko:"라이선스 인증 FAQ"
+  },
+  license_faq_cpu:{
+    ja:"CPU版は無料配布版として利用できます。",
+    en:"The CPU edition can be used as the free distribution edition.",
+    zh_tw:"CPU版可作為免費發布版使用。",
+    zh_cn:"CPU版可作为免费发布版使用。",
+    ko:"CPU판은 무료 배포판으로 사용할 수 있습니다."
+  },
+  license_faq_gpu:{
+    ja:"GPU(Pro)版はライセンス認証対象として運用予定です。",
+    en:"The GPU (Pro) edition is planned to use license authentication.",
+    zh_tw:"GPU(Pro)版預計作為授權認證對象運用。",
+    zh_cn:"GPU(Pro)版计划作为许可证认证对象运营。",
+    ko:"GPU(Pro)판은 라이선스 인증 대상으로 운영할 예정입니다."
+  },
+  license_faq_existing:{
+    ja:"ライセンス認証導入前の既存Proユーザーにも、後から正式ライセンスを発行できる形を検討しています。",
+    en:"We are considering a path to issue official licenses later for existing Pro users from before license authentication was introduced.",
+    zh_tw:"我們正在考慮讓授權認證導入前的既有Pro使用者，也能在日後取得正式授權的方式。",
+    zh_cn:"我们正在考虑让许可证认证导入前的既有Pro用户，也能在之后获得正式许可证的方式。",
+    ko:"라이선스 인증 도입 전의 기존 Pro 사용자에게도 나중에 정식 라이선스를 발급할 수 있는 방식을 검토하고 있습니다."
+  },
+  license_faq_gift:{
+    ja:"イベント、キャンペーン、特典配布向けのギフトライセンスにも対応できる構成を目指しています。",
+    en:"The system is intended to support gift licenses for events, campaigns, and special rewards.",
+    zh_tw:"我們目標是支援活動、企劃、特典發布用的禮物授權。",
+    zh_cn:"我们的目标是支持活动、宣传、特典发布用的礼品许可证。",
+    ko:"이벤트, 캠페인, 특전 배포용 선물 라이선스에도 대응할 수 있는 구성을 목표로 하고 있습니다."
+  },
+  license_faq_auth:{
+    ja:"アプリ内のライセンス画面は認証操作用、このREADMEサイトは説明と規約確認用として分けて運用します。",
+    en:"The in-app license screen is for authentication, while this README site is for explanations and terms.",
+    zh_tw:"應用程式內的授權畫面用於認證操作，本README網站則用於說明與條款確認。",
+    zh_cn:"应用内的许可证界面用于认证操作，本README网站用于说明和条款确认。",
+    ko:"앱 안의 라이선스 화면은 인증 조작용, 이 README 사이트는 설명과 약관 확인용으로 나누어 운영합니다."
+  },
   about_title:{
     ja:"このツールについて",
     en:"About",
@@ -855,4 +1031,3 @@ data-cf-beacon='{"token":"cb332ccaad58465cb9fb35a1da41f8f0"}'>
   
 </body>
 </html>
-
